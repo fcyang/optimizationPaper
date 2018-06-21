@@ -1,4 +1,4 @@
-C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\PMMA\dataGeneration\../../../results/PMMA/PMMAConstNominal Log file
+C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\PMMA\dataGeneration\../../../results/PMMA/PMMALinearNominal Log file
 !!python/object/apply:collections.defaultdict
 args:
 - &id001 !!python/name:builtins.bool ''
@@ -103,7 +103,7 @@ dictitems:
       - 1
       depths:
       - 0
-      file: ../../../data/PMMA/PMMAFake1.csv
+      file: ../../../data/PMMA/PMMAFake2.csv
       finalThickness: false
       frontBoundaryConditions: !!python/object/apply:collections.defaultdict
         args:
@@ -146,7 +146,7 @@ dictitems:
     dscO2: None
     weight: 1.0
   fdsPath: C:\Program Files\FDS\FDS6\bin
-  name: PMMAConstNominal
+  name: PMMALinearNominal
   optimizeParams:
     absErr: 1e-9
     absRelErr: 1e-6
@@ -170,11 +170,11 @@ dictitems:
       - 0
       - 1
     Cpa:
-    - - 1886
+    - - 1289
       - 1000
       - 2800
     Cpb:
-    - - 0.0
+    - - 3.978
       - 0.0
       - 0.0
     Cpc:
@@ -198,11 +198,11 @@ dictitems:
       - 0.75
       - 1.0
     ka:
-    - - 0.249
+    - - 0.21
       - 0.1
       - 0.3
     kb:
-    - - 0.0
+    - - 0.00026
       - 0.0
       - 0.0
     kc:
@@ -280,15 +280,17 @@ dictitems:
 Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
 A	 = 5.08e+10,
 C0	 = 1.0,
-Cpa	 = 1886.0,
+Cpa	 = 1289.0,
+Cpb	 = 3.978,
 E	 = 1.57e+05,
 Hp	 = 788000.0,
 K	 = 1000.0,
-Value	 = 0.0008328388043435709,
+Value	 = 0.0040887066694131205,
 Xi	 = 0.0,
 eps	 = 0.8,
-ka	 = 0.249,
+ka	 = 0.21,
+kb	 = 0.00026,
 n	 = 0.91,
 nO2	 = 0.0,
 rho	 = 1189.37,
-Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\PMMA\dataGeneration\../../../results/PMMA/PMMAConstNominal_solution.txt
+Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\PMMA\dataGeneration\../../../results/PMMA/PMMALinearNominal_solution.txt
