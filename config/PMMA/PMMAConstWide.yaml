@@ -1,6 +1,6 @@
-name: PMMAConstTight
+name: PMMAConstWide
 resultsDir: '../../results/PMMA/'
-virtualExperiment: True
+virtualExperiment: False
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
 reinitializeComplex: False
 outputParams:
