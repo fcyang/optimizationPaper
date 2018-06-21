@@ -1,0 +1,82 @@
+name: PMMAMultiHeatFluxNominal
+virtualExperiment: True
+outputParams:
+  saveAllSamples: True
+restart: False
+resultsDir: '../../../results/PMMA/'
+cone1:
+  file: '../../../data/PMMAFake1.csv'
+  time: 0
+  heatFlux: 20
+  Tinit: 25
+  width1: 0.1016
+  width2: 0.1016
+  thickness: 0.00952
+  names: ['Weight']
+  columns: [1]
+  weights: [1]
+  depths: [0]
+  types: [1]
+cone2:
+  file: '../../../data/PMMAFake2.csv'
+  time: 0
+  heatFlux: 30
+  Tinit: 25
+  width1: 0.1016
+  width2: 0.1016
+  thickness: 0.00952
+  names: ['Weight']
+  columns: [1]
+  weights: [1]
+  depths: [0]
+  types: [1]
+cone3:
+  file: '../../../data/PMMAFake2.csv'
+  time: 0
+  heatFlux: 40
+  Tinit: 25
+  width1: 0.1016
+  width2: 0.1016
+  thickness: 0.00952
+  names: ['Weight']
+  columns: [1]
+  weights: [1]
+  depths: [0]
+  types: [1]
+processParams:
+  multiprocess: True
+  maxProcesses: 4
+optimizeParams:
+  opP: 1
+  opS: 2
+  opQ: 2
+  opAlpha: 5
+  opBeta: 5
+  minIter: 0
+  maxIter: 0
+  absErr: 1e-9
+  relErr: 1e-15
+  relIter: 15
+  maxTime: 1E6
+phaseParams:
+  phases: ['virgin']
+  C0:   [[1.0,      0,      1]      ]
+  ka:   [[0.233969,     0.10,   0.30]   ]
+  kb:   [[0.0,      0.0,    0.0]    ]
+  rho:  [[1189.37,  1189,   1189]   ]
+  Cpa:  [[1341,     1000,   2800]   ]
+  Cpb:  [[0.0,      0.0,    0.0]    ]
+  eps:  [[0.8,     0.75,   1.0]    ]
+  K:    [[1000,     500,    3000]   ]
+  nO2:  [[0,        0,      1]      ]
+dataSources:
+  names: ['cone1', 'cone2', 'cone3']
+  types: ['cone', 'cone', 'cone']
+reactionParams:
+  A:   [[5.08e+10,  4e8,    7e12]]
+  E:   [[1.57e+05,  1.20e5, 2.0e5]]
+  n:   [[0.91,  0.73,   1.5]]
+  Hp:  [[788000,  630e3,  945e3]]
+  typeState: [3]
+  reacState: [0]
+  prodState: [-1]
