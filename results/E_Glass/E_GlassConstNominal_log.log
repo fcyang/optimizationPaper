@@ -1,4 +1,4 @@
-C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\PMMA\dataGeneration\../../../results/PMMA/PMMALinearNominal Log file
+C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\E_Glass\dataGeneration\../../../results/E_Glass/E_GlassConstNominal Log file
 !!python/object/apply:collections.defaultdict
 args:
 - &id001 !!python/name:builtins.bool ''
@@ -32,7 +32,7 @@ dictitems:
     rho: 258
     thickness: 0.0254
   XiState:
-  - known
+  - unknowable
   cone:
     Tinit: 25
     activePhaseVars:
@@ -103,7 +103,7 @@ dictitems:
       - 1
       depths:
       - 0
-      file: ../../../data/PMMA/PMMAFake2.csv
+      file: ../../../data/E_Glass/E_GlassFake1.csv
       finalThickness: false
       frontBoundaryConditions: !!python/object/apply:collections.defaultdict
         args:
@@ -124,7 +124,7 @@ dictitems:
       - 1
       width1: 0.1016
       width2: 0.1016
-  configDir: C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\PMMA\dataGeneration\
+  configDir: C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\E_Glass\dataGeneration\
   dataSources:
     names:
     - cone1
@@ -146,7 +146,7 @@ dictitems:
     dscO2: None
     weight: 1.0
   fdsPath: C:\Program Files\FDS\FDS6\bin
-  name: PMMALinearNominal
+  name: E_GlassConstNominal
   optimizeParams:
     absErr: 1e-9
     absRelErr: 1e-6
@@ -166,18 +166,30 @@ dictitems:
     saveAllSamples: true
   phaseParams:
     C0:
-    - - 1.0
+    - - 1
       - 0
       - 1
+    - - 0
+      - 1189
+      - 1189
     Cpa:
-    - - 203.3433
+    - - 1090
       - 1000
       - 2800
+    - - 1150
+      - 1189
+      - 1189
     Cpb:
-    - - 3.978
+    - - 0.0
       - 0.0
       - 0.0
+    - - 0.0
+      - 1189
+      - 1189
     Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
     - - 0.0
       - 0.0
       - 0.0
@@ -185,27 +197,47 @@ dictitems:
     - - 0.0
       - 0.0
       - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
     Cpe:
-    - - 0
+    - &id002
+      - 0
       - 0
       - 1
+    - *id002
     K:
-    - - 1000
+    - - 10000
       - 500
       - 3000
+    - - 0
+      - 1189
+      - 1189
     eps:
-    - - 0.8
+    - - 0.94
       - 0.75
       - 1.0
+    - - 0.94
+      - 1189
+      - 1189
     ka:
-    - - 0.139
+    - - 0.3
       - 0.1
       - 0.3
+    - - 0.2
+      - 1189
+      - 1189
     kb:
-    - - 0.00026
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
       - 0.0
       - 0.0
     kc:
+    - - 0.0
+      - 0.0
+      - 0.0
     - - 0.0
       - 0.0
       - 0.0
@@ -213,42 +245,54 @@ dictitems:
     - - 0.0
       - 0.0
       - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
     ke:
-    - - 0
+    - &id003
+      - 0
       - 0
       - 1
+    - *id003
     nO2:
     - - 0
       - 0
       - 1
+    - - 0
+      - 1189
+      - 1189
     phases:
     - virgin
+    - char
     rho:
-    - - 1189.37
-      - 1189.37
-      - 1189.37
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
   processParams:
     maxProcesses: 4
     multiprocess: true
   reactionParams:
     A:
-    - - 50800000000.0
+    - - 3380000000000000.0
       - 1e6
       - 1e14
     E:
-    - - 157000.0
+    - - 213000.0
       - 1.2e4
       - 2.0e5
     Hp:
-    - - 788000
+    - - 5.95e5
       - 1e5
       - 1e7
     Xi:
-    - - 0
+    - - None
       - 0
       - 1
     n:
-    - - 0.91
+    - - 1.5
       - 5e-1
       - 4e0
     nO2:
@@ -256,14 +300,14 @@ dictitems:
       - 0
       - 1
     prodState:
-    - -1
+    - 1
     reacState:
     - 0
     typeState:
     - 3
   reinitializeComplex: false
   restart: false
-  resultsDir: ../../../results/PMMA/
+  resultsDir: ../../../results/E_Glass/
   systemDir: C:\Users\Fyang\Workspace\optimization\sourceCode\optimizationpython\src
   tga:
     activePhaseVars:
@@ -278,19 +322,17 @@ dictitems:
     weight: 1.0
   virtualExperiment: true
 Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
-A	 = 5.08e+10,
-C0	 = 1.0,
-Cpa	 = 203.3433,
-Cpb	 = 3.978,
-E	 = 1.57e+05,
-Hp	 = 788000.0,
-K	 = 1000.0,
-Value	 = 0.0009826708712224596,
-Xi	 = 0.0,
-eps	 = 0.8,
-ka	 = 0.139,
-kb	 = 0.00026,
-n	 = 0.91,
+A	 = 3.38e+15,
+C0	 = 1.0,0.0,
+Cpa	 = 1090.0,1150.0,
+E	 = 2.13e+05,
+Hp	 = 595000.0,
+K	 = 10000.0,0.0,
+Value	 = 0.011240772822574652,
+Xi	 = 0.7338086749851456,
+eps	 = 0.94,0.94,
+ka	 = 0.3,0.2,
+n	 = 1.5,
 nO2	 = 0.0,
-rho	 = 1189.37,
-Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\PMMA\dataGeneration\../../../results/PMMA/PMMALinearNominal_solution.txt
+rho	 = 1683.0,1235.0,
+Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\E_Glass\dataGeneration\../../../results/E_Glass/E_GlassConstNominal_solution.txt
