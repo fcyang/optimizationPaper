@@ -1,0 +1,366 @@
+D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\PMMA\../../results/PMMA/PMMAConstTight Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - known
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../data/PMMA/PMMAConstNominal_0_cone_Mass.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 25
+          htc: 15
+      heatFlux: 20
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\PMMA\
+  dataSources:
+    names:
+    - cone1
+    types:
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  name: PMMAConstTight
+  optimizeParams:
+    absErr: 1e-7
+    absRelErr: 1e-6
+    elimThresh: 1e-2
+    maxIter: 1000
+    maxTime: 36000
+    minIter: 5
+    minP: 2
+    opAlpha: 3
+    opBeta: 3
+    opP: 8
+    opQ: 4
+    opS: 16
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: true
+  phaseParams:
+    C0:
+    - - 1.0
+      - 0
+      - 1
+    Cpa:
+    - - None
+      - 1509
+      - 2263
+    Cpb:
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - - 0
+      - 0
+      - 1
+    K:
+    - - None
+      - 800
+      - 1200
+    eps:
+    - - None
+      - 0.64
+      - 0.96
+    ka:
+    - - None
+      - 0.1992
+      - 0.2988
+    kb:
+    - - 0.0
+      - 0.0
+      - 0.0
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - - 0
+      - 0
+      - 1
+    nO2:
+    - - 0
+      - 0
+      - 1
+    phases:
+    - virgin
+    rho:
+    - - 1189.37
+      - 1189.37
+      - 1189.37
+  processParams:
+    maxProcesses: 4
+    multiprocess: true
+  reactionParams:
+    A:
+    - - None
+      - 4.064e10
+      - 6.096e10
+    E:
+    - - None
+      - 1.256e5
+      - 1.884e5
+    Hp:
+    - - None
+      - 6.304e5
+      - 9.456e5
+    Xi:
+    - - 0
+      - 0
+      - 1
+    n:
+    - - None
+      - 0.728
+      - 1.092
+    nO2:
+    - - 0
+      - 0
+      - 1
+    prodState:
+    - -1
+    reacState:
+    - 0
+    typeState:
+    - 3
+  reinitializeComplex: false
+  restart: false
+  resultsDir: ../../results/PMMA/
+  systemDir: D:\workspace\JENSENHUGHES\optimization\sourceCode\optimizationpython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  virtualExperiment: false
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+0		14.86	1.117e-04	1.343e-02	1.000e+00	8	128
+1		31.95	8.298e-05	1.343e-02	1.000e+00	8	128
+2		50.75	2.196e-05	1.343e-02	1.000e+00	8	128
+3		70.98	2.196e-05	1.343e-02	1.000e+00	8	128
+4		91.38	2.196e-05	1.343e-02	1.000e+00	8	128
+5		112.40	1.076e-05	1.343e-02	1.000e+00	8	128
+6		135.91	6.811e-06	1.343e-02	1.000e+00	8	128
+7		157.20	6.811e-06	1.343e-02	1.000e+00	8	128
+8		180.90	5.709e-06	1.343e-02	1.000e+00	8	128
+9		203.80	5.558e-06	1.343e-02	1.000e+00	8	128
+10		226.41	4.001e-06	1.343e-02	1.000e+00	8	128
+11		247.70	2.466e-06	1.343e-02	1.000e+00	8	128
+12		272.10	2.466e-06	1.343e-02	1.000e+00	8	128
+13		296.61	1.946e-06	1.343e-02	1.000e+00	8	128
+14		322.22	1.532e-06	1.343e-02	1.000e+00	8	128
+15		345.32	1.347e-06	9.949e-03	1.000e+00	8	128
+16		368.61	1.132e-06	9.949e-03	8.185e-05	8	128
+17		391.22	9.643e-07	9.949e-03	2.100e-05	8	128
+18		414.37	9.435e-07	9.949e-03	2.102e-05	8	128
+19		438.97	5.755e-07	9.949e-03	2.138e-05	8	128
+20		464.39	5.755e-07	9.949e-03	1.019e-05	8	128
+21		488.70	5.164e-07	1.311e-02	6.295e-06	8	128
+22		513.20	4.774e-07	1.311e-02	6.334e-06	8	128
+23		536.40	4.199e-07	1.311e-02	5.289e-06	8	128
+24		559.99	3.594e-07	1.311e-02	5.199e-06	8	128
+25		586.50	3.512e-07	1.311e-02	3.650e-06	8	128
+26		613.52	3.512e-07	1.311e-02	2.115e-06	8	128
+27		636.52	3.388e-07	1.311e-02	2.127e-06	8	128
+28		660.02	3.264e-07	1.311e-02	1.620e-06	8	128
+29		685.64	3.243e-07	1.311e-02	1.207e-06	8	128
+30		710.85	3.215e-07	1.311e-02	1.025e-06	8	128
+31		735.45	3.176e-07	1.311e-02	8.145e-07	8	128
+32		760.46	2.669e-07	1.311e-02	6.974e-07	8	128
+33		783.97	2.669e-07	1.311e-02	6.766e-07	8	128
+34		808.47	2.669e-07	1.311e-02	3.087e-07	8	128
+35		832.37	2.669e-07	1.311e-02	3.087e-07	8	128
+36		857.07	2.628e-07	1.311e-02	2.536e-07	8	128
+37		879.98	2.583e-07	1.311e-02	2.191e-07	8	128
+38		904.20	2.326e-07	1.311e-02	1.872e-07	8	128
+39		928.71	1.806e-07	1.311e-02	1.788e-07	8	128
+40		953.82	1.738e-07	9.695e-03	1.774e-07	8	128
+41		978.13	1.575e-07	9.136e-03	1.936e-07	8	128
+42		1002.74	1.537e-07	9.136e-03	1.850e-07	8	128
+43		1025.94	1.487e-07	9.136e-03	1.777e-07	8	128
+44		1050.15	1.481e-07	9.136e-03	1.762e-07	8	128
+45		1075.87	1.442e-07	9.136e-03	1.773e-07	8	128
+46		1102.68	1.442e-07	9.136e-03	1.735e-07	8	128
+47		1126.87	1.442e-07	9.136e-03	1.227e-07	8	128
+48		1151.79	1.430e-07	9.136e-03	1.239e-07	8	128
+49		1175.71	1.430e-07	9.136e-03	1.239e-07	8	128
+50		1201.43	1.430e-07	9.136e-03	1.239e-07	8	128
+51		1228.74	1.430e-07	9.136e-03	1.198e-07	8	128
+52		1253.35	1.430e-07	9.136e-03	1.153e-07	8	128
+53		1278.76	1.430e-07	9.136e-03	8.962e-08	8	128
+54		1303.98	1.430e-07	9.136e-03	3.756e-08	8	128
+55		1328.59	1.430e-07	9.136e-03	3.077e-08	8	128
+56		1354.09	1.430e-07	9.136e-03	1.454e-08	8	128
+57		1378.79	1.430e-07	9.136e-03	1.074e-08	8	128
+58		1401.00	1.430e-07	9.136e-03	5.717e-09	8	128
+59		1425.01	1.430e-07	9.136e-03	5.061e-09	8	128
+60		1448.31	1.430e-07	9.136e-03	1.150e-09	8	128
+61		1471.30	1.430e-07	9.136e-03	1.150e-09	8	128
+62		1494.61	1.251e-07	9.136e-03	1.905e-08	8	128
+63		1518.31	1.226e-07	1.111e-02	2.038e-08	8	128
+64		1542.92	1.226e-07	1.111e-02	2.038e-08	8	128
+65		1567.22	1.226e-07	1.111e-02	2.038e-08	8	128
+66		1591.83	1.226e-07	1.111e-02	2.038e-08	8	128
+67		1617.24	1.184e-07	1.111e-02	2.464e-08	8	128
+68		1643.59	1.184e-07	8.748e-03	2.464e-08	8	128
+69		1668.50	1.166e-07	8.748e-03	2.636e-08	8	128
+70		1693.21	1.092e-07	8.748e-03	3.380e-08	8	128
+71		1718.33	9.639e-08	8.748e-03	4.661e-08	8	128
+A	 = 4.76e+10,
+C0	 = 1.0,
+Cpa	 = 1888.2836766452806,
+E	 = 1.56e+05,
+Hp	 = 788066.2878323122,
+K	 = 994.0183196595185,
+Value	 = 9.638976217423436e-08,
+Xi	 = 0.0,
+eps	 = 0.7966818666706459,
+ka	 = 0.2490863843099635,
+n	 = 0.9090470989617561,
+nO2	 = 0.0,
+rho	 = 1189.37,
+Results saved to D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\PMMA\../../results/PMMA/PMMAConstTight_solution.txt
