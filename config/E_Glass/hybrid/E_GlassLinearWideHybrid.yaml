@@ -39,7 +39,7 @@ optimizeParams:
   opBeta: 3
   minP: 2
   minIter: 5
-  maxIter: 2000
+  maxIter: 1000
   absErr: 1e-7
   relErr: 1e-12
   absRelErr: 5e-7
