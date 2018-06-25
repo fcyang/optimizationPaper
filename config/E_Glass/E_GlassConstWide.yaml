@@ -2,9 +2,9 @@ name: E_GlassConstWide
 resultsDir: '../../results/E_Glass/'
 virtualExperiment: False
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
-reinitializeComplex: False
+reinitializeComplex: True
 outputParams:
-  saveAllSamples: True
+  saveAllSamples: False
 cone1:
   activePhaseVars: ['C0','rho','ka','kb','kc','kd','ke','Cpa','Cpb','Cpc','Cpd','Cpe','eps','K']
   activeReactionVars: ['A','E','n','Hp','nO2','Xi']
@@ -19,7 +19,6 @@ cone1:
     heatFlux: 25
   file: '../../data/E_Glass/E_GlassConstNominal_0_cone_Mass.csv'
   time: 0
-  heatFlux: 20
   Tinit: 25
   width1: 0.1016
   width2: 0.1016
@@ -43,7 +42,7 @@ optimizeParams:
   maxIter: 1000
   absErr: 1e-7
   relErr: 1e-12
-  absRelErr: 1e-6
+  absRelErr: 5e-7
   relIter: 15
   maxTime: 36000
   elimThresh: 1e-2
@@ -60,7 +59,7 @@ phaseParams:
   Cpc:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
   Cpd:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
   eps:  [[None,     0.235,   1.0], [None,  0.235,   1.0]    ]
-  K:    [[None,    2500,    40000], [0,  1189,   1189]   ]
+  K:    [[None,    2500,    40000], [1e8,  1189,   1189]   ]
   nO2:  [[0,        0,      1], [0,  1189,   1189]      ]
 dataSources:
   names: ['cone1']
