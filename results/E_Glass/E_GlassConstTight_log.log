@@ -1,0 +1,373 @@
+D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\E_Glass\../../results/E_Glass/E_GlassConstTight Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - unknowable
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../data/E_Glass/E_GlassConstNominal_0_cone_Mass.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 25
+          htc: 15
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\E_Glass\
+  dataSources:
+    names:
+    - cone1
+    types:
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  name: E_GlassConstTight
+  optimizeParams:
+    absErr: 1e-7
+    absRelErr: 5e-7
+    elimThresh: 1e-2
+    maxIter: 1000
+    maxTime: 36000
+    minIter: 5
+    minP: 2
+    opAlpha: 3
+    opBeta: 3
+    opP: 12
+    opQ: 6
+    opS: 24
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: false
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - None
+      - 872
+      - 1308
+    - - None
+      - 920
+      - 1380
+    Cpb:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 1189
+      - 1189
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id002
+      - 0
+      - 0
+      - 1
+    - *id002
+    K:
+    - - None
+      - 8000
+      - 12000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - None
+      - 0.752
+      - 1.0
+    - - None
+      - 0.752
+      - 1.0
+    ka:
+    - - None
+      - 0.24
+      - 0.36
+    - - None
+      - 0.16
+      - 0.24
+    kb:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    nO2:
+    - - 0
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 4
+    multiprocess: true
+  reactionParams:
+    A:
+    - - None
+      - 2704000000000000.0
+      - 4056000000000000.0
+    E:
+    - - None
+      - 170400.0
+      - 255600.0
+    Hp:
+    - - None
+      - 4.76e5
+      - 7.14e5
+    Xi:
+    - - None
+      - 0
+      - 1
+    n:
+    - - None
+      - 1.2
+      - 1.8
+    nO2:
+    - - 0
+      - 0
+      - 1
+    prodState:
+    - 1
+    reacState:
+    - 0
+    typeState:
+    - 3
+  reinitializeComplex: true
+  restart: false
+  resultsDir: ../../results/E_Glass/
+  systemDir: D:\workspace\JENSENHUGHES\optimization\sourceCode\optimizationpython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  virtualExperiment: false
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+0		20.35	1.654e-05	2.921e-03	1.000e+00	12	288
+1		42.41	1.429e-05	2.921e-03	1.000e+00	12	288
+2		65.17	7.879e-06	2.921e-03	1.000e+00	12	288
+3		88.64	5.400e-06	2.921e-03	1.000e+00	12	288
+4		114.10	4.207e-06	2.921e-03	1.000e+00	12	288
+5		141.06	3.148e-06	2.921e-03	1.000e+00	12	288
+6		168.13	2.866e-06	2.921e-03	1.000e+00	12	288
+7		195.60	2.866e-06	2.921e-03	1.000e+00	12	288
+8		222.36	2.274e-06	2.921e-03	1.000e+00	12	288
+9		251.73	2.165e-06	2.921e-03	1.000e+00	12	288
+10		279.80	1.540e-06	2.921e-03	1.000e+00	12	288
+11		309.98	1.491e-06	2.921e-03	1.000e+00	12	288
+12		339.15	1.491e-06	2.921e-03	1.000e+00	12	288
+13		369.11	1.388e-06	2.921e-03	1.000e+00	12	288
+14		399.09	1.305e-06	2.921e-03	1.000e+00	12	288
+15		428.06	1.269e-06	2.921e-03	1.000e+00	12	288
+16		456.23	1.110e-06	2.921e-03	1.318e-05	12	288
+17		485.00	8.811e-07	2.921e-03	6.998e-06	12	288
+18		514.99	8.811e-07	2.921e-03	4.519e-06	12	288
+19		555.14	7.317e-07	2.921e-03	3.475e-06	12	288
+20		595.92	6.775e-07	2.921e-03	2.471e-06	12	288
+21		674.06	4.803e-07	2.921e-03	2.386e-06	12	288
+22		760.67	3.541e-07	2.921e-03	2.512e-06	12	288
+23		842.67	3.541e-07	2.921e-03	1.920e-06	12	288
+24		924.64	3.122e-07	2.921e-03	1.853e-06	12	288
+25		1012.06	2.758e-07	2.921e-03	1.264e-06	12	288
+26		1099.83	2.542e-07	2.921e-03	1.237e-06	12	288
+27		1180.47	2.089e-07	2.921e-03	1.282e-06	12	288
+28		1262.62	1.890e-07	2.921e-03	1.199e-06	12	288
+29		1345.69	1.613e-07	1.975e-03	1.144e-06	12	288
+30		1430.73	1.613e-07	1.437e-03	1.107e-06	12	288
+31		1520.35	1.582e-07	1.437e-03	9.513e-07	12	288
+32		1603.09	1.542e-07	1.437e-03	7.268e-07	12	288
+33		1690.96	1.209e-07	1.437e-03	7.602e-07	12	288
+34		1775.28	1.144e-07	1.437e-03	6.173e-07	12	288
+35		1860.56	9.768e-08	1.437e-03	5.798e-07	12	288
+A	 = 3.21e+15,
+C0	 = 1.0,0.0,
+Cpa	 = 1078.2057452920988,1203.2702631498073,
+E	 = 2.10e+05,
+Hp	 = 580547.9245344372,
+K	 = 10350.492228555253,100000000.0,
+Value	 = 9.768489374141838e-08,
+Xi	 = 0.7338086749851456,
+eps	 = 0.8901907934771967,0.8882101131575764,
+ka	 = 0.2960147597810546,0.19017741897326307,
+n	 = 1.5030650165441974,
+nO2	 = 0.0,
+rho	 = 1683.0,1235.0,
+Results saved to D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\E_Glass\../../results/E_Glass/E_GlassConstTight_solution.txt
