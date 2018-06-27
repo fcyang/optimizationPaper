@@ -103,7 +103,7 @@ dictitems:
       - 1
       depths:
       - 0
-      file: ../../data/E_Glass/E_GlassLinearNominal_0_cone_Mass.csv
+      file: ../../data/E_Glass/E_GlassOldConstNominal_0_cone_Mass.csv
       finalThickness: false
       frontBoundaryConditions: !!python/object/apply:collections.defaultdict
         args:
@@ -154,11 +154,11 @@ dictitems:
     maxTime: 60000
     minIter: 5
     minP: 2
-    opAlpha: 57
+    opAlpha: 41
     opBeta: 1
-    opP: 29
-    opQ: 15
-    opS: 29
+    opP: 21
+    opQ: 11
+    opS: 21
     relErr: 1e-12
     relIter: 15
   outputParams:
@@ -173,18 +173,18 @@ dictitems:
       - 1189
     Cpa:
     - - None
-      - 270
-      - 4320
+      - 375
+      - 6000
     - - None
-      - 260.25
-      - 4164
+      - 275
+      - 4400
     Cpb:
-    - - None
-      - 0.0113
-      - 0.1808
-    - - None
-      - 0.06475
-      - 1.036
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 1189
+      - 1189
     Cpc:
     - - 0.0
       - 0.0
@@ -221,18 +221,18 @@ dictitems:
       - 1.0
     ka:
     - - None
-      - 0.078
-      - 1.248
+      - 0.075
+      - 1.2
     - - None
-      - 0.023725
-      - 0.3796
+      - 0.05
+      - 0.8
     kb:
-    - - None
-      - 1.1013e-05
-      - 0.0001762
-    - - None
-      - 7.075e-05
-      - 0.001132
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
     kc:
     - - 0.0
       - 0.0
@@ -321,7 +321,5 @@ dictitems:
     weight: 1.0
   virtualExperiment: false
 Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
-21		4710.04	5.064e-06	4.672e-03	4.141e-06	21	441
-0		568.72	2.273e-04	3.990e-03	1.000e+00	29	841
-22		5079.20	5.058e-06	4.672e-03	3.568e-06	21	441
-23		5277.90	5.048e-06	4.672e-03	2.985e-06	21	441
+1		442.49	3.466e-05	5.291e-03	1.000e+00	29	841
+0		170.02	1.318e-04	4.672e-03	1.000e+00	21	441

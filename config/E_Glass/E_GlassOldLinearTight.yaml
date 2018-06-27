@@ -1,4 +1,4 @@
-name: E_GlassOldConstTight
+name: E_GlassOldLinearTight
 resultsDir: '../../results/E_Glass/'
 virtualExperiment: False
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
