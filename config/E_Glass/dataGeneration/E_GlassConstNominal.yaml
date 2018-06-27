@@ -19,7 +19,6 @@ cone1:
     heatFlux: 25
   file: '../../../data/E_Glass/E_GlassFake1.csv'
   time: 0
-  heatFlux: 20
   Tinit: 25
   width1: 0.1016
   width2: 0.1016

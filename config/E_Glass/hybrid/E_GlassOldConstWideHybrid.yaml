@@ -1,4 +1,4 @@
-name: E_GlassConstWideHybrid
+name: E_GlassOldConstWideHybrid
 resultsDir: '../../../results/E_Glass/hybrid/'
 virtualExperiment: False
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
@@ -17,7 +17,7 @@ cone1:
     htc: 15
     Tamb: 25
     heatFlux: 25
-  file: '../../../data/E_Glass/E_GlassConstNominal_0_cone_Mass.csv'
+  file: '../../../data/E_Glass/E_GlassOldConstNominal_0_cone_Mass.csv'
   time: 0
   Tinit: 25
   width1: 0.1016
@@ -44,7 +44,7 @@ optimizeParams:
   relErr: 1e-12
   absRelErr: 5e-7
   relIter: 15
-  maxTime: 36000
+  maxTime: 60000
   elimThresh: 1e-2
 phaseParams:
   phases: ['virgin', 'char']
@@ -54,7 +54,7 @@ phaseParams:
   kc:   [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
   kd:   [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
   rho:  [[1683,  1189,   1189], [1235,  1189,   1189]   ]
-  Cpa:  [[None,     981,   1199], [None,  287.5,   4600]   ]
+  Cpa:  [[None,     1350,   1650], [None,  275,   4400]   ]
   Cpb:  [[0.0,      0.0,    0.0], [0.0,  1189,   1189]    ]
   Cpc:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
   Cpd:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
@@ -65,10 +65,10 @@ dataSources:
   names: ['cone1']
   types: ['cone']
 reactionParams:
-  A:   [[None,3.042e+15,3.718e+15]]
-  E:   [[None,1.917e+05,2.343e+05]]
-  n:   [[None,1.35,1.65]]
-  Hp:  [[None,1.4875e+05,2.38e+06]]
+  A:   [[None,2.106e12,2.574e12]]
+  E:   [[None,1.629e5,1.991e5]]
+  n:   [[None,0.9,1.1]]
+  Hp:  [[None,0.25e05,4.0e5]]
   nO2: [[0,0,1]]
   Xi:  [[None,0,1]]
   typeState: [3]
