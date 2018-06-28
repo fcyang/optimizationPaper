@@ -1,4 +1,4 @@
-D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\E_Glass\../../results/E_Glass/E_GlassOldConstTight Log file
+E:\workspace_fengchang\optimizationPaper\config\E_Glass\../../results/E_Glass/E_GlassOldConstTight Log file
 !!python/object/apply:collections.defaultdict
 args:
 - &id001 !!python/name:builtins.bool ''
@@ -103,7 +103,7 @@ dictitems:
       - 1
       depths:
       - 0
-      file: ../../data/E_Glass/E_GlassLinearNominal_0_cone_Mass.csv
+      file: ../../data/E_Glass/E_GlassOldLinearNominal_0_cone_Mass.csv
       finalThickness: false
       frontBoundaryConditions: !!python/object/apply:collections.defaultdict
         args:
@@ -123,7 +123,7 @@ dictitems:
       - 1
       width1: 0.1016
       width2: 0.1016
-  configDir: D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\E_Glass\
+  configDir: E:\workspace_fengchang\optimizationPaper\config\E_Glass\
   dataSources:
     names:
     - cone1
@@ -145,6 +145,7 @@ dictitems:
     dscO2: None
     weight: 1.0
   fdsPath: C:\Program Files\FDS\FDS6\bin
+  keepTemporaryFiles: false
   name: E_GlassOldConstTight
   optimizeParams:
     absErr: 1e-7
@@ -307,7 +308,7 @@ dictitems:
   reinitializeComplex: true
   restart: false
   resultsDir: ../../results/E_Glass/
-  systemDir: D:\workspace\JENSENHUGHES\optimization\sourceCode\optimizationpython\src
+  systemDir: E:\workspace_fengchang\optimizationpython\src
   tga:
     activePhaseVars:
     - C0
@@ -319,6 +320,13 @@ dictitems:
     tgaO2: None
     tgaOpt: 1
     weight: 1.0
+  thermalPropertyUnits: K
   virtualExperiment: false
 Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
-0		1073.52	2.785e-04	1.875e-03	1.000e+00	29	841
+0		245.41	1.159e-05	4.356e-03	1.000e+00	29	841
+1		517.12	5.682e-06	3.886e-03	1.000e+00	29	841
+2		794.05	2.849e-06	2.873e-03	1.000e+00	29	841
+3		1075.12	1.744e-06	3.079e-03	1.000e+00	29	841
+4		1362.59	8.357e-07	1.998e-03	1.000e+00	29	841
+5		1662.31	5.744e-07	1.440e-03	1.000e+00	29	841
+6		1956.27	4.097e-07	1.361e-03	1.000e+00	29	841
