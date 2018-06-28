@@ -1,0 +1,61 @@
+name: E_GlassOldLinearHybrid50KW
+resultsDir: '../../../results/E_Glass/comparison/'
+virtualExperiment: True
+fdsPath: 'C:\Program Files\FDS\FDS6\bin'
+reinitializeComplex: False
+outputParams:
+  saveAllSamples: True
+cone1:
+  activePhaseVars: ['C0','rho','ka','kb','kc','kd','ke','Cpa','Cpb','Cpc','Cpd','Cpe','eps','K']
+  activeReactionVars: ['A','E','n','Hp','nO2','Xi']
+  weight: 1.0
+  backBoundaryConditions:
+    type: 'INSULATED'
+    htc: 'Auto'
+    Tamb: 25
+  frontBoundaryConditions:
+    htc: 15
+    Tamb: 25
+    heatFlux: 50
+  file: '../../../data/E_Glass/E_GlassOldLinearNominal50KW_0_cone_Mass.csv'
+  time: 0
+  Tinit: 25
+  width1: 0.1016
+  width2: 0.1016
+  initialThickness: 0.008
+  names: ['Mass']
+  columns: [1]
+  weights: [1]
+  depths: [0]
+  types: [1]
+processParams:
+  multiprocess: True
+  maxProcesses: 8
+phaseParams:
+  phases: ['virgin', 'char']
+  C0:   [[1,      0,      1], [0,  1189,   1189]      ]
+  ka:   [[0.27004725294725773,     0.10,   0.30], [0.20162626119914195,  1189,   1189]   ]
+  kb:   [[0.00016881454492321477,      0.0,    0.0], [0.00018006513880179116,  0.0,   0.0]     ]
+  kc:   [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
+  kd:   [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
+  rho:  [[1683,  1189,   1189], [1235,  1189,   1189]   ]
+  Cpa:  [[1174.2121276496835,     1000,   2800], [1355.3408782514998,  1189,   1189]   ]
+  Cpb:  [[0.04244192783154354,      0.0,    0.0], [0.2612743608503119,  1189,   1189]    ]
+  Cpc:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
+  Cpd:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
+  eps:  [[0.9581866156753343,     0.75,   1.0], [0.94,  1189,   1189]    ]
+  K:    [[25483.19785841499,     500,    3000], [1e8,  1189,   1189]   ]
+  nO2:  [[0,        0,      1], [0,  1189,   1189]      ]
+dataSources:
+  names: ['cone1']
+  types: ['cone']
+reactionParams:
+  A:   [[2.19e12,1e6,1e14]]
+  E:   [[1.78e5,1.2e4,2.0e5]]
+  n:   [[0.98513,5e-1,4e0]]
+  Hp:  [[111505.38646189752,1e5,1e7]]
+  nO2: [[0,0,1]]
+  Xi:  [[None,0,1]]
+  typeState: [3]
+  reacState: [0]
+  prodState: [1]
