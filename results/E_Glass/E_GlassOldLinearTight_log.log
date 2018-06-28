@@ -1,0 +1,349 @@
+E:\workspace_fengchang\optimizationPaper\config\E_Glass\../../results/E_Glass/E_GlassOldLinearTight Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - unknowable
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../data/E_Glass/E_GlassOldLinearNominal_0_cone_Mass.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 25
+          htc: 15
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: E:\workspace_fengchang\optimizationPaper\config\E_Glass\
+  dataSources:
+    names:
+    - cone1
+    types:
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  keepTemporaryFiles: false
+  name: E_GlassOldLinearTight
+  optimizeParams:
+    absErr: 1e-7
+    absRelErr: 5e-7
+    elimThresh: 1e-2
+    maxIter: 1000
+    maxTime: 60000
+    minIter: 5
+    minP: 2
+    opAlpha: 57
+    opBeta: 1
+    opP: 29
+    opQ: 15
+    opS: 29
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: false
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - None
+      - 864
+      - 1296
+    - - None
+      - 832.8
+      - 1.2492e3
+    Cpb:
+    - - None
+      - 0.03616
+      - 0.05424
+    - - None
+      - 0.2072
+      - 0.3108
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id002
+      - 0
+      - 0
+      - 1
+    - *id002
+    K:
+    - - None
+      - 8000
+      - 12000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - None
+      - 0.752
+      - 1.0
+    - - 0.94
+      - 0.752
+      - 1.0
+    ka:
+    - - None
+      - 0.2496
+      - 0.3744
+    - - None
+      - 0.07592
+      - 0.11388
+    kb:
+    - - None
+      - 3.524e-05
+      - 5.286e-05
+    - - None
+      - 0.0002264
+      - 0.0003396
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    nO2:
+    - - 0
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 4
+    multiprocess: true
+  reactionParams:
+    A:
+    - - None
+      - 1.8752e12
+      - 2.8128e12
+    E:
+    - - None
+      - 144800.0
+      - 217200.0
+    Hp:
+    - - None
+      - 8.0e4
+      - 1.2e5
+    Xi:
+    - - None
+      - 0
+      - 1
+    n:
+    - - None
+      - 0.8
+      - 1.2
+    nO2:
+    - - 0
+      - 0
+      - 1
+    prodState:
+    - 1
+    reacState:
+    - 0
+    typeState:
+    - 3
+  reinitializeComplex: true
+  restart: false
+  resultsDir: ../../results/E_Glass/
+  systemDir: E:\workspace_fengchang\optimizationpython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  thermalPropertyUnits: K
+  virtualExperiment: false
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+0		265.54	8.411e-06	4.136e-03	1.000e+00	29	841
+1		538.66	2.567e-06	3.596e-03	1.000e+00	29	841
+2		819.43	2.170e-06	2.963e-03	1.000e+00	29	841
+3		1109.29	8.602e-07	2.828e-03	1.000e+00	29	841
+4		1418.50	4.658e-07	2.828e-03	1.000e+00	29	841
+5		1721.05	2.761e-07	2.828e-03	1.000e+00	29	841
+6		2021.47	1.241e-07	1.843e-03	1.000e+00	29	841
+7		2320.90	7.743e-08	1.696e-03	1.000e+00	29	841
+A	 = 2.34e+12,
+C0	 = 1.0,0.0,
+Cpa	 = 1060.35662426,1040.94601286,
+Cpb	 = 0.0437415099513,0.251215531136,
+E	 = 1.81e+05,
+Hp	 = 99441.7002031,
+K	 = 10287.6810029,100000000.0,
+Value	 = 7.74288024323e-08,
+Xi	 = 0.733808674985,
+eps	 = 0.924247330812,0.94,
+ka	 = 0.302892944149,0.0935155513727,
+kb	 = 4.39566837817e-05,0.000277320539425,
+n	 = 1.00310121977,
+nO2	 = 0.0,
+rho	 = 1683.0,1235.0,
+Results saved to E:\workspace_fengchang\optimizationPaper\config\E_Glass\../../results/E_Glass/E_GlassOldLinearTight_solution.txt
