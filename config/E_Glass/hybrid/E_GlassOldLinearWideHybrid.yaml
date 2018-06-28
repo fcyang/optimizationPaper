@@ -1,5 +1,5 @@
 name: E_GlassOldLinearWideHybrid
-resultsDir: '../../../results/E_Glass/'
+resultsDir: '../../../results/E_Glass/hybrid/'
 virtualExperiment: False
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
 reinitializeComplex: True

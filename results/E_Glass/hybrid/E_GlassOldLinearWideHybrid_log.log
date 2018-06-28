@@ -1,0 +1,417 @@
+C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\E_Glass\hybrid\../../../results/E_Glass/E_GlassOldLinearWideHybrid Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - unknowable
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../../data/E_Glass/E_GlassOldLinearNominal_0_cone_Mass.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 25
+          htc: 15
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\E_Glass\hybrid\
+  dataSources:
+    names:
+    - cone1
+    types:
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  name: E_GlassOldLinearWideHybrid
+  optimizeParams:
+    absErr: 1e-7
+    absRelErr: 5e-7
+    elimThresh: 1e-2
+    maxIter: 1000
+    maxTime: 60000
+    minIter: 5
+    minP: 2
+    opAlpha: 57
+    opBeta: 1
+    opP: 29
+    opQ: 15
+    opS: 29
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: false
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - None
+      - 972
+      - 1188
+    - - None
+      - 260.25
+      - 4164
+    Cpb:
+    - - None
+      - 0.04068
+      - 0.04972
+    - - None
+      - 0.06475
+      - 1.036
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id002
+      - 0
+      - 0
+      - 1
+    - *id002
+    K:
+    - - None
+      - 2500
+      - 40000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - None
+      - 0.235
+      - 1.0
+    - - 0.94
+      - 0.235
+      - 1.0
+    ka:
+    - - None
+      - 0.078
+      - 1.248
+    - - None
+      - 0.023725
+      - 0.3796
+    kb:
+    - - None
+      - 1.1013e-05
+      - 0.0001762
+    - - None
+      - 7.075e-05
+      - 0.001132
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    nO2:
+    - - 0
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 8
+    multiprocess: true
+  reactionParams:
+    A:
+    - - None
+      - 2.106e12
+      - 2.574e12
+    E:
+    - - None
+      - 1.629e5
+      - 1.991e5
+    Hp:
+    - - None
+      - 2.5e4
+      - 4e5
+    Xi:
+    - - None
+      - 0
+      - 1
+    n:
+    - - None
+      - 0.9
+      - 1.1
+    nO2:
+    - - 0
+      - 0
+      - 1
+    prodState:
+    - 1
+    reacState:
+    - 0
+    typeState:
+    - 3
+  reinitializeComplex: true
+  restart: false
+  resultsDir: ../../../results/E_Glass/
+  systemDir: C:\Users\Fyang\Workspace\optimization\sourceCode\optimizationpython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  virtualExperiment: false
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+0		190.67	2.974e-05	5.291e-03	1.000e+00	29	841
+1		436.03	2.170e-05	5.243e-03	1.000e+00	29	841
+2		687.22	7.797e-06	5.154e-03	1.000e+00	29	841
+3		947.47	3.733e-06	5.154e-03	1.000e+00	29	841
+4		1213.34	2.280e-06	4.882e-03	1.000e+00	29	841
+5		1494.59	2.056e-06	5.066e-03	1.000e+00	29	841
+6		1773.92	1.971e-06	3.621e-03	1.000e+00	29	841
+7		2058.07	1.884e-06	3.475e-03	1.000e+00	29	841
+8		2367.15	1.700e-06	3.400e-03	1.000e+00	29	841
+9		2679.88	1.657e-06	3.315e-03	1.000e+00	29	841
+10		3008.98	1.482e-06	4.021e-03	1.000e+00	29	841
+11		3343.58	1.436e-06	5.287e-03	1.000e+00	29	841
+12		3699.82	1.290e-06	3.869e-03	1.000e+00	29	841
+13		4062.54	1.231e-06	4.046e-03	1.000e+00	29	841
+14		4428.10	1.138e-06	3.605e-03	1.000e+00	29	841
+15		4799.47	1.084e-06	5.291e-03	1.000e+00	29	841
+16		5179.80	1.057e-06	5.290e-03	2.065e-05	29	841
+17		5576.61	1.027e-06	3.995e-03	6.770e-06	29	841
+18		5976.93	1.019e-06	2.694e-03	2.714e-06	29	841
+19		6388.49	1.006e-06	4.892e-03	1.274e-06	29	841
+20		6822.95	9.908e-07	5.149e-03	1.066e-06	29	841
+21		7273.87	9.886e-07	5.283e-03	9.826e-07	29	841
+22		7723.55	9.885e-07	5.200e-03	8.958e-07	29	841
+23		8193.30	9.883e-07	4.929e-03	7.116e-07	29	841
+24		8675.11	9.882e-07	5.287e-03	6.692e-07	29	841
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 7.22e-03 replaced with parameter deviation 1.64
+25		9170.71	9.882e-07	1.208e-02	4.935e-07	29	841
+26		9699.33	9.882e-07	5.286e-03	4.481e-07	29	841
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 5.37e-03 replaced with parameter deviation 1.59
+27		10219.40	9.882e-07	1.195e-02	3.015e-07	29	841
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 5.09e-03 replaced with parameter deviation 1.77
+28		10797.35	9.881e-07	1.022e-02	2.425e-07	29	841
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 3.40e-03 replaced with parameter deviation 1.54
+29		11394.54	9.881e-07	1.087e-02	1.499e-07	29	841
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 9.99e-03 replaced with parameter deviation 1.63
+30		12013.59	9.881e-07	1.146e-02	9.571e-08	29	841
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 6.32e-03 replaced with parameter deviation 1.51
+31		12656.07	9.881e-07	1.056e-02	6.918e-08	29	841
+32		13336.02	9.881e-07	5.291e-03	3.891e-08	29	841
+33		14022.50	9.879e-07	5.288e-03	3.156e-08	29	841
+34		14733.26	9.878e-07	5.288e-03	1.810e-08	29	841
+35		15488.02	9.877e-07	5.115e-03	3.053e-09	29	841
+36		16268.61	9.877e-07	5.280e-03	9.067e-10	29	841
+37		17075.67	9.877e-07	5.276e-03	8.336e-10	29	841
+38		17906.94	9.877e-07	5.280e-03	5.862e-10	29	841
+39		18754.95	9.877e-07	4.689e-03	5.908e-10	29	841
+40		19589.79	9.876e-07	5.290e-03	6.067e-10	29	841
+41		20431.00	9.384e-07	3.283e-03	4.982e-08	29	841
+42		21315.61	9.384e-07	5.289e-03	4.977e-08	29	841
+43		22187.79	9.203e-07	5.222e-03	6.787e-08	29	841
+44		23111.18	8.461e-07	5.259e-03	1.420e-07	29	841
+45		24030.45	7.657e-07	4.344e-03	2.224e-07	29	841
+46		24954.57	7.472e-07	2.172e-03	2.410e-07	29	841
+47		25913.64	7.182e-07	4.769e-03	2.699e-07	29	841
+48		26874.89	6.336e-07	4.201e-03	3.543e-07	29	841
+49		27835.04	5.923e-07	2.252e-03	3.955e-07	29	841
+50		28850.86	5.543e-07	5.036e-03	4.335e-07	29	841
+51		29907.61	5.347e-07	5.291e-03	4.530e-07	29	841
+52		31014.49	5.213e-07	2.423e-03	4.665e-07	29	841
+53		32130.33	5.144e-07	5.282e-03	4.733e-07	29	841
+54		33306.62	4.501e-07	3.845e-03	5.376e-07	29	841
+55		34532.74	4.501e-07	2.508e-03	5.375e-07	29	841
+56		35791.94	3.260e-07	4.811e-03	6.123e-07	29	841
+57		37084.91	2.963e-07	5.239e-03	6.420e-07	29	841
+58		38449.57	2.696e-07	4.920e-03	6.506e-07	29	841
+59		39876.54	2.568e-07	4.873e-03	5.893e-07	29	841
+60		41291.23	2.398e-07	4.683e-03	5.259e-07	29	841
+61		42715.48	2.374e-07	2.964e-03	5.098e-07	29	841
+62		44148.27	2.159e-07	1.045e-03	5.023e-07	29	841
+63		45607.29	1.962e-07	5.138e-03	4.375e-07	29	841
+64		47144.24	1.188e-07	5.099e-03	4.736e-07	29	841
+65		48828.15	8.228e-08	1.908e-03	4.720e-07	29	841
+A	 = 2.19e+12,
+C0	 = 1.0,0.0,
+Cpa	 = 1174.2121276496835,1355.3408782514998,
+Cpb	 = 0.04244192783154354,0.2612743608503119,
+E	 = 1.78e+05,
+Hp	 = 111505.38646189752,
+K	 = 25483.19785841499,100000000.0,
+Value	 = 8.228174490277684e-08,
+Xi	 = 0.7338086749851456,
+eps	 = 0.9581866156753343,0.94,
+ka	 = 0.27004725294725773,0.20162626119914195,
+kb	 = 0.00016881454492321477,0.00018006513880179116,
+n	 = 0.9851304534824454,
+nO2	 = 0.0,
+rho	 = 1683.0,1235.0,
+Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\E_Glass\hybrid\../../../results/E_Glass/E_GlassOldLinearWideHybrid_solution.txt
