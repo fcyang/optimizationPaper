@@ -1,5 +1,5 @@
-name: E_GlassOldConstWide50KW
-resultsDir: '../../../results/E_Glass/comparison/'
+name: E_GlassOldConstNominal15KW
+resultsDir: '../../../results/E_Glass/'
 virtualExperiment: True
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
 reinitializeComplex: False
@@ -16,8 +16,8 @@ cone1:
   frontBoundaryConditions:
     htc: 15
     Tamb: 25
-    heatFlux: 50
-  file: '../../../data/E_Glass/E_GlassOldConstNominal50KW_0_cone_Mass.csv'
+    heatFlux: 15
+  file: '../../../data/E_Glass/E_GlassFake3.csv'
   time: 0
   Tinit: 25
   width1: 0.1016
@@ -34,26 +34,26 @@ processParams:
 phaseParams:
   phases: ['virgin', 'char']
   C0:   [[1,      0,      1], [0,  1189,   1189]      ]
-  ka:   [[0.935,     0.10,   0.30], [0.146,  1189,   1189]   ]
+  ka:   [[0.3,     0.10,   0.30], [0.2,  1189,   1189]   ]
   kb:   [[0.0,      0.0,    0.0], [0.0,  0.0,   0.0]     ]
   kc:   [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
   kd:   [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
   rho:  [[1683,  1189,   1189], [1235,  1189,   1189]   ]
-  Cpa:  [[5276.66,     1000,   2800], [405.58,  1189,   1189]   ]
+  Cpa:  [[1500,     1000,   2800], [1100,  1189,   1189]   ]
   Cpb:  [[0.0,      0.0,    0.0], [0.0,  1189,   1189]    ]
   Cpc:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
   Cpd:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
-  eps:  [[1.0,     0.75,   1.0], [0.94,  1189,   1189]    ]
-  K:    [[2500.18,     500,    3000], [1e8,  1189,   1189]   ]
+  eps:  [[0.94,     0.75,   1.0], [0.94,  1189,   1189]    ]
+  K:    [[10000,     500,    3000], [1e8,  1189,   1189]   ]
   nO2:  [[0,        0,      1], [0,  1189,   1189]      ]
 dataSources:
   names: ['cone1']
   types: ['cone']
 reactionParams:
-  A:   [[1.65E+12,1e6,1e14]]
-  E:   [[1.30E+05,1.2e4,2.0e5]]
-  n:   [[2.297,5e-1,4e0]]
-  Hp:  [[178066.2,1e5,1e7]]
+  A:   [[2.344e12,1e6,1e14]]
+  E:   [[1.81e5,1.2e4,2.0e5]]
+  n:   [[1.0,5e-1,4e0]]
+  Hp:  [[100000,1e5,1e7]]
   nO2: [[0,0,1]]
   Xi:  [[None,0,1]]
   typeState: [3]

@@ -1,4 +1,4 @@
-name: E_GlassOldConstWide50KW
+name: E_GlassOldConstWide15KW
 resultsDir: '../../../results/E_Glass/comparison/'
 virtualExperiment: True
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
@@ -16,8 +16,8 @@ cone1:
   frontBoundaryConditions:
     htc: 15
     Tamb: 25
-    heatFlux: 50
-  file: '../../../data/E_Glass/E_GlassOldConstNominal50KW_0_cone_Mass.csv'
+    heatFlux: 15
+  file: '../../../data/E_Glass/E_GlassOldConstNominal15KW_0_cone_Mass.csv'
   time: 0
   Tinit: 25
   width1: 0.1016
