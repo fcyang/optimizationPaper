@@ -1,0 +1,62 @@
+name: PMMAConstNominal50KW
+resultsDir: '../../../results/PMMA/'
+virtualExperiment: True
+fdsPath: 'C:\Program Files\FDS\FDS6\bin'
+reinitializeComplex: False
+outputParams:
+  saveAllSamples: True
+cone1:
+  activePhaseVars: ['C0','rho','ka','kb','kc','kd','ke','Cpa','Cpb','Cpc','Cpd','Cpe','eps','K']
+  activeReactionVars: ['A','E','n','Hp','nO2','Xi']
+  weight: 1.0
+  backBoundaryConditions:
+    type: 'INSULATED'
+    htc: 'Auto'
+    Tamb: 25
+  frontBoundaryConditions:
+    htc: 15
+    Tamb: 25
+    heatFlux: 50
+  file: '../../../data/PMMA/PMMAConstNominal_0_cone_Mass.csv'
+  time: 0
+  heatFlux: 20
+  Tinit: 25
+  width1: 0.1016
+  width2: 0.1016
+  initialThickness: 0.008
+  names: ['Mass']
+  columns: [1]
+  weights: [1]
+  depths: [0]
+  types: [1]
+processParams:
+  multiprocess: True
+  maxProcesses: 4
+phaseParams:
+  phases: ['virgin']
+  C0:   [[1.0,      0,      1]      ]
+  ka:   [[0.249,     0.10,   0.30]   ]
+  kb:   [[0.0,      0.0,    0.0]    ]
+  kc:   [[0.0,      0.0,    0.0]    ]
+  kd:   [[0.0,      0.0,    0.0]    ]
+  rho:  [[1189.37,  1189.37,   1189.37]   ]
+  Cpa:  [[1886,     1000,   2800]   ]
+  Cpb:  [[0.0,      0.0,    0.0]    ]
+  Cpc:  [[0.0,      0.0,    0.0]    ]
+  Cpd:  [[0.0,      0.0,    0.0]    ]
+  eps:  [[0.8,     0.75,   1.0]    ]
+  K:    [[1000,     500,    3000]   ]
+  nO2:  [[0,        0,      1]      ]
+dataSources:
+  names: ['cone1']
+  types: ['cone']
+reactionParams:
+  A:   [[5.08e+10,1e6,1e14]]
+  E:   [[1.57e+05,1.2e4,2.0e5]]
+  n:   [[0.91,5e-1,4e0]]
+  Hp:  [[788000,1e5,1e7]]
+  nO2: [[0,0,1]]
+  Xi: [[0,0,1]]
+  typeState: [3]
+  reacState: [0]
+  prodState: [-1]

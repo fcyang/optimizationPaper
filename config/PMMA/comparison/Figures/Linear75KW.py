@@ -17,17 +17,17 @@ import pandas as pd
 # Program space
 # %%
 # Read data from csv files
-fileName = 'PMMALinearNominal35KW_0_cone_Mass.csv'
+fileName = 'PMMALinearNominal75KW_0_cone_Mass.csv'
 df = pd.read_csv(fileName, skiprows=0)
 dfMassNorminal = df[['# Time [s]',' Mass [Kg]']]  # select time and MLR for 1D plot
 dfMassNorminal = np.transpose(np.array(dfMassNorminal))
 
-fileName = 'PMMALinearWide35KW_0_cone_Mass.csv'
+fileName = 'PMMALinearWide75KW_0_cone_Mass.csv'
 df = pd.read_csv(fileName, skiprows=0)
 dfMassWide = df[['# Time [s]',' Mass [Kg]']]  # select time and MLR for 1D plot
 dfMassWide = np.transpose(np.array(dfMassWide))
 
-fileName = 'PMMALinearHybrid35KW_0_cone_Mass.csv'
+fileName = 'PMMALinearHybrid75KW_0_cone_Mass.csv'
 df = pd.read_csv(fileName, skiprows=0)
 dfMassHybrid = df[['# Time [s]',' Mass [Kg]']]  # select time and MLR for 1D plot
 dfMassHybrid = np.transpose(np.array(dfMassHybrid))
@@ -72,30 +72,9 @@ H = plt.legend(leg, loc='upper right', prop={'size': 16}, numpoints=1,
                frameon=False)
 plt.rc('xtick', labelsize=16)
 plt.rc('ytick', labelsize=16)
-plt.axis([0, 1000, -0.05, 1.05])
+plt.axis([0, 400, 0.00, 1.05])
 # Save figures
 plt.tight_layout()
-plt.savefig('PMMA_Linear_35kW_Mass_Comparison.png', dpi=300)
-plt.show()
-plt.close()
-
-# %%
-# Zoom in
-fig1 = plt.figure(figsize=(fwidth, fheight))
-plt.plot(dfMassNorminal[0][500:800], dfMassNorminal[1][500:800], '-k', marker='o', markerfacecolor='none', markevery=30, markersize=15, markeredgewidth=2, linewidth=2.0)
-plt.plot(dfMassHybrid[0][500:800], dfMassHybrid[1][500:800], '--', marker='^', markerfacecolor='none', markevery=30, color=colors[0], markersize=15, markeredgewidth=2, linewidth=2.0)
-plt.plot(dfMassWide[0][500:800], dfMassWide[1][500:800], '-.', marker='v', markerfacecolor='none', markevery=30, color=colors[1], markersize=15, markeredgewidth=2, linewidth=2.0)
-# plt.xlabel('Time (s)', fontname='Times New Roman', fontsize=fsize)
-# plt.ylabel(r'Normalized Mass', fontname='Times New Roman', fontsize=fsize)
-# leg = ('Virtual', 'Hybrid', 'Full')
-# H = plt.legend(leg, loc='upper right', prop={'size': 16}, numpoints=1,
-               # frameon=False)
-plt.rc('xtick', labelsize=16)
-plt.rc('ytick', labelsize=16)
-plt.tick_params(axis=u'both', which=u'both',length=0,colors='w')
-plt.axis([500, 700, 0.2, 0.65])
-# Save figures
-plt.tight_layout()
-plt.savefig('PMMA_Linear_35kW_Mass_Comparison_ZoomIn.png', dpi=300)
+plt.savefig('PMMA_Linear_75kW_Mass_Comparison.png', dpi=300)
 plt.show()
 plt.close()

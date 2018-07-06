@@ -1,0 +1,294 @@
+D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\PMMA\dataGeneration\../../../results/PMMA/PMMAConstNominal100KW Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - known
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../../data/PMMA/PMMAConstNominal_0_cone_Mass.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 100
+          htc: 15
+      heatFlux: 20
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\PMMA\dataGeneration\
+  dataSources:
+    names:
+    - cone1
+    types:
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  name: PMMAConstNominal100KW
+  optimizeParams:
+    absErr: 1e-9
+    absRelErr: 1e-6
+    elimThresh: 1e-2
+    maxIter: -1
+    maxTime: -1
+    minIter: -1
+    minP: 2
+    opAlpha: 1
+    opBeta: 1
+    opP: 1
+    opQ: 1
+    opS: 1
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: true
+  phaseParams:
+    C0:
+    - - 1.0
+      - 0
+      - 1
+    Cpa:
+    - - 1886
+      - 1000
+      - 2800
+    Cpb:
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - - 0
+      - 0
+      - 1
+    K:
+    - - 1000
+      - 500
+      - 3000
+    eps:
+    - - 0.8
+      - 0.75
+      - 1.0
+    ka:
+    - - 0.249
+      - 0.1
+      - 0.3
+    kb:
+    - - 0.0
+      - 0.0
+      - 0.0
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - - 0
+      - 0
+      - 1
+    nO2:
+    - - 0
+      - 0
+      - 1
+    phases:
+    - virgin
+    rho:
+    - - 1189.37
+      - 1189.37
+      - 1189.37
+  processParams:
+    maxProcesses: 4
+    multiprocess: true
+  reactionParams:
+    A:
+    - - 50800000000.0
+      - 1e6
+      - 1e14
+    E:
+    - - 157000.0
+      - 1.2e4
+      - 2.0e5
+    Hp:
+    - - 788000
+      - 1e5
+      - 1e7
+    Xi:
+    - - 0
+      - 0
+      - 1
+    n:
+    - - 0.91
+      - 5e-1
+      - 4e0
+    nO2:
+    - - 0
+      - 0
+      - 1
+    prodState:
+    - -1
+    reacState:
+    - 0
+    typeState:
+    - 3
+  reinitializeComplex: false
+  restart: false
+  resultsDir: ../../../results/PMMA/
+  systemDir: D:\workspace\JENSENHUGHES\optimization\sourceCode\optimizationpython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  virtualExperiment: true
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+A	 = 5.08e+10,
+C0	 = 1.0,
+Cpa	 = 1886.0,
+E	 = 1.57e+05,
+Hp	 = 788000.0,
+K	 = 1000.0,
+Value	 = 0.012880197296992794,
+Xi	 = 0.0,
+eps	 = 0.8,
+ka	 = 0.249,
+n	 = 0.91,
+nO2	 = 0.0,
+rho	 = 1189.37,
+Results saved to D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\PMMA\dataGeneration\../../../results/PMMA/PMMAConstNominal100KW_solution.txt
