@@ -1,4 +1,4 @@
-C:\Users\Fyang\Workspace\optimization\optimizationPaper\figures\E_Glass\../../results/E_Glass/comparison/E_GlassOldLinearWide100KW Log file
+C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\E_Glass\multiHeatFlux\../../../results/E_Glass/multiHeatFlux/E_GlassOldLinearWide25_50KW Log file
 !!python/object/apply:collections.defaultdict
 args:
 - &id001 !!python/name:builtins.bool ''
@@ -103,14 +103,14 @@ dictitems:
       - 1
       depths:
       - 0
-      file: ../../data/E_Glass/E_GlassOldLinearNominal100KW_0_cone_Mass.csv
+      file: ../../../data/E_Glass/E_GlassOldLinearNominal_0_cone_Mass.csv
       finalThickness: false
       frontBoundaryConditions: !!python/object/apply:collections.defaultdict
         args:
         - *id001
         dictitems:
           Tamb: 25
-          heatFlux: 100
+          heatFlux: 25
           htc: 15
       initialThickness: 0.008
       names:
@@ -123,11 +123,71 @@ dictitems:
       - 1
       width1: 0.1016
       width2: 0.1016
-  configDir: C:\Users\Fyang\Workspace\optimization\optimizationPaper\figures\E_Glass\
+  cone2: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../../data/E_Glass/E_GlassOldLinearNominal50KW_0_cone_Mass.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 50
+          htc: 15
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\E_Glass\multiHeatFlux\
   dataSources:
     names:
     - cone1
+    - cone2
     types:
+    - cone
     - cone
   dsc:
     activePhaseVars:
@@ -145,24 +205,24 @@ dictitems:
     dscO2: None
     weight: 1.0
   fdsPath: C:\Program Files\FDS\FDS6\bin
-  name: E_GlassOldLinearWide100KW
+  name: E_GlassOldLinearWide25_50KW
   optimizeParams:
-    absErr: 1e-9
-    absRelErr: 1e-6
+    absErr: 1e-7
+    absRelErr: 5e-7
     elimThresh: 1e-2
-    maxIter: -1
-    maxTime: -1
-    minIter: -1
+    maxIter: 1000
+    maxTime: 60000
+    minIter: 5
     minP: 2
-    opAlpha: 1
+    opAlpha: 57
     opBeta: 1
-    opP: 1
-    opQ: 1
-    opS: 1
+    opP: 29
+    opQ: 15
+    opS: 29
     relErr: 1e-12
     relIter: 15
   outputParams:
-    saveAllSamples: true
+    saveAllSamples: false
   phaseParams:
     C0:
     - - 1
@@ -172,19 +232,19 @@ dictitems:
       - 1189
       - 1189
     Cpa:
-    - - 1082
-      - 1000
-      - 2800
-    - - 1045
-      - 1189
-      - 1189
+    - - None
+      - 270
+      - 4320
+    - - None
+      - 260.25
+      - 4164
     Cpb:
-    - - 0.0457
-      - 0.0
-      - 0.0
-    - - 0.2564
-      - 1189
-      - 1189
+    - - None
+      - 0.0113
+      - 0.1808
+    - - None
+      - 0.06475
+      - 1.036
     Cpc:
     - - 0.0
       - 0.0
@@ -206,33 +266,33 @@ dictitems:
       - 1
     - *id002
     K:
-    - - 10246.65
-      - 500
-      - 3000
+    - - None
+      - 2500
+      - 40000
     - - 1e8
       - 1189
       - 1189
     eps:
-    - - 0.9417
-      - 0.75
+    - - None
+      - 0.235
       - 1.0
     - - 0.94
-      - 1189
-      - 1189
+      - 0.235
+      - 1.0
     ka:
-    - - 0.313
-      - 0.1
-      - 0.3
-    - - 0.0834
-      - 1189
-      - 1189
+    - - None
+      - 0.078
+      - 1.248
+    - - None
+      - 0.023725
+      - 0.3796
     kb:
-    - - 4.24e-05
-      - 0.0
-      - 0.0
-    - - 0.0003
-      - 0.0
-      - 0.0
+    - - None
+      - 1.1013e-05
+      - 0.0001762
+    - - None
+      - 7.075e-05
+      - 0.001132
     kc:
     - - 0.0
       - 0.0
@@ -275,25 +335,25 @@ dictitems:
     multiprocess: true
   reactionParams:
     A:
-    - - 3.43e12
-      - 1e6
-      - 1e14
+    - - None
+      - 5.86e11
+      - 9.376e12
     E:
-    - - 1.83e5
-      - 1.2e4
-      - 2.0e5
+    - - None
+      - 4.525e4
+      - 7.24e5
     Hp:
-    - - 99847.41
-      - 1e5
-      - 1e7
+    - - None
+      - 2.5e4
+      - 4e5
     Xi:
     - - None
       - 0
       - 1
     n:
-    - - 1.013
-      - 5e-1
-      - 4e0
+    - - None
+      - 0.25
+      - 4.0
     nO2:
     - - 0
       - 0
@@ -304,9 +364,9 @@ dictitems:
     - 0
     typeState:
     - 3
-  reinitializeComplex: false
+  reinitializeComplex: true
   restart: false
-  resultsDir: ../../results/E_Glass/comparison/
+  resultsDir: ../../../results/E_Glass/multiHeatFlux/
   systemDir: C:\Users\Fyang\Workspace\optimization\sourceCode\optimizationpython\src
   tga:
     activePhaseVars:
@@ -319,21 +379,14 @@ dictitems:
     tgaO2: None
     tgaOpt: 1
     weight: 1.0
-  virtualExperiment: true
+  virtualExperiment: false
 Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
-A	 = 3.43e+12,
-C0	 = 1.0,0.0,
-Cpa	 = 1082.0,1045.0,
-Cpb	 = 0.0457,0.2564,
-E	 = 1.83e+05,
-Hp	 = 99847.41,
-K	 = 10246.65,100000000.0,
-Value	 = 3.0282466080018293e-06,
-Xi	 = 0.7338086749851456,
-eps	 = 0.9417,0.94,
-ka	 = 0.313,0.0834,
-kb	 = 4.24e-05,0.0003,
-n	 = 1.013,
-nO2	 = 0.0,
-rho	 = 1683.0,1235.0,
-Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\figures\E_Glass\../../results/E_Glass/comparison/E_GlassOldLinearWide100KW_solution.txt
+0		326.58	2.233e-04	1.150e-02	1.000e+00	29	841
+1		681.42	1.254e-04	1.150e-02	1.000e+00	29	841
+2		1025.89	9.406e-05	1.150e-02	1.000e+00	29	841
+3		1405.36	8.048e-05	1.150e-02	1.000e+00	29	841
+4		1783.12	6.927e-05	1.150e-02	1.000e+00	29	841
+5		2145.47	6.264e-05	1.150e-02	1.000e+00	29	841
+6		2524.61	5.587e-05	1.150e-02	1.000e+00	29	841
+7		2914.90	4.674e-05	1.150e-02	1.000e+00	29	841
+8		3322.78	3.624e-05	1.150e-02	1.000e+00	29	841

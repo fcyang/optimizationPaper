@@ -1,4 +1,4 @@
-C:\Users\Fyang\Workspace\optimization\optimizationPaper\figures\E_Glass\../../results/E_Glass/comparison/E_GlassOldLinearWide100KW Log file
+C:\Users\Fyang\Workspace\optimization\optimizationPaper\figures\E_Glass\../../results/E_Glass/comparison/E_GlassOldLinearMass_T_100KW Log file
 !!python/object/apply:collections.defaultdict
 args:
 - &id001 !!python/name:builtins.bool ''
@@ -145,7 +145,7 @@ dictitems:
     dscO2: None
     weight: 1.0
   fdsPath: C:\Program Files\FDS\FDS6\bin
-  name: E_GlassOldLinearWide100KW
+  name: E_GlassOldLinearMass_T_100KW
   optimizeParams:
     absErr: 1e-9
     absRelErr: 1e-6
@@ -336,4 +336,4 @@ kb	 = 4.24e-05,0.0003,
 n	 = 1.013,
 nO2	 = 0.0,
 rho	 = 1683.0,1235.0,
-Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\figures\E_Glass\../../results/E_Glass/comparison/E_GlassOldLinearWide100KW_solution.txt
+Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\figures\E_Glass\../../results/E_Glass/comparison/E_GlassOldLinearMass_T_100KW_solution.txt
