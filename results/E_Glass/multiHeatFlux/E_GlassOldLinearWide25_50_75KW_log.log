@@ -1,0 +1,918 @@
+D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\E_Glass\multiHeatFlux\../../../results/E_Glass/multiHeatFlux/E_GlassOldLinearWide25_50_75KW Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - unknowable
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../../data/E_Glass/E_GlassOldLinearNominal_0_cone_Mass.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 25
+          htc: 15
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  cone2: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../../data/E_Glass/E_GlassOldLinearNominal50KW_0_cone_Mass.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 50
+          htc: 15
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  cone3: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../../data/E_Glass/E_GlassOldLinearNominal75KW_0_cone_Mass.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 75
+          htc: 15
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\E_Glass\multiHeatFlux\
+  dataSources:
+    names:
+    - cone1
+    - cone2
+    - cone3
+    types:
+    - cone
+    - cone
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  name: E_GlassOldLinearWide25_50_75KW
+  optimizeParams:
+    absErr: 1e-7
+    absRelErr: 5e-7
+    elimThresh: 1e-2
+    maxIter: 1000
+    maxTime: 60000
+    minIter: 5
+    minP: 2
+    opAlpha: 57
+    opBeta: 1
+    opP: 29
+    opQ: 15
+    opS: 29
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: false
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - None
+      - 270
+      - 4320
+    - - None
+      - 260.25
+      - 4164
+    Cpb:
+    - - None
+      - 0.0113
+      - 0.1808
+    - - None
+      - 0.06475
+      - 1.036
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id002
+      - 0
+      - 0
+      - 1
+    - *id002
+    K:
+    - - None
+      - 2500
+      - 40000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - None
+      - 0.235
+      - 1.0
+    - - 0.94
+      - 0.235
+      - 1.0
+    ka:
+    - - None
+      - 0.078
+      - 1.248
+    - - None
+      - 0.023725
+      - 0.3796
+    kb:
+    - - None
+      - 1.1013e-05
+      - 0.0001762
+    - - None
+      - 7.075e-05
+      - 0.001132
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    nO2:
+    - - 0
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 8
+    multiprocess: true
+  reactionParams:
+    A:
+    - - None
+      - 5.86e11
+      - 9.376e12
+    E:
+    - - None
+      - 4.525e4
+      - 7.24e5
+    Hp:
+    - - None
+      - 2.5e4
+      - 4e5
+    Xi:
+    - - None
+      - 0
+      - 1
+    n:
+    - - None
+      - 0.25
+      - 4.0
+    nO2:
+    - - 0
+      - 0
+      - 1
+    prodState:
+    - 1
+    reacState:
+    - 0
+    typeState:
+    - 3
+  reinitializeComplex: true
+  restart: false
+  resultsDir: ../../../results/E_Glass/multiHeatFlux/
+  systemDir: D:\workspace\JENSENHUGHES\optimization\sourceCode\optimizationpython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  virtualExperiment: false
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+0		538.48	4.956e-04	1.791e-02	1.000e+00	29	841
+1		1098.62	2.457e-04	1.791e-02	1.000e+00	29	841
+2		1662.20	2.087e-04	1.791e-02	1.000e+00	29	841
+3		2237.78	1.521e-04	1.791e-02	1.000e+00	29	841
+4		2832.37	1.296e-04	1.791e-02	1.000e+00	29	841
+5		3452.15	9.764e-05	1.791e-02	1.000e+00	29	841
+6		4068.02	8.441e-05	1.791e-02	1.000e+00	29	841
+7		4697.97	7.746e-05	1.791e-02	1.000e+00	29	841
+8		5353.10	7.303e-05	1.791e-02	1.000e+00	29	841
+9		6002.60	7.006e-05	1.650e-02	1.000e+00	29	841
+10		6657.96	6.587e-05	1.308e-02	1.000e+00	29	841
+11		7318.32	6.192e-05	1.130e-02	1.000e+00	29	841
+12		7965.48	4.453e-05	1.787e-02	1.000e+00	29	841
+13		8600.33	3.160e-05	1.266e-02	1.000e+00	29	841
+14		9226.76	2.386e-05	1.791e-02	1.000e+00	29	841
+15		9868.57	1.784e-05	1.791e-02	1.000e+00	29	841
+16		10521.42	1.374e-05	1.791e-02	2.320e-04	29	841
+17		11201.52	1.282e-05	1.791e-02	1.959e-04	29	841
+18		11891.79	1.208e-05	1.791e-02	1.400e-04	29	841
+19		12566.09	1.139e-05	1.791e-02	1.183e-04	29	841
+20		13228.63	1.046e-05	1.723e-02	8.718e-05	29	841
+21		13924.74	9.743e-06	1.791e-02	7.467e-05	29	841
+22		14611.02	8.695e-06	1.791e-02	6.876e-05	29	841
+23		15297.83	6.918e-06	1.791e-02	6.611e-05	29	841
+24		15976.07	5.787e-06	1.791e-02	6.427e-05	29	841
+25		16638.35	5.451e-06	1.791e-02	6.042e-05	29	841
+26		17268.76	4.216e-06	1.668e-02	5.771e-05	29	841
+27		17921.97	3.219e-06	1.791e-02	4.131e-05	29	841
+28		18578.70	1.993e-06	1.791e-02	2.961e-05	29	841
+29		19261.96	1.188e-06	1.791e-02	2.267e-05	29	841
+30		19953.05	7.546e-07	1.791e-02	1.709e-05	29	841
+31		20682.03	6.651e-07	1.779e-02	1.308e-05	29	841
+32		21391.95	6.241e-07	5.820e-03	1.220e-05	29	841
+33		22096.08	6.095e-07	6.445e-04	1.147e-05	29	841
+34		22811.72	5.999e-07	3.370e-04	1.079e-05	29	841
+35		23532.28	5.849e-07	6.084e-03	9.873e-06	29	841
+36		24237.56	5.681e-07	1.791e-02	9.174e-06	29	841
+37		24928.15	5.532e-07	1.035e-02	8.142e-06	29	841
+38		25595.15	5.283e-07	5.657e-03	6.390e-06	29	841
+39		26256.54	4.966e-07	1.771e-02	5.291e-06	29	841
+40		26926.17	4.423e-07	1.153e-02	5.009e-06	29	841
+41		27580.45	4.241e-07	3.506e-04	3.792e-06	29	841
+Reinitializing complex 27, running simulations.
+Complex 27 with parameter deviation 9.41e-03 replaced with parameter deviation 1.69
+Reinitializing complex 24, running simulations.
+Complex 24 with parameter deviation 8.19e-03 replaced with parameter deviation 1.64
+Reinitializing complex 23, running simulations.
+Complex 23 with parameter deviation 8.87e-03 replaced with parameter deviation 1.71
+42		28228.76	4.000e-07	5.156e-02	2.819e-06	29	841
+Reinitializing complex 26, running simulations.
+Complex 26 with parameter deviation 7.64e-03 replaced with parameter deviation 1.54
+Reinitializing complex 25, running simulations.
+Complex 25 with parameter deviation 8.40e-03 replaced with parameter deviation 1.39
+43		28905.35	3.774e-07	3.340e-02	1.615e-06	29	841
+44		29583.27	3.730e-07	3.340e-02	8.155e-07	29	841
+Reinitializing complex 26, running simulations.
+Complex 26 with parameter deviation 7.29e-03 replaced with parameter deviation 1.52
+45		30232.48	3.703e-07	4.405e-02	3.844e-07	29	841
+46		30881.19	3.626e-07	1.791e-02	3.025e-07	29	841
+Reinitializing complex 26, running simulations.
+Complex 26 with parameter deviation 7.71e-03 replaced with parameter deviation 1.62
+Reinitializing complex 25, running simulations.
+Complex 25 with parameter deviation 8.19e-03 replaced with parameter deviation 1.54
+47		31529.77	3.561e-07	2.217e-02	2.680e-07	29	841
+Reinitializing complex 26, running simulations.
+Complex 26 with parameter deviation 6.97e-03 replaced with parameter deviation 1.68
+Reinitializing complex 25, running simulations.
+Complex 25 with parameter deviation 3.92e-03 replaced with parameter deviation 1.58
+Reinitializing complex 24, running simulations.
+Complex 24 with parameter deviation 9.58e-03 replaced with parameter deviation 1.55
+48		32196.07	3.493e-07	3.058e-02	2.603e-07	29	841
+Reinitializing complex 27, running simulations.
+Complex 27 with parameter deviation 6.52e-03 replaced with parameter deviation 1.53
+Reinitializing complex 26, running simulations.
+Complex 26 with parameter deviation 8.95e-03 replaced with parameter deviation 1.58
+Reinitializing complex 25, running simulations.
+Complex 25 with parameter deviation 3.74e-03 replaced with parameter deviation 1.46
+49		32853.92	3.462e-07	5.156e-02	2.537e-07	29	841
+Reinitializing complex 26, running simulations.
+Complex 26 with parameter deviation 6.57e-03 replaced with parameter deviation 1.70
+Reinitializing complex 25, running simulations.
+Complex 25 with parameter deviation 6.43e-03 replaced with parameter deviation 1.57
+Reinitializing complex 24, running simulations.
+Complex 24 with parameter deviation 4.05e-03 replaced with parameter deviation 1.74
+Reinitializing complex 22, running simulations.
+Complex 22 with parameter deviation 8.02e-03 replaced with parameter deviation 1.71
+50		33507.11	3.362e-07	3.663e-02	2.486e-07	29	841
+Reinitializing complex 27, running simulations.
+Complex 27 with parameter deviation 8.10e-03 replaced with parameter deviation 1.48
+Reinitializing complex 26, running simulations.
+Complex 26 with parameter deviation 7.41e-03 replaced with parameter deviation 1.66
+Reinitializing complex 25, running simulations.
+Complex 25 with parameter deviation 6.96e-03 replaced with parameter deviation 1.36
+Reinitializing complex 24, running simulations.
+Complex 24 with parameter deviation 3.51e-03 replaced with parameter deviation 1.62
+Reinitializing complex 21, running simulations.
+Complex 21 with parameter deviation 8.00e-03 replaced with parameter deviation 1.76
+Reinitializing complex 19, running simulations.
+Complex 19 with parameter deviation 6.50e-03 replaced with parameter deviation 1.64
+51		34173.01	3.218e-07	3.121e-02	2.462e-07	29	841
+Reinitializing complex 21, running simulations.
+Complex 21 with parameter deviation 6.03e-03 replaced with parameter deviation 1.52
+Reinitializing complex 20, running simulations.
+Complex 20 with parameter deviation 6.71e-03 replaced with parameter deviation 1.91
+Reinitializing complex 19, running simulations.
+Complex 19 with parameter deviation 4.15e-03 replaced with parameter deviation 1.68
+52		34874.29	3.105e-07	3.140e-02	2.428e-07	29	841
+Reinitializing complex 21, running simulations.
+Complex 21 with parameter deviation 6.03e-03 replaced with parameter deviation 1.88
+Reinitializing complex 20, running simulations.
+Complex 20 with parameter deviation 5.72e-03 replaced with parameter deviation 1.58
+Reinitializing complex 19, running simulations.
+Complex 19 with parameter deviation 3.60e-03 replaced with parameter deviation 1.75
+53		35580.87	2.984e-07	2.921e-02	2.300e-07	29	841
+Reinitializing complex 21, running simulations.
+Complex 21 with parameter deviation 9.70e-03 replaced with parameter deviation 1.57
+Reinitializing complex 19, running simulations.
+Complex 19 with parameter deviation 2.93e-03 replaced with parameter deviation 1.72
+54		36304.71	2.888e-07	4.768e-02	2.078e-07	29	841
+Reinitializing complex 21, running simulations.
+Complex 21 with parameter deviation 7.49e-03 replaced with parameter deviation 1.61
+Reinitializing complex 20, running simulations.
+Complex 20 with parameter deviation 9.25e-03 replaced with parameter deviation 1.60
+Reinitializing complex 19, running simulations.
+Complex 19 with parameter deviation 7.38e-03 replaced with parameter deviation 1.58
+55		37000.41	2.796e-07	4.957e-02	1.627e-07	29	841
+56		37717.05	2.717e-07	1.791e-02	1.524e-07	29	841
+57		38382.70	2.611e-07	1.791e-02	1.389e-07	29	841
+Reinitializing complex 21, running simulations.
+Complex 21 with parameter deviation 9.95e-03 replaced with parameter deviation 1.63
+58		39050.28	2.541e-07	4.645e-02	1.233e-07	29	841
+59		39728.69	2.461e-07	1.791e-02	1.269e-07	29	841
+Reinitializing complex 21, running simulations.
+Complex 21 with parameter deviation 8.46e-03 replaced with parameter deviation 1.68
+60		40394.84	2.383e-07	5.650e-02	1.319e-07	29	841
+61		41069.04	2.248e-07	1.789e-02	1.378e-07	29	841
+62		41750.69	2.161e-07	1.791e-02	1.400e-07	29	841
+63		42433.88	2.072e-07	1.595e-02	1.421e-07	29	841
+64		43129.85	1.978e-07	1.791e-02	1.484e-07	29	841
+65		43813.08	1.919e-07	1.791e-02	1.443e-07	29	841
+66		44486.17	1.887e-07	1.791e-02	1.331e-07	29	841
+67		45177.60	1.868e-07	1.790e-02	1.237e-07	29	841
+68		45866.35	1.846e-07	1.791e-02	1.138e-07	29	841
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 8.66e-03 replaced with parameter deviation 1.65
+69		46551.12	1.820e-07	5.397e-02	1.068e-07	29	841
+Reinitializing complex 19, running simulations.
+Complex 19 with parameter deviation 3.89e-03 replaced with parameter deviation 1.85
+Reinitializing complex 3, running simulations.
+Complex 3 with parameter deviation 8.60e-03 replaced with parameter deviation 1.61
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 8.44e-03 replaced with parameter deviation 1.59
+70		47250.74	1.798e-07	1.950e-02	9.985e-08	29	841
+Reinitializing complex 19, running simulations.
+Complex 19 with parameter deviation 1.41e-03 replaced with parameter deviation 1.53
+Reinitializing complex 5, running simulations.
+Complex 5 with parameter deviation 6.23e-03 replaced with parameter deviation 1.55
+Reinitializing complex 4, running simulations.
+Complex 4 with parameter deviation 7.61e-03 replaced with parameter deviation 1.78
+Reinitializing complex 3, running simulations.
+Complex 3 with parameter deviation 5.53e-03 replaced with parameter deviation 1.76
+Reinitializing complex 2, running simulations.
+Complex 2 with parameter deviation 6.61e-03 replaced with parameter deviation 1.80
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 7.04e-03 replaced with parameter deviation 1.55
+71		47981.96	1.784e-07	4.537e-02	9.336e-08	29	841
+Reinitializing complex 19, running simulations.
+Complex 19 with parameter deviation 7.46e-04 replaced with parameter deviation 1.40
+Reinitializing complex 12, running simulations.
+Complex 12 with parameter deviation 8.00e-03 replaced with parameter deviation 1.59
+Reinitializing complex 9, running simulations.
+Complex 9 with parameter deviation 7.66e-03 replaced with parameter deviation 1.73
+Reinitializing complex 8, running simulations.
+Complex 8 with parameter deviation 6.73e-03 replaced with parameter deviation 1.57
+Reinitializing complex 6, running simulations.
+Complex 6 with parameter deviation 8.65e-03 replaced with parameter deviation 1.66
+Reinitializing complex 5, running simulations.
+Complex 5 with parameter deviation 5.70e-03 replaced with parameter deviation 1.59
+Reinitializing complex 4, running simulations.
+Complex 4 with parameter deviation 7.81e-03 replaced with parameter deviation 1.54
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 9.80e-03 replaced with parameter deviation 1.83
+72		48767.59	1.768e-07	3.143e-02	8.436e-08	29	841
+Reinitializing complex 19, running simulations.
+Complex 19 with parameter deviation 3.23e-03 replaced with parameter deviation 1.66
+Reinitializing complex 15, running simulations.
+Complex 15 with parameter deviation 7.66e-03 replaced with parameter deviation 1.58
+Reinitializing complex 13, running simulations.
+Complex 13 with parameter deviation 9.08e-03 replaced with parameter deviation 1.43
+Reinitializing complex 11, running simulations.
+Complex 11 with parameter deviation 6.26e-03 replaced with parameter deviation 1.65
+Reinitializing complex 10, running simulations.
+Complex 10 with parameter deviation 6.05e-03 replaced with parameter deviation 1.76
+Reinitializing complex 8, running simulations.
+Complex 8 with parameter deviation 5.75e-03 replaced with parameter deviation 1.72
+Reinitializing complex 6, running simulations.
+Complex 6 with parameter deviation 5.77e-03 replaced with parameter deviation 1.56
+Reinitializing complex 5, running simulations.
+Complex 5 with parameter deviation 6.94e-03 replaced with parameter deviation 1.69
+Reinitializing complex 4, running simulations.
+Complex 4 with parameter deviation 7.72e-03 replaced with parameter deviation 1.54
+Reinitializing complex 3, running simulations.
+Complex 3 with parameter deviation 9.76e-03 replaced with parameter deviation 1.67
+73		49590.07	1.756e-07	5.552e-02	7.851e-08	29	841
+Reinitializing complex 16, running simulations.
+Complex 16 with parameter deviation 9.26e-03 replaced with parameter deviation 1.76
+Reinitializing complex 15, running simulations.
+Complex 15 with parameter deviation 8.21e-03 replaced with parameter deviation 1.61
+Reinitializing complex 14, running simulations.
+Complex 14 with parameter deviation 6.65e-03 replaced with parameter deviation 1.55
+Reinitializing complex 13, running simulations.
+Complex 13 with parameter deviation 5.41e-03 replaced with parameter deviation 1.63
+Reinitializing complex 12, running simulations.
+Complex 12 with parameter deviation 3.54e-03 replaced with parameter deviation 1.63
+Reinitializing complex 11, running simulations.
+Complex 11 with parameter deviation 4.46e-03 replaced with parameter deviation 1.45
+Reinitializing complex 10, running simulations.
+Complex 10 with parameter deviation 5.10e-03 replaced with parameter deviation 1.69
+Reinitializing complex 9, running simulations.
+Complex 9 with parameter deviation 5.22e-03 replaced with parameter deviation 1.62
+74		50442.56	1.748e-07	5.664e-02	7.133e-08	29	841
+Reinitializing complex 15, running simulations.
+Complex 15 with parameter deviation 7.93e-03 replaced with parameter deviation 1.64
+Reinitializing complex 14, running simulations.
+Complex 14 with parameter deviation 4.86e-03 replaced with parameter deviation 1.54
+Reinitializing complex 13, running simulations.
+Complex 13 with parameter deviation 4.01e-03 replaced with parameter deviation 1.64
+Reinitializing complex 12, running simulations.
+Complex 12 with parameter deviation 5.73e-03 replaced with parameter deviation 1.67
+Reinitializing complex 11, running simulations.
+Complex 11 with parameter deviation 9.91e-03 replaced with parameter deviation 1.69
+Reinitializing complex 10, running simulations.
+Complex 10 with parameter deviation 8.66e-03 replaced with parameter deviation 1.52
+Reinitializing complex 9, running simulations.
+Complex 9 with parameter deviation 7.41e-03 replaced with parameter deviation 1.53
+Reinitializing complex 8, running simulations.
+Complex 8 with parameter deviation 9.01e-03 replaced with parameter deviation 1.58
+Reinitializing complex 6, running simulations.
+Complex 6 with parameter deviation 9.88e-03 replaced with parameter deviation 1.39
+Reinitializing complex 5, running simulations.
+Complex 5 with parameter deviation 9.40e-03 replaced with parameter deviation 1.66
+Reinitializing complex 3, running simulations.
+Complex 3 with parameter deviation 8.78e-03 replaced with parameter deviation 1.70
+Reinitializing complex 2, running simulations.
+Complex 2 with parameter deviation 6.96e-03 replaced with parameter deviation 1.48
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 6.49e-03 replaced with parameter deviation 1.56
+75		51251.00	1.740e-07	3.078e-02	6.431e-08	29	841
+Reinitializing complex 16, running simulations.
+Complex 16 with parameter deviation 5.56e-03 replaced with parameter deviation 1.61
+Reinitializing complex 14, running simulations.
+Complex 14 with parameter deviation 4.66e-03 replaced with parameter deviation 1.64
+Reinitializing complex 13, running simulations.
+Complex 13 with parameter deviation 2.92e-03 replaced with parameter deviation 1.71
+Reinitializing complex 11, running simulations.
+Complex 11 with parameter deviation 7.50e-03 replaced with parameter deviation 1.54
+Reinitializing complex 10, running simulations.
+Complex 10 with parameter deviation 9.83e-03 replaced with parameter deviation 1.61
+Reinitializing complex 8, running simulations.
+Complex 8 with parameter deviation 8.94e-03 replaced with parameter deviation 1.57
+Reinitializing complex 7, running simulations.
+Complex 7 with parameter deviation 8.05e-03 replaced with parameter deviation 1.49
+Reinitializing complex 5, running simulations.
+Complex 5 with parameter deviation 9.58e-03 replaced with parameter deviation 1.59
+Reinitializing complex 4, running simulations.
+Complex 4 with parameter deviation 6.21e-03 replaced with parameter deviation 1.65
+Reinitializing complex 3, running simulations.
+Complex 3 with parameter deviation 7.36e-03 replaced with parameter deviation 1.66
+Reinitializing complex 2, running simulations.
+Complex 2 with parameter deviation 8.48e-03 replaced with parameter deviation 1.36
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 5.76e-03 replaced with parameter deviation 1.74
+76		52124.46	1.724e-07	5.325e-02	5.241e-08	29	841
+Reinitializing complex 15, running simulations.
+Complex 15 with parameter deviation 9.28e-04 replaced with parameter deviation 1.60
+Reinitializing complex 13, running simulations.
+Complex 13 with parameter deviation 6.41e-03 replaced with parameter deviation 1.70
+Reinitializing complex 11, running simulations.
+Complex 11 with parameter deviation 5.83e-03 replaced with parameter deviation 1.50
+Reinitializing complex 10, running simulations.
+Complex 10 with parameter deviation 8.57e-03 replaced with parameter deviation 1.58
+Reinitializing complex 7, running simulations.
+Complex 7 with parameter deviation 6.49e-03 replaced with parameter deviation 1.58
+Reinitializing complex 6, running simulations.
+Complex 6 with parameter deviation 6.79e-03 replaced with parameter deviation 1.73
+Reinitializing complex 5, running simulations.
+Complex 5 with parameter deviation 7.00e-03 replaced with parameter deviation 1.45
+Reinitializing complex 4, running simulations.
+Complex 4 with parameter deviation 9.09e-03 replaced with parameter deviation 1.62
+Reinitializing complex 3, running simulations.
+Complex 3 with parameter deviation 7.38e-03 replaced with parameter deviation 1.60
+Reinitializing complex 2, running simulations.
+Complex 2 with parameter deviation 6.41e-03 replaced with parameter deviation 1.61
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 6.63e-03 replaced with parameter deviation 1.65
+77		52997.59	1.721e-07	3.702e-02	4.400e-08	29	841
+Reinitializing complex 15, running simulations.
+Complex 15 with parameter deviation 3.72e-03 replaced with parameter deviation 1.49
+Reinitializing complex 13, running simulations.
+Complex 13 with parameter deviation 5.16e-03 replaced with parameter deviation 1.58
+Reinitializing complex 11, running simulations.
+Complex 11 with parameter deviation 8.29e-03 replaced with parameter deviation 1.30
+Reinitializing complex 10, running simulations.
+Complex 10 with parameter deviation 8.04e-03 replaced with parameter deviation 1.51
+Reinitializing complex 8, running simulations.
+Complex 8 with parameter deviation 5.97e-03 replaced with parameter deviation 1.59
+Reinitializing complex 7, running simulations.
+Complex 7 with parameter deviation 7.04e-03 replaced with parameter deviation 1.80
+Reinitializing complex 6, running simulations.
+Complex 6 with parameter deviation 8.94e-03 replaced with parameter deviation 1.45
+Reinitializing complex 4, running simulations.
+Complex 4 with parameter deviation 9.55e-03 replaced with parameter deviation 1.67
+Reinitializing complex 3, running simulations.
+Complex 3 with parameter deviation 6.84e-03 replaced with parameter deviation 1.44
+Reinitializing complex 2, running simulations.
+Complex 2 with parameter deviation 7.16e-03 replaced with parameter deviation 1.58
+78		53836.60	1.715e-07	4.866e-02	3.561e-08	29	841
+Reinitializing complex 14, running simulations.
+Complex 14 with parameter deviation 3.34e-03 replaced with parameter deviation 1.71
+Reinitializing complex 9, running simulations.
+Complex 9 with parameter deviation 7.08e-03 replaced with parameter deviation 1.99
+Reinitializing complex 8, running simulations.
+Complex 8 with parameter deviation 7.46e-03 replaced with parameter deviation 1.54
+Reinitializing complex 7, running simulations.
+Complex 7 with parameter deviation 6.72e-03 replaced with parameter deviation 1.53
+Reinitializing complex 6, running simulations.
+Complex 6 with parameter deviation 5.71e-03 replaced with parameter deviation 1.68
+Reinitializing complex 5, running simulations.
+Complex 5 with parameter deviation 8.80e-03 replaced with parameter deviation 1.68
+Reinitializing complex 4, running simulations.
+Complex 4 with parameter deviation 5.54e-03 replaced with parameter deviation 1.76
+Reinitializing complex 3, running simulations.
+Complex 3 with parameter deviation 8.72e-03 replaced with parameter deviation 1.78
+Reinitializing complex 2, running simulations.
+Complex 2 with parameter deviation 6.00e-03 replaced with parameter deviation 1.57
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 7.69e-03 replaced with parameter deviation 1.69
+79		54689.76	1.710e-07	4.608e-02	2.685e-08	29	841
+Reinitializing complex 13, running simulations.
+Complex 13 with parameter deviation 1.98e-03 replaced with parameter deviation 1.58
+Reinitializing complex 11, running simulations.
+Complex 11 with parameter deviation 5.44e-03 replaced with parameter deviation 1.54
+Reinitializing complex 10, running simulations.
+Complex 10 with parameter deviation 7.72e-03 replaced with parameter deviation 1.65
+Reinitializing complex 9, running simulations.
+Complex 9 with parameter deviation 5.85e-03 replaced with parameter deviation 1.69
+Reinitializing complex 8, running simulations.
+Complex 8 with parameter deviation 6.35e-03 replaced with parameter deviation 1.60
+Reinitializing complex 7, running simulations.
+Complex 7 with parameter deviation 7.45e-03 replaced with parameter deviation 1.50
+Reinitializing complex 6, running simulations.
+Complex 6 with parameter deviation 7.87e-03 replaced with parameter deviation 1.51
+Reinitializing complex 5, running simulations.
+Complex 5 with parameter deviation 6.78e-03 replaced with parameter deviation 1.51
+Reinitializing complex 4, running simulations.
+Complex 4 with parameter deviation 6.44e-03 replaced with parameter deviation 1.69
+Reinitializing complex 2, running simulations.
+Complex 2 with parameter deviation 6.99e-03 replaced with parameter deviation 1.66
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 6.03e-03 replaced with parameter deviation 1.59
+80		55546.54	1.707e-07	3.993e-02	2.122e-08	29	841
+Reinitializing complex 13, running simulations.
+Complex 13 with parameter deviation 6.07e-03 replaced with parameter deviation 1.46
+Reinitializing complex 12, running simulations.
+Complex 12 with parameter deviation 1.91e-03 replaced with parameter deviation 1.53
+Reinitializing complex 10, running simulations.
+Complex 10 with parameter deviation 9.08e-03 replaced with parameter deviation 1.60
+Reinitializing complex 9, running simulations.
+Complex 9 with parameter deviation 5.76e-03 replaced with parameter deviation 1.71
+Reinitializing complex 8, running simulations.
+Complex 8 with parameter deviation 5.94e-03 replaced with parameter deviation 1.63
+Reinitializing complex 7, running simulations.
+Complex 7 with parameter deviation 7.29e-03 replaced with parameter deviation 1.54
+Reinitializing complex 6, running simulations.
+Complex 6 with parameter deviation 9.34e-03 replaced with parameter deviation 1.75
+Reinitializing complex 5, running simulations.
+Complex 5 with parameter deviation 8.15e-03 replaced with parameter deviation 1.64
+Reinitializing complex 4, running simulations.
+Complex 4 with parameter deviation 6.43e-03 replaced with parameter deviation 1.48
+Reinitializing complex 3, running simulations.
+Complex 3 with parameter deviation 7.04e-03 replaced with parameter deviation 1.72
+Reinitializing complex 2, running simulations.
+Complex 2 with parameter deviation 9.57e-03 replaced with parameter deviation 1.65
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 7.62e-03 replaced with parameter deviation 1.60
+81		56402.17	1.703e-07	2.469e-02	1.847e-08	29	841
+Reinitializing complex 12, running simulations.
+Complex 12 with parameter deviation 9.99e-03 replaced with parameter deviation 1.62
+Reinitializing complex 11, running simulations.
+Complex 11 with parameter deviation 2.32e-03 replaced with parameter deviation 1.45
+Reinitializing complex 9, running simulations.
+Complex 9 with parameter deviation 5.31e-03 replaced with parameter deviation 1.53
+Reinitializing complex 8, running simulations.
+Complex 8 with parameter deviation 5.74e-03 replaced with parameter deviation 1.74
+Reinitializing complex 7, running simulations.
+Complex 7 with parameter deviation 6.23e-03 replaced with parameter deviation 1.66
+Reinitializing complex 6, running simulations.
+Complex 6 with parameter deviation 6.28e-03 replaced with parameter deviation 1.60
+Reinitializing complex 5, running simulations.
+Complex 5 with parameter deviation 6.17e-03 replaced with parameter deviation 1.65
+Reinitializing complex 4, running simulations.
+Complex 4 with parameter deviation 6.61e-03 replaced with parameter deviation 1.63
+Reinitializing complex 3, running simulations.
+Complex 3 with parameter deviation 7.78e-03 replaced with parameter deviation 1.80
+Reinitializing complex 2, running simulations.
+Complex 2 with parameter deviation 5.52e-03 replaced with parameter deviation 1.88
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 4.70e-03 replaced with parameter deviation 1.62
+82		57297.58	1.701e-07	4.268e-02	1.667e-08	29	841
+Reinitializing complex 10, running simulations.
+Complex 10 with parameter deviation 6.11e-03 replaced with parameter deviation 1.55
+Reinitializing complex 9, running simulations.
+Complex 9 with parameter deviation 3.06e-03 replaced with parameter deviation 1.50
+Reinitializing complex 5, running simulations.
+Complex 5 with parameter deviation 7.63e-03 replaced with parameter deviation 1.66
+Reinitializing complex 4, running simulations.
+Complex 4 with parameter deviation 4.68e-03 replaced with parameter deviation 1.67
+Reinitializing complex 3, running simulations.
+Complex 3 with parameter deviation 6.76e-03 replaced with parameter deviation 1.67
+Reinitializing complex 2, running simulations.
+Complex 2 with parameter deviation 5.13e-03 replaced with parameter deviation 1.61
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 5.52e-03 replaced with parameter deviation 1.78
+83		58184.39	1.700e-07	3.569e-02	1.458e-08	29	841
+Reinitializing complex 8, running simulations.
+Complex 8 with parameter deviation 4.76e-03 replaced with parameter deviation 1.46
+Reinitializing complex 7, running simulations.
+Complex 7 with parameter deviation 1.71e-03 replaced with parameter deviation 1.45
+Reinitializing complex 5, running simulations.
+Complex 5 with parameter deviation 8.60e-03 replaced with parameter deviation 1.87
+Reinitializing complex 4, running simulations.
+Complex 4 with parameter deviation 5.99e-03 replaced with parameter deviation 1.73
+Reinitializing complex 3, running simulations.
+Complex 3 with parameter deviation 5.69e-03 replaced with parameter deviation 1.48
+Reinitializing complex 2, running simulations.
+Complex 2 with parameter deviation 5.16e-03 replaced with parameter deviation 1.65
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 4.29e-03 replaced with parameter deviation 1.77
+84		59014.33	1.698e-07	3.410e-02	1.224e-08	29	841
+Reinitializing complex 6, running simulations.
+Complex 6 with parameter deviation 2.12e-03 replaced with parameter deviation 1.52
+Reinitializing complex 4, running simulations.
+Complex 4 with parameter deviation 8.32e-03 replaced with parameter deviation 1.73
+Reinitializing complex 3, running simulations.
+Complex 3 with parameter deviation 7.65e-03 replaced with parameter deviation 1.59
+Reinitializing complex 2, running simulations.
+Complex 2 with parameter deviation 8.79e-03 replaced with parameter deviation 1.56
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 2.94e-03 replaced with parameter deviation 1.61
+85		59849.39	1.696e-07	5.141e-02	1.017e-08	29	841
+Reinitializing complex 5, running simulations.
+Complex 5 with parameter deviation 3.04e-03 replaced with parameter deviation 1.47
+Reinitializing complex 3, running simulations.
+Complex 3 with parameter deviation 9.96e-03 replaced with parameter deviation 1.51
+Reinitializing complex 2, running simulations.
+Complex 2 with parameter deviation 5.52e-03 replaced with parameter deviation 1.64
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 7.03e-03 replaced with parameter deviation 1.73
+86		60662.43	1.696e-07	2.933e-02	8.745e-09	29	841
+A	 = 3.32e+12,
+C0	 = 1.0,0.0,
+Cpa	 = 1047.4997944519455,1053.3719342730976,
+Cpb	 = 0.12538136987097565,0.2415561157611929,
+E	 = 1.83e+05,
+Hp	 = 100484.25974247257,
+K	 = 4956.625111734609,100000000.0,
+Value	 = 1.696156973821042e-07,
+Xi	 = 0.7338086749851456,
+eps	 = 0.9415662432001088,0.94,
+ka	 = 0.2921753698867401,0.09612325821561,
+kb	 = 8.462994381433172e-05,0.000283137989750129,
+n	 = 1.0082695650356839,
+nO2	 = 0.0,
+rho	 = 1683.0,1235.0,
+Results saved to D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\E_Glass\multiHeatFlux\../../../results/E_Glass/multiHeatFlux/E_GlassOldLinearWide25_50_75KW_solution.txt

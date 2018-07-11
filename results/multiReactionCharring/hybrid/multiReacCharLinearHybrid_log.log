@@ -1,0 +1,350 @@
+D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\multiReactionCharring\hybrid\../../../results/multiReactionCharring/hybrid/multiReacCharLinearHybrid Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - unknowable
+  - unknowable
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../../data/multiReactionCharring/multiReactionCharringLinearNominal_0_cone_Mass.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 25
+          htc: 15
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\multiReactionCharring\hybrid\
+  dataSources:
+    names:
+    - cone1
+    types:
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  keepTemporaryFiles: false
+  name: multiReacCharLinearHybrid
+  optimizeParams:
+    absErr: 1e-7
+    absRelErr: 5e-7
+    elimThresh: 1e-2
+    maxIter: 1000
+    maxTime: 60000
+    minIter: 5
+    minP: 2
+    opAlpha: 57
+    opBeta: 1
+    opP: 29
+    opQ: 15
+    opS: 29
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: false
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - None
+      - 972
+      - 1188
+    - - None
+      - 260.25
+      - 4164
+    Cpb:
+    - - None
+      - 0.04068
+      - 0.04972
+    - - None
+      - 0.06475
+      - 1.036
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id002
+      - 0
+      - 0
+      - 1
+    - *id002
+    K:
+    - - None
+      - 2500
+      - 40000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - None
+      - 0.235
+      - 1.0
+    - - 0.94
+      - 0.235
+      - 1.0
+    ka:
+    - - None
+      - 0.078
+      - 1.248
+    - - None
+      - 0.023725
+      - 0.3796
+    kb:
+    - - None
+      - 1.1013e-05
+      - 0.0001762
+    - - None
+      - 7.075e-05
+      - 0.001132
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    nO2:
+    - - 0
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 4
+    multiprocess: true
+  reactionParams:
+    A:
+    - - None
+      - 2.106e12
+      - 2.574e12
+    - - None
+      - 6.75e13
+      - 8.25e13
+    E:
+    - - None
+      - 1.629e5
+      - 1.991e5
+    - - None
+      - 1.737e5
+      - 2.123e5
+    Hp:
+    - - None
+      - 2.5e4
+      - 4e5
+    - - None
+      - 5e4
+      - 8e5
+    Xi:
+    - &id004
+      - None
+      - 0
+      - 1
+    - *id004
+    n:
+    - - None
+      - 0.9
+      - 1.1
+    - - None
+      - 1.35
+      - 1.65
+    nO2:
+    - &id005
+      - 0
+      - 0
+      - 1
+    - *id005
+    prodState:
+    - 1
+    - 1
+    reacState:
+    - 0
+    - 0
+    typeState:
+    - 3
+    - 3
+  reinitializeComplex: true
+  restart: false
+  resultsDir: ../../../results/multiReactionCharring/hybrid/
+  systemDir: D:\workspace\JENSENHUGHES\optimization\sourceCode\optimizationpython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  thermalPropertyUnits: K
+  virtualExperiment: false
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+0		221.24	4.390e-05	5.341e-03	1.000e+00	29	841
+1		480.97	2.790e-05	5.324e-03	1.000e+00	29	841
+2		769.38	2.790e-05	5.348e-03	1.000e+00	29	841
+3		1068.61	2.076e-05	5.352e-03	1.000e+00	29	841
+4		1370.11	2.076e-05	5.352e-03	1.000e+00	29	841

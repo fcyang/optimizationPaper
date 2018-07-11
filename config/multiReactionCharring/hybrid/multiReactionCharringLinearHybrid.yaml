@@ -1,6 +1,7 @@
-name: multiReacCharLinearHybrid
+name: multiReacLinearHybrid
 resultsDir: '../../../results/multiReactionCharring/hybrid/'
 virtualExperiment: False
+keepTemporaryFiles: True
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
 reinitializeComplex: True
 outputParams:
