@@ -24,6 +24,7 @@ cone1:
   width1: 0.1016
   width2: 0.1016
   initialThickness: 0.008
+  finalThickness: 0.0063498751
   names: ['Mass']
   columns: [1]
   weights: [1]
@@ -71,7 +72,7 @@ reactionParams:
   n:   [[None,0.9,1.1], [None,1.35,1.65]]
   Hp:  [[None,2.5e4,4e5], [None,5e4,8e5]]
   nO2: [[0,0,1], [0,0,1]]
-  Xi:  [[0.75,0,1], [0.5,0,1]]
+  Xi:  [[None,0.675,0.825], [None,0.45,0.55]]
   typeState: [3,3]
   reacState: [0,0]
   prodState: [1,1]

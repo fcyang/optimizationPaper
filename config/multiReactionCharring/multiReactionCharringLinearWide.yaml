@@ -23,6 +23,7 @@ cone1:
   width1: 0.1016
   width2: 0.1016
   initialThickness: 0.008
+  finalThickness: 0.0063498751
   names: ['Mass']
   columns: [1]
   weights: [1]
@@ -46,6 +47,7 @@ cone2:
   width1: 0.1016
   width2: 0.1016
   initialThickness: 0.008
+  finalThickness: 0.0063100001
   names: ['Mass']
   columns: [1]
   weights: [1]
@@ -55,10 +57,10 @@ processParams:
   multiprocess: True
   maxProcesses: 8
 optimizeParams:
-  opP: 29
-  opS: 29
-  opQ: 15
-  opAlpha: 57
+  opP: 41
+  opS: 41
+  opQ: 21
+  opAlpha: 81
   opBeta: 1
   minP: 2
   minIter: 5
@@ -93,7 +95,7 @@ reactionParams:
   n:   [[None,0.25,4.0], [None,0.375,6.0]]
   Hp:  [[None,2.5e4,4e5], [None,5e4,8e5]]
   nO2: [[0,0,1], [0,0,1]]
-  Xi:  [[0.75,0,1], [0.5,0,1]]
+  Xi:  [[None,0,1], [None,0,1]]
   typeState: [3,3]
   reacState: [0,0]
   prodState: [1,1]
