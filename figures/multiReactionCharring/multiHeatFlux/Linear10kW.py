@@ -103,7 +103,7 @@ H = plt.legend(leg, loc='lower right', prop={'size': 16}, numpoints=1,
                frameon=False)
 plt.rc('xtick', labelsize=16)
 plt.rc('ytick', labelsize=16)
-plt.axis([0, 600, 20, 400])
+plt.axis([0, 6000, 20, 400])
 # Save figures
 plt.tight_layout()
 plt.savefig('multi_Reaction_Linear_10KW_Temp_Comparison.png', dpi=300)
