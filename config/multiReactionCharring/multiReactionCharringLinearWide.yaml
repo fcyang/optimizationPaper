@@ -2,7 +2,7 @@ name: multiReacCharLinearWide
 resultsDir: '../../results/multiReactionCharring/'
 virtualExperiment: False
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
-reinitializeComplex: True
+reinitializeComplex: False
 outputParams:
   saveAllSamples: False
 cone1:
@@ -55,14 +55,14 @@ cone2:
   types: [1]
 processParams:
   multiprocess: True
-  maxProcesses: 8
+  maxProcesses: 4
 optimizeParams:
   opP: 41
   opS: 41
   opQ: 21
-  opAlpha: 81
-  opBeta: 1
-  minP: 2
+  opAlpha: 1
+  opBeta: 41
+  minP: 21
   minIter: 5
   maxIter: 1000
   absErr: 1e-7
@@ -95,7 +95,7 @@ reactionParams:
   n:   [[None,0.25,4.0], [None,0.375,6.0]]
   Hp:  [[None,2.5e4,4e5], [None,5e4,8e5]]
   nO2: [[0,0,1], [0,0,1]]
-  Xi:  [[None,0,1], [None,0,1]]
+  Xi:  [[None,0.1875,1], [None,0.125,1]]
   typeState: [3,3]
   reacState: [0,0]
   prodState: [1,1]

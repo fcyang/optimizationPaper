@@ -1,0 +1,441 @@
+C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\../../results/multiReactionCharring/multiReacCharLinearWide Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - unknown
+  - unknown
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../data/multiReactionCharring/multiReactionCharringLinearNominal_0_cone_Mass.csv
+      finalThickness: 0.0063498751
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 25
+          htc: 15
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  cone2: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../data/multiReactionCharring/multiReacCharLinearNominal50KW_0_cone_Mass.csv
+      finalThickness: 0.0063100001
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 50
+          htc: 15
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\
+  dataSources:
+    names:
+    - cone1
+    - cone2
+    types:
+    - cone
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  keepTemporaryFiles: false
+  name: multiReacCharLinearWide
+  optimizeParams:
+    absErr: 1e-7
+    absRelErr: 5e-7
+    elimThresh: 1e-2
+    maxIter: 1000
+    maxTime: 60000
+    minIter: 5
+    minP: 2
+    opAlpha: 81
+    opBeta: 1
+    opP: 41
+    opQ: 21
+    opS: 41
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: false
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - None
+      - 270
+      - 4320
+    - - None
+      - 260.25
+      - 4164
+    Cpb:
+    - - None
+      - 0.0113
+      - 0.1808
+    - - None
+      - 0.06475
+      - 1.036
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id002
+      - 0
+      - 0
+      - 1
+    - *id002
+    K:
+    - - None
+      - 2500
+      - 40000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - None
+      - 0.235
+      - 1.0
+    - - 0.94
+      - 0.235
+      - 1.0
+    ka:
+    - - None
+      - 0.078
+      - 1.248
+    - - None
+      - 0.023725
+      - 0.3796
+    kb:
+    - - None
+      - 1.1013e-05
+      - 0.0001762
+    - - None
+      - 7.075e-05
+      - 0.001132
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    nO2:
+    - - 0
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 8
+    multiprocess: true
+  reactionParams:
+    A:
+    - - None
+      - 5.86e11
+      - 9.376e12
+    - - None
+      - 1.875e13
+      - 3e14
+    E:
+    - - None
+      - 4.525e4
+      - 7.24e5
+    - - None
+      - 4.825e4
+      - 7.72e5
+    Hp:
+    - - None
+      - 2.5e4
+      - 4e5
+    - - None
+      - 5e4
+      - 8e5
+    Xi:
+    - &id004
+      - None
+      - 0
+      - 1
+    - *id004
+    n:
+    - - None
+      - 0.25
+      - 4.0
+    - - None
+      - 0.375
+      - 6.0
+    nO2:
+    - &id005
+      - 0
+      - 0
+      - 1
+    - *id005
+    prodState:
+    - 1
+    - 1
+    reacState:
+    - 0
+    - 0
+    typeState:
+    - 3
+    - 3
+  reinitializeComplex: false
+  restart: false
+  resultsDir: ../../results/multiReactionCharring/
+  systemDir: C:\Users\Fyang\Workspace\optimization\sourceCode\optimizationpython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  thermalPropertyUnits: K
+  virtualExperiment: false
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+0		767.87	4.470e-03	9.049e-01	1.000e+00	41	1681
+1		1662.62	4.109e-03	1.056e+00	1.000e+00	41	1681
+2		2602.41	2.613e-03	1.236e+00	1.000e+00	41	1681
+3		3505.15	2.613e-03	1.173e+00	1.000e+00	41	1681
+4		4475.87	2.613e-03	7.376e-01	1.000e+00	41	1681
+5		5447.60	2.613e-03	8.052e-01	1.000e+00	41	1681
+6		6433.75	2.613e-03	8.052e-01	1.000e+00	41	1681
+7		7406.34	1.731e-03	7.081e-01	1.000e+00	41	1681
+8		8333.14	8.533e-04	7.114e-01	1.000e+00	41	1681
+9		9206.18	8.057e-04	5.382e-01	1.000e+00	41	1681
+10		10116.82	7.081e-04	5.854e-01	1.000e+00	41	1681
+11		11029.22	5.808e-04	1.016e+00	1.000e+00	41	1681
+12		12009.04	5.538e-04	1.252e+00	1.000e+00	41	1681
+13		13023.81	5.151e-04	1.178e+00	1.000e+00	41	1681
+14		14058.64	4.808e-04	1.134e+00	1.000e+00	41	1681
+15		15044.02	4.556e-04	8.179e-01	1.000e+00	41	1681
+16		15998.19	4.287e-04	6.381e-01	3.680e-03	41	1681
+17		16951.32	4.105e-04	7.732e-01	2.202e-03	41	1681
+18		17899.52	3.901e-04	8.174e-01	2.223e-03	41	1681
+19		18838.85	3.869e-04	6.862e-01	2.226e-03	41	1681
+20		19809.37	3.776e-04	1.148e+00	2.235e-03	41	1681
+21		20795.29	3.733e-04	6.650e-01	2.239e-03	41	1681
+22		21794.71	3.695e-04	7.444e-01	1.361e-03	41	1681
+23		22773.00	3.690e-04	1.130e+00	4.843e-04	41	1681
+24		23792.88	3.682e-04	1.261e+00	4.375e-04	41	1681
+25		24788.83	3.679e-04	1.153e+00	3.402e-04	41	1681
+26		25784.94	3.672e-04	6.964e-01	2.136e-04	41	1681
+27		26852.32	3.667e-04	1.264e+00	1.870e-04	41	1681
+28		27912.84	3.667e-04	1.263e+00	1.484e-04	41	1681
+29		28968.60	3.662e-04	9.578e-01	1.146e-04	41	1681
+30		30029.61	3.652e-04	8.095e-01	9.039e-05	41	1681
+31		31081.33	3.644e-04	8.161e-01	6.428e-05	41	1681
+32		32084.65	3.635e-04	6.473e-01	4.707e-05	41	1681
+33		33086.53	3.627e-04	1.192e+00	2.732e-05	41	1681
+34		34104.41	3.622e-04	1.133e+00	2.473e-05	41	1681
+35		35143.33	3.612e-04	5.986e-01	1.634e-05	41	1681
