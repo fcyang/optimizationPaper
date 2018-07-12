@@ -3,7 +3,7 @@ resultsDir: '../../../results/multiReactionCharring/hybrid/'
 virtualExperiment: False
 keepTemporaryFiles: True
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
-reinitializeComplex: True
+reinitializeComplex: False
 outputParams:
   saveAllSamples: False
 cone1:
@@ -32,14 +32,14 @@ cone1:
   types: [1]
 processParams:
   multiprocess: True
-  maxProcesses: 8
+  maxProcesses: 4
 optimizeParams:
-  opP: 29
-  opS: 29
-  opQ: 15
-  opAlpha: 57
-  opBeta: 1
-  minP: 2
+  opP: 41
+  opS: 41
+  opQ: 21
+  opAlpha: 1
+  opBeta: 41
+  minP: 21
   minIter: 5
   maxIter: 1000
   absErr: 1e-7
