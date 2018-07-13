@@ -38,7 +38,7 @@ optimizeParams:
   opP: 26
   opS: 51
   opQ: 26
-  opAlpha: 26
+  opAlpha: 51
   opBeta: 1
   minP: 26
   minIter: 5
