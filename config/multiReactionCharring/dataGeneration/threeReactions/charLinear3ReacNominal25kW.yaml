@@ -1,5 +1,5 @@
-name: multiReacCharLinearNominal50KW
-resultsDir: '../../../results/multiReactionCharring/nominal/'
+name: charLinear3ReacNominal25kW
+resultsDir: '../../../../results/multiReactionCharring/nominal/'
 virtualExperiment: True
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
 reinitializeComplex: False
@@ -17,8 +17,8 @@ cone1:
   frontBoundaryConditions:
     htc: 15
     Tamb: 25
-    heatFlux: 50
-  file: '../../../data/multiReactionCharring/multiReactionCharringFake.csv'
+    heatFlux: 25
+  file: '../../../../data/multiReactionCharring/multiReactionCharringFake.csv'
   time: 0
   Tinit: 25
   width1: 0.1016
@@ -51,12 +51,12 @@ dataSources:
   names: ['cone1']
   types: ['cone']
 reactionParams:
-  A:   [[2.344e12,1e6,1e14], [7.5e13,1e6,1e14]]
-  E:   [[1.81e5,1.2e4,2.0e5], [1.93e5,1.2e4,2.0e5]]
-  n:   [[1.0,5e-1,4e0], [1.5,5e-1,4e0]]
-  Hp:  [[100000,1e5,1e7], [200000,1e5,1e7]]
-  nO2: [[0,0,1], [0,0,1]]
-  Xi:  [[0.75,0,1], [0.5,0,1]]
-  typeState: [3,3]
-  reacState: [0,0]
-  prodState: [1,1]
+  A:   [[2.344e12,1e6,1e14], [7.5e13,1e6,1e14], [9.2e12,1e6,1e14]]
+  E:   [[1.81e5,1.2e4,2.0e5], [1.93e5,1.2e4,2.0e5], [1.75e5,1.2e4,2.0e5]]
+  n:   [[1.0,5e-1,4e0], [1.5,5e-1,4e0], [3.0,5e-1,4e0]]
+  Hp:  [[100000,1e5,1e7], [200000,1e5,1e7], [400000,1e5,1e7]]
+  nO2: [[0,0,1], [0,0,1], [0,0,1]]
+  Xi:  [[0.75,0,1], [0.5,0,1], [0.3,0,1]]
+  typeState: [3,3,3]
+  reacState: [0,0,0]
+  prodState: [1,1,1]
