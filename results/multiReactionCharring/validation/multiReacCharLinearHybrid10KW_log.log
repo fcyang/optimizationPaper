@@ -34,6 +34,7 @@ dictitems:
   XiState:
   - known
   - known
+  assumeVolumeConservation: true
   cone:
     Tinit: 25
     activePhaseVars:
@@ -58,6 +59,7 @@ dictitems:
     - Hp
     - nO2
     - Xi
+    allowIgnition: false
     backBoundaryConditions:
       Tamb: 25
       htc: Auto
@@ -65,6 +67,8 @@ dictitems:
     frontBoundaryConditions:
       Tamb: 25
       htc: Auto
+    ignitionHeatFlux: 20
+    ignitionThreshold: 0.0032
     weight: 1.0
   cone1: !!python/object/apply:collections.defaultdict
     args:
@@ -113,6 +117,8 @@ dictitems:
           Tamb: 25
           heatFlux: 10
           htc: 15
+      ignitionHeatFlux: 20.0
+      ignitionThreshold: 0.0032
       initialThickness: 0.008
       names:
       - Mass
@@ -174,17 +180,17 @@ dictitems:
       - 1189
       - 1189
     Cpa:
-    - - 1045.04
+    - - 1270
       - 1000
       - 2800
-    - - 2496.36
+    - - 2692.71
       - 1189
       - 1189
     Cpb:
-    - - 0.04628
+    - - 0.0866
       - 0.0
       - 0.0
-    - - 0.4786
+    - - 0.7131
       - 1189
       - 1189
     Cpc:
@@ -208,31 +214,31 @@ dictitems:
       - 1
     - *id002
     K:
-    - - 23613.58
+    - - 19186
       - 500
       - 3000
     - - 1e8
       - 1189
       - 1189
     eps:
-    - - 0.8098
+    - - 0.9328
       - 0.75
       - 1.0
     - - 0.94
       - 1189
       - 1189
     ka:
-    - - 0.3001
+    - - 0.366
       - 0.1
       - 0.3
-    - - 0.2007
+    - - 0.1675
       - 1189
       - 1189
     kb:
-    - - 6.004e-05
+    - - 7.808e-05
       - 0.0
       - 0.0
-    - - 0.0004928
+    - - 0.0005876
       - 0.0
       - 0.0
     kc:
@@ -277,38 +283,38 @@ dictitems:
     multiprocess: true
   reactionParams:
     A:
-    - - 2.32e12
+    - - 2.37e12
       - 1e6
       - 1e14
-    - - 7.29e13
+    - - 7.48e13
       - 1e6
       - 1e14
     E:
     - - 1.74e5
       - 1.2e4
       - 2.0e5
-    - - 1.85e5
+    - - 1.83e5
       - 1.2e4
       - 2.0e5
     Hp:
-    - - 120369
+    - - 140255
       - 1e5
       - 1e7
-    - - 263793
+    - - 249845
       - 1e5
       - 1e7
     Xi:
-    - - 0.736
+    - - 0.7223
       - 0
       - 1
-    - - 0.51
+    - - 0.53
       - 0
       - 1
     n:
-    - - 0.994
+    - - 0.972
       - 5e-1
       - 4e0
-    - - 1.542
+    - - 1.493
       - 5e-1
       - 4e0
     nO2:
@@ -344,19 +350,19 @@ dictitems:
   thermalPropertyUnits: K
   virtualExperiment: true
 Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
-A	 = 2.32e+12,7.29e+13,
+A	 = 2.37e+12,7.48e+13,
 C0	 = 1.0,0.0,
-Cpa	 = 1045.04,2496.36,
-Cpb	 = 0.04628,0.4786,
-E	 = 1.74e+05,1.85e+05,
-Hp	 = 120369.0,263793.0,
-K	 = 23613.58,100000000.0,
-Value	 = 0.0006875461656233592,
-Xi	 = 0.736,0.51,
-eps	 = 0.8098,0.94,
-ka	 = 0.3001,0.2007,
-kb	 = 6.004e-05,0.0004928,
-n	 = 0.994,1.542,
+Cpa	 = 1270.0,2692.71,
+Cpb	 = 0.0866,0.7131,
+E	 = 1.74e+05,1.83e+05,
+Hp	 = 140255.0,249845.0,
+K	 = 19186.0,100000000.0,
+Value	 = 0.0015247178355499106,
+Xi	 = 0.7223,0.53,
+eps	 = 0.9328,0.94,
+ka	 = 0.366,0.1675,
+kb	 = 7.808e-05,0.0005876,
+n	 = 0.972,1.493,
 nO2	 = 0.0,0.0,
 rho	 = 1683.0,1235.0,
 Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\validation\../../../results/multiReactionCharring/validation/multiReacCharLinearHybrid10KW_solution.txt

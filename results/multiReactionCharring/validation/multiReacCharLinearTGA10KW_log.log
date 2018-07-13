@@ -1,4 +1,4 @@
-C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\validation\../../../results/multiReactionCharring/validation/multiReacCharLinearHybrid100KW Log file
+C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\validation\../../../results/multiReactionCharring/validation/multiReacCharLinearTGA10KW Log file
 !!python/object/apply:collections.defaultdict
 args:
 - &id001 !!python/name:builtins.bool ''
@@ -108,14 +108,14 @@ dictitems:
       - 1
       depths:
       - 0
-      file: ../../../data/multiReactionCharring/multiReacCharLinearNominal100KW_0_cone_Mass.csv
+      file: ../../../data/multiReactionCharring/multiReacCharLinearNominal10KW_0_cone_Mass.csv
       finalThickness: false
       frontBoundaryConditions: !!python/object/apply:collections.defaultdict
         args:
         - *id001
         dictitems:
           Tamb: 25
-          heatFlux: 100
+          heatFlux: 10
           htc: 15
       ignitionHeatFlux: 20.0
       ignitionThreshold: 0.0032
@@ -153,7 +153,7 @@ dictitems:
     weight: 1.0
   fdsPath: C:\Program Files\FDS\FDS6\bin
   keepTemporaryFiles: true
-  name: multiReacCharLinearHybrid100KW
+  name: multiReacCharLinearTGA10KW
   optimizeParams:
     absErr: 1e-9
     absRelErr: 1e-6
@@ -357,7 +357,7 @@ Cpb	 = 0.0866,0.7131,
 E	 = 1.74e+05,1.83e+05,
 Hp	 = 140255.0,249845.0,
 K	 = 19186.0,100000000.0,
-Value	 = 0.00010882602846354568,
+Value	 = 0.0015247178355499106,
 Xi	 = 0.7223,0.53,
 eps	 = 0.9328,0.94,
 ka	 = 0.366,0.1675,
@@ -365,4 +365,4 @@ kb	 = 7.808e-05,0.0005876,
 n	 = 0.972,1.493,
 nO2	 = 0.0,0.0,
 rho	 = 1683.0,1235.0,
-Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\validation\../../../results/multiReactionCharring/validation/multiReacCharLinearHybrid100KW_solution.txt
+Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\validation\../../../results/multiReactionCharring/validation/multiReacCharLinearTGA10KW_solution.txt

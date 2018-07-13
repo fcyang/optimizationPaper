@@ -32,6 +32,11 @@ df = pd.read_csv(fileName, skiprows=0)
 dfMassHybrid = df[['# Time [s]',' Mass [Kg]']]  # select time and MLR for 1D plot
 dfMassHybrid = np.transpose(np.array(dfMassHybrid))
 
+fileName = 'multiReacCharLinearTGA10KW_0_cone_Mass.csv'
+df = pd.read_csv(fileName, skiprows=0)
+dfMassTGA = df[['# Time [s]',' Mass [Kg]']]  # select time and MLR for 1D plot
+dfMassTGA = np.transpose(np.array(dfMassTGA))
+
 fileName = 'multiReacCharLinearNominal10KW_0_cone_FT.csv'
 df = pd.read_csv(fileName, skiprows=0)
 dfFTNorminal = df[['# Time [s]',' Temperature [C]']]  # select time and MLR for 1D plot
@@ -46,6 +51,11 @@ fileName = 'multiReacCharLinearHybrid10KW_0_cone_FT.csv'
 df = pd.read_csv(fileName, skiprows=0)
 dfFTHybrid = df[['# Time [s]',' Temperature [C]']]  # select time and MLR for 1D plot
 dfFTHybrid = np.transpose(np.array(dfFTHybrid))
+
+fileName = 'multiReacCharLinearTGA10KW_0_cone_FT.csv'
+df = pd.read_csv(fileName, skiprows=0)
+dfFTTGA = df[['# Time [s]',' Temperature [C]']]  # select time and MLR for 1D plot
+dfFTTGA = np.transpose(np.array(dfFTTGA))
 
 # %%
 # Data processing
@@ -73,14 +83,15 @@ fwidthlong = 6.5 * 2
 markStep = 200
 
 # %%
-# Figure #1
+# Figure #2
 fig1 = plt.figure(figsize=(fwidth, fheight))
 plt.plot(dfMassNorminal[0], dfMassNorminal[1], '-k', marker='o', markerfacecolor='none', markevery=markStep, linewidth=1.5)
 plt.plot(dfMassHybrid[0], dfMassHybrid[1], '-', marker='^', markerfacecolor='none', markevery=markStep, color=colors[0], linewidth=1.5)
 plt.plot(dfMassWide[0], dfMassWide[1], '-', marker='v', markerfacecolor='none', markevery=markStep, color=colors[1], linewidth=1.5)
+plt.plot(dfMassTGA[0], dfMassTGA[1], '-', marker='s', markerfacecolor='none', markevery=markStep, color=colors[2], linewidth=1.5)
 plt.xlabel('Time (s)', fontname='Times New Roman', fontsize=fsize)
 plt.ylabel(r'Normalized Mass', fontname='Times New Roman', fontsize=fsize)
-leg = ('Virtual', 'Hybrid', 'Full')
+leg = ('Virtual', 'M+TGA+DSC', '2M', 'M+TGA')
 H = plt.legend(leg, loc='upper right', prop={'size': 16}, numpoints=1,
                frameon=False)
 plt.rc('xtick', labelsize=16)
@@ -96,9 +107,10 @@ fig1 = plt.figure(figsize=(fwidth, fheight))
 plt.plot(dfFTNorminal[0], dfFTNorminal[1], '-k', marker='o', markerfacecolor='none', markevery=markStep, linewidth=1.5)
 plt.plot(dfFTHybrid[0], dfFTHybrid[1], '-', marker='^', markerfacecolor='none', markevery=markStep, color=colors[0], linewidth=1.5)
 plt.plot(dfFTWide[0], dfFTWide[1], '-', marker='v', markerfacecolor='none', markevery=markStep, color=colors[1], linewidth=1.5)
+plt.plot(dfFTTGA[0], dfFTTGA[1], '-', marker='s', markerfacecolor='none', markevery=markStep, color=colors[2], linewidth=1.5)
 plt.xlabel('Time (s)', fontname='Times New Roman', fontsize=fsize)
 plt.ylabel(r'Temperature ($^o$C)', fontname='Times New Roman', fontsize=fsize)
-leg = ('Virtual', 'Hybrid', 'Full')
+leg = ('Virtual', 'M+TGA+DSC', '2M', 'M+TGA')
 H = plt.legend(leg, loc='lower right', prop={'size': 16}, numpoints=1,
                frameon=False)
 plt.rc('xtick', labelsize=16)
