@@ -56,7 +56,7 @@ cone2:
   types: [1]
 processParams:
   multiprocess: True
-  maxProcesses: 4
+  maxProcesses: 8
 optimizeParams:
   opP: 26
   opS: 51
