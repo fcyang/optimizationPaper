@@ -1,5 +1,5 @@
 name: CharLinear2Reac2MassTGA
-resultsDir: '../../../results/multiReactionCharring/'
+resultsDir: '../../../results/multiReactionCharring/2Reactions/'
 virtualExperiment: False
 restart: True
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
@@ -25,7 +25,6 @@ cone1:
   width1: 0.1016
   width2: 0.1016
   initialThickness: 0.008
-  finalThickness: 0.0063498751
   names: ['Mass']
   columns: [1]
   weights: [1]
@@ -57,7 +56,7 @@ cone2:
   types: [1]
 processParams:
   multiprocess: True
-  maxProcesses: 4
+  maxProcesses: 8
 optimizeParams:
   opP: 21
   opS: 41
@@ -69,7 +68,7 @@ optimizeParams:
   maxIter: 200
   absErr: 1e-7
   relErr: 1e-12
-  absRelErr: 5e-7
+  absRelErr: 1e-7
   relIter: 15
   maxTime: 600000
   elimThresh: 1e-2

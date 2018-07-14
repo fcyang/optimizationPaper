@@ -1,4 +1,4 @@
-name: charLinear3ReacTGADSC
+name: charLinear3Reac3Mass
 resultsDir: '../../../../results/multiReactionCharring/3Reactions/'
 restart: False
 virtualExperiment: False
@@ -31,9 +31,55 @@ cone1:
   weights: [1]
   depths: [0]
   types: [1]
+cone2:
+  activePhaseVars: ['C0','rho','ka','kb','kc','kd','ke','Cpa','Cpb','Cpc','Cpd','Cpe','eps','K']
+  activeReactionVars: ['A','E','n','Hp','nO2','Xi']
+  weight: 1.0
+  backBoundaryConditions:
+    type: 'INSULATED'
+    htc: 'Auto'
+    Tamb: 25
+  frontBoundaryConditions:
+    htc: 15
+    Tamb: 25
+    heatFlux: 50
+  file: '../../../../data/multiReactionCharring/charLinear3ReacNominal50kW_0_cone_Mass.csv'
+  time: 0
+  Tinit: 25
+  width1: 0.1016
+  width2: 0.1016
+  initialThickness: 0.008
+  names: ['Mass']
+  columns: [1]
+  weights: [1]
+  depths: [0]
+  types: [1]
+cone3:
+  activePhaseVars: ['C0','rho','ka','kb','kc','kd','ke','Cpa','Cpb','Cpc','Cpd','Cpe','eps','K']
+  activeReactionVars: ['A','E','n','Hp','nO2','Xi']
+  weight: 1.0
+  backBoundaryConditions:
+    type: 'INSULATED'
+    htc: 'Auto'
+    Tamb: 25
+  frontBoundaryConditions:
+    htc: 15
+    Tamb: 25
+    heatFlux: 75
+  file: '../../../../data/multiReactionCharring/charLinear3ReacNominal75kW_0_cone_Mass.csv'
+  time: 0
+  Tinit: 25
+  width1: 0.1016
+  width2: 0.1016
+  initialThickness: 0.008
+  names: ['Mass']
+  columns: [1]
+  weights: [1]
+  depths: [0]
+  types: [1]
 processParams:
   multiprocess: True
-  maxProcesses: 4
+  maxProcesses: 8
 optimizeParams:
   opP: 26
   opS: 51
@@ -45,7 +91,7 @@ optimizeParams:
   maxIter: 200
   absErr: 1e-7
   relErr: 1e-12
-  absRelErr: 5e-7
+  absRelErr: 3e-7
   relIter: 15
   maxTime: 600000
   elimThresh: 1e-2
@@ -57,23 +103,23 @@ phaseParams:
   kc:   [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
   kd:   [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
   rho:  [[1683,  1189,   1189], [1235,  1189,   1189]   ]
-  Cpa:  [[None,     972,   1188], [None,  260.25,   4164]   ]
-  Cpb:  [[None,     0.04068,    0.04972], [None,  6.475e-2,   1.036]    ]
+  Cpa:  [[None,     270,   4320], [None,  260.25,   4164]   ]
+  Cpb:  [[None,     1.13e-2,    1.808e-1], [None,  6.475e-2,   1.036]    ]
   Cpc:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
   Cpd:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
   eps:  [[None,     0.235,   1.0], [0.94,  0.235,   1.0]    ]
   K:    [[None,    2500,    40000], [1e8,  1189,   1189]   ]
   nO2:  [[0,        0,      1], [0,  1189,   1189]      ]
 dataSources:
-  names: ['cone1']
-  types: ['cone']
+  names: ['cone1','cone2','cone3']
+  types: ['cone','cone','cone']
 reactionParams:
-  A:   [[None,2.106e12,2.574e12], [None,6.75e13,8.25e13], [None,8.28e12,1.012e13]]
-  E:   [[None,1.629e5,1.991e5], [None,1.737e5,2.123e5], [None,1.575e5,1.925e5]]
-  n:   [[None,0.9,1.1], [None,1.35,1.65], [None,2.7,3.3]]
-  Hp:  [[None,2.5e4,4e5], [None,5e4,8e5], [None,360000,440000]]
+  A:   [[None,5.86e11,9.376e12], [None,1.875e13,3e14], [None,2.3e12,3.68e13]]
+  E:   [[None,4.525e4,7.24e5], [None,4.825e4,7.72e5], [None,4.375e4,7e5]]
+  n:   [[None,0.25,4.0], [None,0.375,6.0], [None,0.75,12]]
+  Hp:  [[None,2.5e4,4e5], [None,5e4,8e5], [None,1e5,1.6e6]]
   nO2: [[0,0,1], [0,0,1], [0,0,1]]
-  Xi:  [[None,0.675,0.825], [None,0.45,0.55], [None,0.27,0.33]]
+  Xi:  [[None,0.1875,1], [None,0.125,1], [None,0.075,1]]
   typeState: [3,3,3]
   reacState: [0,0,0]
   prodState: [1,1,1]
