@@ -17,14 +17,14 @@ import pandas as pd
 # Program space
 # %%
 # file name components
-fileName = 'data/charLinear3Reac'
-figureName = 'charLinear3Reac'
+figureName = 'charLinear2Reac'
+fileName = 'data/' + figureName
 massCol = ['# Time [s]',' Mass [Kg]']
 tempCol = ['# Time [s]',' Temperature [C]']
 dfMass = []
 dfFT = []
 dfBT = []
-fileSeq = ['Nominal', 'TGADSC', '3Mass', 'TGA']
+fileSeq = ['Nominal', '3Mass']
 heatFlux = ['10kW', '100kW']
 tempSeq = ['FT', 'BT']
 
@@ -76,7 +76,7 @@ fheight = 5
 fwidthlong = 6.5 * 2
 markStep = [200, 20]
 markerList = ['o', '^', 'v', 's']
-legList = ['Virtual', 'M+TGA+DSC', '3 M', 'M+TGA']
+legList = ['Virtual', '3 M']
 axisList = [6000, 400]
 
 # %%

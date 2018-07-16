@@ -1,0 +1,78 @@
+name: multiReacLinearMass2T
+resultsDir: '../../../results/multiReactionCharring/temp/'
+virtualExperiment: False
+keepTemporaryFiles: True
+fdsPath: 'C:\Program Files\FDS\FDS6\bin'
+reinitializeComplex: False
+assumeVolumeConservation: False
+outputParams:
+  saveAllSamples: False
+cone1:
+  activePhaseVars: ['C0','rho','ka','kb','kc','kd','ke','Cpa','Cpb','Cpc','Cpd','Cpe','eps','K']
+  activeReactionVars: ['A','E','n','Hp','nO2','Xi']
+  weight: 1.0
+  backBoundaryConditions:
+    type: 'INSULATED'
+    htc: 'Auto'
+    Tamb: 25
+  frontBoundaryConditions:
+    htc: 15
+    Tamb: 25
+    heatFlux: 25
+  file: '../../../data/multiReactionCharring/multiReactionCharringLinearNominalVirtual.csv'
+  time: 0
+  Tinit: 25
+  width1: 0.1016
+  width2: 0.1016
+  initialThickness: 0.008
+  names: ['Mass','Temperature','Temperature']
+  columns: [1,2,3]
+  weights: [1,1,1]
+  depths: [0,0,0.008]
+  types: [1,3,3]
+processParams:
+  multiprocess: True
+  maxProcesses: 4
+optimizeParams:
+  opP: 21
+  opS: 41
+  opQ: 21
+  opAlpha: 41
+  opBeta: 1
+  minP: 21
+  minIter: 5
+  maxIter: 200
+  absErr: 1e-7
+  relErr: 1e-12
+  absRelErr: 5e-7
+  relIter: 15
+  maxTime: 600000
+  elimThresh: 1e-2
+phaseParams:
+  phases: ['virgin', 'char']
+  C0:   [[1,      0,      1], [0,  1189,   1189]      ]
+  ka:   [[None,     0.078,   1.248], [None,  0.023725,  0.3796]   ]
+  kb:   [[None,     1.1013e-5,    1.762e-4], [None,  7.075e-5,   1.132e-3]     ]
+  kc:   [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
+  kd:   [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
+  rho:  [[1683,  1189,   1189], [1235,  1189,   1189]   ]
+  Cpa:  [[None,     270,   4320], [None,  260.25,   4164]   ]
+  Cpb:  [[None,     1.13e-2,    1.808e-1], [None,  6.475e-2,   1.036]    ]
+  Cpc:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
+  Cpd:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
+  eps:  [[None,     0.235,   1.0], [0.94,  0.235,   1.0]    ]
+  K:    [[None,    2500,    40000], [1e8,  1189,   1189]   ]
+  nO2:  [[0,        0,      1], [0,  1189,   1189]      ]
+dataSources:
+  names: ['cone1']
+  types: ['cone']
+reactionParams:
+  A:   [[None,5.86e11,9.376e12], [None,1.875e13,3e14]]
+  E:   [[None,4.525e4,7.24e5], [None,4.825e4,7.72e5]]
+  n:   [[None,0.25,4.0], [None,0.375,6.0]]
+  Hp:  [[None,2.5e4,4e5], [None,5e4,8e5]]
+  nO2: [[0,0,1], [0,0,1]]
+  Xi:  [[None,0.1875,1], [None,0.125,1]]
+  typeState: [3,3]
+  reacState: [0,0]
+  prodState: [1,1]
