@@ -1,10 +1,11 @@
-name: multiReacLinearMass2T
-resultsDir: '../../../results/multiReactionCharring/temp/'
+name: charLinear3ReacFTBT
+resultsDir: '../../../../results/multiReactionCharring/3Reactions/'
+restart: False
 virtualExperiment: False
-keepTemporaryFiles: True
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
 reinitializeComplex: False
 assumeVolumeConservation: False
+thermalPropertyUnits: 'K'
 outputParams:
   saveAllSamples: False
 cone1:
@@ -19,7 +20,7 @@ cone1:
     htc: 15
     Tamb: 25
     heatFlux: 25
-  file: '../../../data/multiReactionCharring/multiReactionCharringLinearNominalVirtual.csv'
+  file: '../../../../data/multiReactionCharring/charLinear3ReacNominal25kWVirtual.csv'
   time: 0
   Tinit: 25
   width1: 0.1016
@@ -34,12 +35,12 @@ processParams:
   multiprocess: True
   maxProcesses: 4
 optimizeParams:
-  opP: 21
-  opS: 41
-  opQ: 21
-  opAlpha: 41
+  opP: 26
+  opS: 51
+  opQ: 26
+  opAlpha: 51
   opBeta: 1
-  minP: 21
+  minP: 26
   minIter: 5
   maxIter: 200
   absErr: 1e-7
@@ -67,12 +68,12 @@ dataSources:
   names: ['cone1']
   types: ['cone']
 reactionParams:
-  A:   [[None,5.86e11,9.376e12], [None,1.875e13,3e14]]
-  E:   [[None,4.525e4,7.24e5], [None,4.825e4,7.72e5]]
-  n:   [[None,0.25,4.0], [None,0.375,6.0]]
-  Hp:  [[None,2.5e4,4e5], [None,5e4,8e5]]
-  nO2: [[0,0,1], [0,0,1]]
-  Xi:  [[None,0.1875,1], [None,0.125,1]]
-  typeState: [3,3]
-  reacState: [0,0]
-  prodState: [1,1]
+  A:   [[None,5.86e11,9.376e12], [None,1.875e13,3e14], [None,2.3e12,3.68e13]]
+  E:   [[None,4.525e4,7.24e5], [None,4.825e4,7.72e5], [None,4.375e4,7e5]]
+  n:   [[None,0.25,4.0], [None,0.375,6.0], [None,0.75,12]]
+  Hp:  [[None,2.5e4,4e5], [None,5e4,8e5], [None,1e5,1.6e6]]
+  nO2: [[0,0,1], [0,0,1], [0,0,1]]
+  Xi:  [[None,0.1875,1], [None,0.125,1], [None,0.075,1]]
+  typeState: [3,3,3]
+  reacState: [0,0,0]
+  prodState: [1,1,1]
