@@ -24,8 +24,12 @@ tempCol = ['# Time [s]',' Temperature [C]']
 dfMass = []
 dfFT = []
 dfBT = []
-fileSeq = ['Nominal', 'TGADSC', '3Mass', 'TGA']
-heatFlux = ['10kW', '100kW']
+fileSeq = ['Nominal', 'TGADSC', '3Mass', 'FTBT']
+heatFlux = ['10kW', '60kW', '100kW']
+# fileSeq = ['Nominal', 'TGADSC', '3Mass', 'TGA']
+# heatFlux = ['10kW', '100kW']
+legList = ['Virtual', 'M+TGA+DSC', '3 M', 'M+FT+BT']
+# legList = ['Virtual', 'M+TGA+DSC', '3 M', 'M+TGA']
 tempSeq = ['FT', 'BT']
 
 # Read data from csv files
@@ -76,7 +80,6 @@ fheight = 5
 fwidthlong = 6.5 * 2
 markStep = [200, 20]
 markerList = ['o', '^', 'v', 's']
-legList = ['Virtual', 'M+TGA+DSC', '3 M', 'M+TGA']
 axisList = [6000, 400]
 
 # %%
