@@ -1,10 +1,11 @@
-name: multiReacLinearMass2T
-resultsDir: '../../../results/multiReactionCharring/temp/'
+name: charLinear3Reac2MassTGA
+resultsDir: '../../../../results/multiReactionCharring/3Reactions/'
+restart: False
 virtualExperiment: False
-keepTemporaryFiles: True
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
 reinitializeComplex: False
 assumeVolumeConservation: False
+thermalPropertyUnits: 'K'
 outputParams:
   saveAllSamples: False
 cone1:
@@ -19,32 +20,55 @@ cone1:
     htc: 15
     Tamb: 25
     heatFlux: 25
-  file: '../../../data/multiReactionCharring/multiReactionCharringLinearNominalVirtual.csv'
+  file: '../../../../data/multiReactionCharring/charLinear3ReacNominal25kW_0_cone_Mass.csv'
   time: 0
   Tinit: 25
   width1: 0.1016
   width2: 0.1016
   initialThickness: 0.008
-  names: ['Mass','Temperature','Temperature']
-  columns: [1,2,3]
-  weights: [1,1,1]
-  depths: [0,0,0.008]
-  types: [1,3,3]
+  names: ['Mass']
+  columns: [1]
+  weights: [1]
+  depths: [0]
+  types: [1]
+cone2:
+  activePhaseVars: ['C0','rho','ka','kb','kc','kd','ke','Cpa','Cpb','Cpc','Cpd','Cpe','eps','K']
+  activeReactionVars: ['A','E','n','Hp','nO2','Xi']
+  weight: 1.0
+  backBoundaryConditions:
+    type: 'INSULATED'
+    htc: 'Auto'
+    Tamb: 25
+  frontBoundaryConditions:
+    htc: 15
+    Tamb: 25
+    heatFlux: 50
+  file: '../../../../data/multiReactionCharring/charLinear3ReacNominal50kW_0_cone_Mass.csv'
+  time: 0
+  Tinit: 25
+  width1: 0.1016
+  width2: 0.1016
+  initialThickness: 0.008
+  names: ['Mass']
+  columns: [1]
+  weights: [1]
+  depths: [0]
+  types: [1]
 processParams:
   multiprocess: True
   maxProcesses: 4
 optimizeParams:
-  opP: 21
-  opS: 41
-  opQ: 21
-  opAlpha: 41
+  opP: 26
+  opS: 51
+  opQ: 26
+  opAlpha: 51
   opBeta: 1
-  minP: 21
+  minP: 26
   minIter: 5
   maxIter: 200
   absErr: 1e-7
   relErr: 1e-12
-  absRelErr: 5e-7
+  absRelErr: 1e-7
   relIter: 15
   maxTime: 600000
   elimThresh: 1e-2
@@ -64,15 +88,15 @@ phaseParams:
   K:    [[None,    2500,    40000], [1e8,  1189,   1189]   ]
   nO2:  [[0,        0,      1], [0,  1189,   1189]      ]
 dataSources:
-  names: ['cone1']
-  types: ['cone']
+  names: ['cone1','cone2']
+  types: ['cone','cone']
 reactionParams:
-  A:   [[None,5.86e11,9.376e12], [None,1.875e13,3e14]]
-  E:   [[None,4.525e4,7.24e5], [None,4.825e4,7.72e5]]
-  n:   [[None,0.25,4.0], [None,0.375,6.0]]
-  Hp:  [[None,2.5e4,4e5], [None,5e4,8e5]]
-  nO2: [[0,0,1], [0,0,1]]
-  Xi:  [[None,0.1875,1], [None,0.125,1]]
-  typeState: [3,3]
-  reacState: [0,0]
-  prodState: [1,1]
+  A:   [[None,2.106e12,2.574e12], [None,6.75e13,8.25e13], [None,8.28e12,1.012e13]]
+  E:   [[None,1.629e5,1.991e5], [None,1.737e5,2.123e5], [None,1.575e5,1.925e5]]
+  n:   [[None,0.9,1.1], [None,1.35,1.65], [None,2.7,3.3]]
+  Hp:  [[None,2.5e4,4e5], [None,5e4,8e5], [None,360000,440000]]
+  nO2: [[0,0,1], [0,0,1], [0,0,1]]
+  Xi:  [[None,0.675,0.825], [None,0.45,0.55], [None,0.27,0.33]]
+  typeState: [3,3,3]
+  reacState: [0,0,0]
+  prodState: [1,1,1]

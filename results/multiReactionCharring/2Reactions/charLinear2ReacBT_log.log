@@ -1,0 +1,446 @@
+C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\2Reactions\1mass_BT\../../../../results/multiReactionCharring/2Reactions/charLinear2ReacBT Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - unknown
+  - unknown
+  assumeVolumeConservation: false
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    allowIgnition: false
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    ignitionHeatFlux: 20
+    ignitionThreshold: 0.0032
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      - 3
+      depths:
+      - 0
+      - 0.008
+      file: ../../../../data/multiReactionCharring/multiReactionCharringLinearNominalVirtual.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 25
+          htc: 15
+      ignitionHeatFlux: 20.0
+      ignitionThreshold: 0.0032
+      initialThickness: 0.008
+      names:
+      - Mass
+      - Temperature
+      time: 0
+      types:
+      - 1
+      - 3
+      weight: 1.0
+      weights:
+      - 1
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\2Reactions\1mass_BT\
+  dataSources:
+    names:
+    - cone1
+    types:
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  keepTemporaryFiles: false
+  name: charLinear2ReacBT
+  optimizeParams:
+    absErr: 1e-7
+    absRelErr: 5e-7
+    elimThresh: 1e-2
+    maxIter: 200
+    maxTime: 600000
+    minIter: 5
+    minP: 21
+    opAlpha: 41
+    opBeta: 1
+    opP: 21
+    opQ: 21
+    opS: 41
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: false
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - None
+      - 270
+      - 4320
+    - - None
+      - 260.25
+      - 4164
+    Cpb:
+    - - None
+      - 0.0113
+      - 0.1808
+    - - None
+      - 0.06475
+      - 1.036
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id002
+      - 0
+      - 0
+      - 1
+    - *id002
+    K:
+    - - None
+      - 2500
+      - 40000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - None
+      - 0.235
+      - 1.0
+    - - 0.94
+      - 0.235
+      - 1.0
+    ka:
+    - - None
+      - 0.078
+      - 1.248
+    - - None
+      - 0.023725
+      - 0.3796
+    kb:
+    - - None
+      - 1.1013e-05
+      - 0.0001762
+    - - None
+      - 7.075e-05
+      - 0.001132
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    nO2:
+    - - 0
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 4
+    multiprocess: true
+  reactionParams:
+    A:
+    - - None
+      - 5.86e11
+      - 9.376e12
+    - - None
+      - 1.875e13
+      - 3e14
+    E:
+    - - None
+      - 4.525e4
+      - 7.24e5
+    - - None
+      - 4.825e4
+      - 7.72e5
+    Hp:
+    - - None
+      - 2.5e4
+      - 4e5
+    - - None
+      - 5e4
+      - 8e5
+    Xi:
+    - - None
+      - 0.1875
+      - 1
+    - - None
+      - 0.125
+      - 1
+    n:
+    - - None
+      - 0.25
+      - 4.0
+    - - None
+      - 0.375
+      - 6.0
+    nO2:
+    - &id004
+      - 0
+      - 0
+      - 1
+    - *id004
+    prodState:
+    - 1
+    - 1
+    reacState:
+    - 0
+    - 0
+    typeState:
+    - 3
+    - 3
+  reinitializeComplex: false
+  restart: false
+  resultsDir: ../../../../results/multiReactionCharring/2Reactions/
+  systemDir: C:\Users\Fyang\Workspace\optimization\sourceCode\optimizationpython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  thermalPropertyUnits: K
+  virtualExperiment: false
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+0		110.01	3.239e-03	2.640e-02	1.000e+00	21	861
+1		225.18	2.195e-03	2.659e-02	1.000e+00	21	861
+2		342.74	2.195e-03	2.642e-02	1.000e+00	21	861
+3		463.62	2.195e-03	2.555e-02	1.000e+00	21	861
+4		583.11	1.316e-03	2.742e-02	1.000e+00	21	861
+5		704.68	1.164e-03	2.742e-02	1.000e+00	21	861
+6		823.17	9.176e-04	2.742e-02	1.000e+00	21	861
+7		946.04	8.370e-04	2.460e-02	1.000e+00	21	861
+8		1074.63	7.596e-04	2.460e-02	1.000e+00	21	861
+9		1204.60	7.322e-04	2.460e-02	1.000e+00	21	861
+10		1339.78	6.315e-04	2.376e-02	1.000e+00	21	861
+11		1471.04	4.929e-04	2.715e-02	1.000e+00	21	861
+12		1598.42	3.802e-04	2.715e-02	1.000e+00	21	861
+13		1723.30	2.815e-04	2.657e-02	1.000e+00	21	861
+14		1849.26	2.448e-04	2.522e-02	1.000e+00	21	861
+15		1974.65	2.287e-04	2.297e-02	1.000e+00	21	861
+16		2097.33	1.746e-04	2.643e-02	2.020e-03	21	861
+17		2224.90	1.497e-04	2.628e-02	2.045e-03	21	861
+18		2346.39	1.207e-04	2.605e-02	2.074e-03	21	861
+19		2472.76	1.097e-04	2.733e-02	1.206e-03	21	861
+20		2595.53	1.059e-04	2.733e-02	1.058e-03	21	861
+21		2721.62	1.051e-04	2.585e-02	8.125e-04	21	861
+22		2847.00	9.651e-05	2.371e-02	7.405e-04	21	861
+23		2974.50	9.427e-05	2.650e-02	6.653e-04	21	861
+24		3100.38	8.490e-05	2.641e-02	6.474e-04	21	861
+25		3222.87	8.017e-05	2.625e-02	5.513e-04	21	861
+26		3342.36	7.048e-05	2.563e-02	4.224e-04	21	861
+27		3469.54	6.407e-05	2.514e-02	3.161e-04	21	861
+28		3597.53	5.995e-05	2.537e-02	2.215e-04	21	861
+29		3723.57	5.276e-05	2.577e-02	1.920e-04	21	861
+30		3842.56	5.276e-05	2.564e-02	1.759e-04	21	861
+31		3961.54	4.869e-05	2.350e-02	1.259e-04	21	861
+32		4088.61	4.500e-05	2.316e-02	1.047e-04	21	861
+33		4223.00	4.377e-05	2.658e-02	7.697e-05	21	861
+34		4348.88	4.133e-05	2.527e-02	6.835e-05	21	861
+35		4477.85	3.903e-05	2.483e-02	6.684e-05	21	861
+36		4606.36	3.775e-05	1.902e-02	6.731e-05	21	861
+37		4732.70	3.769e-05	2.497e-02	5.881e-05	21	861
+38		4856.76	3.682e-05	1.227e-02	5.745e-05	21	861
+39		4980.04	3.562e-05	1.019e-02	4.928e-05	21	861
+40		5104.60	3.462e-05	2.205e-02	4.555e-05	21	861
+41		5226.00	3.400e-05	2.265e-02	3.648e-05	21	861
+42		5350.29	3.336e-05	2.149e-02	3.071e-05	21	861
+43		5472.27	3.251e-05	2.149e-02	2.744e-05	21	861
+44		5595.45	3.251e-05	2.149e-02	2.025e-05	21	861
+45		5715.11	3.220e-05	2.441e-02	2.056e-05	21	861
+46		5832.89	3.213e-05	1.653e-02	1.656e-05	21	861
+47		5951.17	3.188e-05	2.342e-02	1.313e-05	21	861
+48		6068.44	3.178e-05	1.671e-02	1.199e-05	21	861
+49		6186.79	3.171e-05	1.313e-02	9.620e-06	21	861
+50		6310.35	3.161e-05	2.158e-02	7.425e-06	21	861
+51		6428.64	3.159e-05	2.650e-02	6.166e-06	21	861
+52		6541.32	3.148e-05	2.321e-02	6.211e-06	21	861
+53		6656.61	3.139e-05	1.560e-02	5.432e-06	21	861
+54		6773.59	3.128e-05	2.583e-02	4.335e-06	21	861
+55		6891.38	3.101e-05	2.232e-02	3.614e-06	21	861
+56		7004.04	3.080e-05	2.159e-02	3.203e-06	21	861
+57		7116.12	3.035e-05	2.434e-02	3.007e-06	21	861
+58		7227.71	2.997e-05	2.578e-02	2.540e-06	21	861
+59		7338.18	2.984e-05	2.307e-02	2.668e-06	21	861
+60		7449.16	2.963e-05	2.442e-02	2.579e-06	21	861
+61		7562.29	2.888e-05	1.930e-02	3.243e-06	21	861
+62		7674.57	2.850e-05	2.521e-02	3.373e-06	21	861
+63		7793.04	2.836e-05	2.367e-02	3.416e-06	21	861
+64		7908.81	2.781e-05	1.754e-02	3.903e-06	21	861
+65		8024.79	2.781e-05	1.195e-02	3.796e-06	21	861
+66		8135.45	2.774e-05	1.275e-02	3.845e-06	21	861
+67		8251.33	2.771e-05	1.533e-02	3.767e-06	21	861
+68		8362.60	2.770e-05	1.199e-02	3.685e-06	21	861
+69		8474.87	2.768e-05	9.987e-03	3.604e-06	21	861
+70		8588.73	2.762e-05	9.946e-03	3.385e-06	21	861
+71		8702.00	2.759e-05	9.938e-03	3.205e-06	21	861
+72		8815.07	2.757e-05	9.938e-03	2.781e-06	21	861
+73		8931.75	2.750e-05	2.605e-02	2.465e-06	21	861
+74		9041.07	2.743e-05	2.415e-02	2.409e-06	21	861
+75		9152.12	2.730e-05	2.581e-02	2.327e-06	21	861
+76		9265.11	2.729e-05	2.609e-02	1.598e-06	21	861
+77		9375.78	2.726e-05	2.609e-02	1.244e-06	21	861
+78		9490.38	2.725e-05	2.609e-02	1.117e-06	21	861
+79		9606.08	2.723e-05	2.465e-02	5.837e-07	21	861
+80		9719.10	2.720e-05	2.465e-02	6.057e-07	21	861
+81		9829.77	2.719e-05	2.041e-02	5.500e-07	21	861
+82		9951.34	2.716e-05	2.193e-02	5.537e-07	21	861
+83		10066.02	2.714e-05	1.764e-02	5.596e-07	21	861
+84		10188.39	2.713e-05	2.399e-02	5.450e-07	21	861
+85		10312.75	2.697e-05	2.659e-02	6.509e-07	21	861
+86		10435.43	2.697e-05	2.241e-02	6.215e-07	21	861
+87		10559.70	2.687e-05	2.495e-02	6.973e-07	21	861
+88		10675.68	2.682e-05	2.495e-02	6.835e-07	21	861
