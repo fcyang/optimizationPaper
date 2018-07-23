@@ -1,0 +1,400 @@
+C:\Users\skraft\Projects\NIJ\optimizationtests\Long\E_Glass_linear_dsc_M\E_Glass_linear_dsc_M/E_Glass_linear_dsc_M Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - unknowable
+  assumeVolumeConservation: true
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    allowIgnition: false
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    ignitionHeatFlux: 20
+    ignitionThreshold: 0.0032
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: E_GlassLinearVirtual.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 25
+          htc: 15
+      ignitionHeatFlux: 20.0
+      ignitionThreshold: 0.0032
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: C:\Users\skraft\Projects\NIJ\optimizationtests\Long\E_Glass_linear_dsc_M\
+  dataSources:
+    names:
+    - cone1
+    types:
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  keepTemporaryFiles: false
+  name: E_Glass_linear_dsc_M
+  optimizeParams:
+    absErr: 1e-7
+    absRelErr: 5e-7
+    elimThresh: 1e-2
+    maxIter: 1000
+    maxTime: 60000
+    minIter: 5
+    minP: 2
+    opAlpha: 57
+    opBeta: 1
+    opP: 29
+    opQ: 15
+    opS: 29
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: true
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - None
+      - 972
+      - 1188
+    - - None
+      - 260.25
+      - 4164
+    Cpb:
+    - - None
+      - 0.04068
+      - 0.04972
+    - - None
+      - 0.06475
+      - 1.036
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id002
+      - 0
+      - 0
+      - 1
+    - *id002
+    K:
+    - - None
+      - 2500
+      - 40000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - None
+      - 0.235
+      - 1.0
+    - - 0.94
+      - 0.235
+      - 1.0
+    ka:
+    - - None
+      - 0.078
+      - 1.248
+    - - None
+      - 0.023725
+      - 0.3796
+    kb:
+    - - None
+      - 1.1013e-05
+      - 0.0001762
+    - - None
+      - 7.075e-05
+      - 0.001132
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    nO2:
+    - - 0
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 8
+    multiprocess: true
+  reactionParams:
+    A:
+    - - None
+      - 5.86e11
+      - 9.376e12
+    E:
+    - - None
+      - 4.525e4
+      - 7.24e5
+    Hp:
+    - - None
+      - 2.5e4
+      - 4e5
+    Xi:
+    - - None
+      - 0
+      - 1
+    n:
+    - - None
+      - 0.25
+      - 4.0
+    nO2:
+    - - 0
+      - 0
+      - 1
+    prodState:
+    - 1
+    reacState:
+    - 0
+    typeState:
+    - 3
+  reinitializeComplex: true
+  restart: false
+  resultsDir: E_Glass_linear_dsc_M/
+  systemDir: C:\Users\skraft\Projects\NIJ\optimizationpython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  thermalPropertyUnits: K
+  virtualExperiment: false
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+0		1075.75	8.101e-05	5.093e-03	1.000e+00	29	841
+1		2223.52	3.826e-05	5.093e-03	1.000e+00	29	841
+2		3442.85	2.058e-05	5.093e-03	1.000e+00	29	841
+3		4710.13	1.361e-05	5.093e-03	1.000e+00	29	841
+4		5964.13	1.099e-05	5.093e-03	1.000e+00	29	841
+5		7210.08	9.832e-06	5.093e-03	1.000e+00	29	841
+6		8483.98	9.518e-06	5.093e-03	1.000e+00	29	841
+7		9702.22	8.444e-06	5.093e-03	1.000e+00	29	841
+8		10912.53	7.758e-06	5.093e-03	1.000e+00	29	841
+9		12162.81	7.155e-06	5.093e-03	1.000e+00	29	841
+10		13439.24	6.851e-06	5.093e-03	1.000e+00	29	841
+11		14701.67	6.769e-06	5.093e-03	1.000e+00	29	841
+12		15975.59	6.750e-06	5.093e-03	1.000e+00	29	841
+13		17301.03	6.742e-06	5.093e-03	1.000e+00	29	841
+14		18703.16	6.737e-06	5.093e-03	1.000e+00	29	841
+15		20531.05	6.675e-06	5.093e-03	1.000e+00	29	841
+16		21814.51	6.607e-06	5.093e-03	3.165e-05	29	841
+17		23095.89	6.542e-06	5.093e-03	1.404e-05	29	841
+18		24388.99	6.364e-06	5.093e-03	7.245e-06	29	841
+19		25612.17	6.364e-06	5.093e-03	4.626e-06	29	841
+20		26910.17	6.364e-06	5.093e-03	3.468e-06	29	841
+21		28219.64	6.364e-06	5.093e-03	3.154e-06	29	841
+22		29540.63	6.364e-06	5.093e-03	2.080e-06	29	841
+23		30899.20	6.364e-06	5.093e-03	1.394e-06	29	841
+24		32285.52	6.333e-06	5.093e-03	8.213e-07	29	841
+25		33660.64	6.297e-06	5.093e-03	5.532e-07	29	841
+26		35077.54	6.297e-06	5.093e-03	4.716e-07	29	841
+27		36413.75	6.288e-06	5.093e-03	4.623e-07	29	841
+28		37836.91	6.288e-06	5.093e-03	4.538e-07	29	841
+29		39357.84	6.288e-06	5.093e-03	4.492e-07	29	841
+30		40820.11	6.210e-06	5.093e-03	4.645e-07	29	841
+31		42230.17	6.118e-06	5.093e-03	4.895e-07	29	841
+32		43602.26	6.057e-06	5.093e-03	4.841e-07	29	841
+33		44972.86	5.987e-06	5.093e-03	3.769e-07	29	841
+34		46357.56	5.839e-06	5.093e-03	5.243e-07	29	841
+35		47723.37	5.732e-06	5.093e-03	6.321e-07	29	841
+36		49089.66	5.640e-06	5.093e-03	7.238e-07	29	841
+37		50459.58	5.552e-06	5.093e-03	8.119e-07	29	841
+38		51830.38	5.537e-06	5.093e-03	8.270e-07	29	841
+39		53217.77	5.527e-06	5.093e-03	8.065e-07	29	841
+40		54726.66	5.525e-06	5.093e-03	7.724e-07	29	841
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 8.19e-03 replaced with parameter deviation 1.58
+41		56215.27	5.524e-06	1.124e-02	7.737e-07	29	841
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 6.14e-03 replaced with parameter deviation 1.46
+42		57702.15	5.521e-06	5.093e-03	7.671e-07	29	841
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 3.42e-03 replaced with parameter deviation 1.75
+43		59143.61	5.519e-06	1.540e-02	7.693e-07	29	841
+Reinitializing complex 1, running simulations.
+Complex 1 with parameter deviation 2.36e-03 replaced with parameter deviation 1.51
+44		60501.19	5.518e-06	1.597e-02	7.707e-07	29	841
+A	 = 4.32e+12,
+C0	 = 1.0,0.0,
+Cpa	 = 1054.07922114,2525.6758118,
+Cpb	 = 0.0406841999164,0.729842603866,
+E	 = 1.77e+05,
+Hp	 = 125218.609706,
+K	 = 13051.0419462,100000000.0,
+Value	 = 5.51752092243e-06,
+Xi	 = 0.733808674985,
+eps	 = 0.807351193647,0.94,
+ka	 = 0.208262891084,0.0900348579126,
+kb	 = 0.000174792795077,0.000560461762705,
+n	 = 0.943669673204,
+nO2	 = 0.0,
+rho	 = 1683.0,1235.0,
+Results saved to C:\Users\skraft\Projects\NIJ\optimizationtests\Long\E_Glass_linear_dsc_M\E_Glass_linear_dsc_M/E_Glass_linear_dsc_M_solution.txt
