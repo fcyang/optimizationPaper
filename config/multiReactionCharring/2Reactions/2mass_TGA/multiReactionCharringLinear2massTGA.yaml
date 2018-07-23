@@ -48,7 +48,6 @@ cone2:
   width1: 0.1016
   width2: 0.1016
   initialThickness: 0.008
-  finalThickness: 0.0063100001
   names: ['Mass']
   columns: [1]
   weights: [1]

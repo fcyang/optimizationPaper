@@ -1,0 +1,62 @@
+name: charLinear2ReacTGABT60kW
+resultsDir: '../../../../results/multiReactionCharring/2Reactions/validation/'
+virtualExperiment: True
+fdsPath: 'C:\Program Files\FDS\FDS6\bin'
+reinitializeComplex: False
+keepTemporaryFiles: True
+outputParams:
+  saveAllSamples: True
+cone1:
+  activePhaseVars: ['C0','rho','ka','kb','kc','kd','ke','Cpa','Cpb','Cpc','Cpd','Cpe','eps','K']
+  activeReactionVars: ['A','E','n','Hp','nO2','Xi']
+  weight: 1.0
+  backBoundaryConditions:
+    type: 'INSULATED'
+    htc: 'Auto'
+    Tamb: 25
+  frontBoundaryConditions:
+    htc: 15
+    Tamb: 25
+    heatFlux: 60
+  file: '../../../../data/multiReactionCharring/multiReactionCharringFake.csv'
+  time: 0
+  Tinit: 25
+  width1: 0.1016
+  width2: 0.1016
+  initialThickness: 0.008
+  names: ['Mass']
+  columns: [1]
+  weights: [1]
+  depths: [0]
+  types: [1]
+processParams:
+  multiprocess: True
+  maxProcesses: 8
+phaseParams:
+  phases: ['virgin', 'char']
+  C0:   [[1,      0,      1], [0,  1189,   1189]      ]
+  ka:   [[0.3169,     0.10,   0.30], [0.1324,  1189,   1189]   ]
+  kb:   [[4.43e-5,      0.0,    0.0], [2.273e-4,  0.0,   0.0]     ]
+  kc:   [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
+  kd:   [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
+  rho:  [[1683,  1189,   1189], [1235,  1189,   1189]   ]
+  Cpa:  [[1097.85,     1000,   2800], [615.32,  1189,   1189]   ]
+  Cpb:  [[0.0364,      0.0,    0.0], [0.84,  1189,   1189]    ]
+  Cpc:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
+  Cpd:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
+  eps:  [[0.949,     0.75,   1.0], [0.94,  1189,   1189]    ]
+  K:    [[146090,     500,    3000], [1e8,  1189,   1189]   ]
+  nO2:  [[0,        0,      1], [0,  1189,   1189]      ]
+dataSources:
+  names: ['cone1']
+  types: ['cone']
+reactionParams:
+  A:   [[2.49e12,1e6,1e14], [6.96e13,1e6,1e14]]
+  E:   [[1.80e5,1.2e4,2.0e5], [1.93e5,1.2e4,2.0e5]]
+  n:   [[1.1,5e-1,4e0], [1.464,5e-1,4e0]]
+  Hp:  [[146090,1e5,1e7], [183230,1e5,1e7]]
+  nO2: [[0,0,1], [0,0,1]]
+  Xi:  [[0.68,0,1], [0.5177,0,1]]
+  typeState: [3,3]
+  reacState: [0,0]
+  prodState: [1,1]

@@ -1,8 +1,9 @@
-name: multiReacCharLinearWide
-resultsDir: '../../results/multiReactionCharring/'
+name: charLinear2Reac2Mass
+resultsDir: '../../results/multiReactionCharring/2Reactions/'
 virtualExperiment: False
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
 reinitializeComplex: False
+assumeVolumeConservation: False
 outputParams:
   saveAllSamples: False
 cone1:
@@ -23,7 +24,6 @@ cone1:
   width1: 0.1016
   width2: 0.1016
   initialThickness: 0.008
-  finalThickness: 0.0063498751
   names: ['Mass']
   columns: [1]
   weights: [1]
@@ -47,7 +47,6 @@ cone2:
   width1: 0.1016
   width2: 0.1016
   initialThickness: 0.008
-  finalThickness: 0.0063100001
   names: ['Mass']
   columns: [1]
   weights: [1]
@@ -57,19 +56,19 @@ processParams:
   multiprocess: True
   maxProcesses: 4
 optimizeParams:
-  opP: 41
+  opP: 21
   opS: 41
   opQ: 21
-  opAlpha: 1
-  opBeta: 41
+  opAlpha: 41
+  opBeta: 1
   minP: 21
   minIter: 5
-  maxIter: 1000
+  maxIter: 200
   absErr: 1e-7
   relErr: 1e-12
-  absRelErr: 5e-7
+  absRelErr: 1e-7
   relIter: 15
-  maxTime: 60000
+  maxTime: 600000
   elimThresh: 1e-2
 phaseParams:
   phases: ['virgin', 'char']
