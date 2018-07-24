@@ -1,5 +1,5 @@
 name: charLinear2Reac2Mass
-resultsDir: '../../results/multiReactionCharring/2Reactions/'
+resultsDir: '../../../../results/multiReactionCharring/2Reactions/'
 virtualExperiment: False
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
 reinitializeComplex: False
@@ -18,7 +18,7 @@ cone1:
     htc: 15
     Tamb: 25
     heatFlux: 25
-  file: '../../data/multiReactionCharring/multiReactionCharringLinearNominal_0_cone_Mass.csv'
+  file: '../../../../data/multiReactionCharring/multiReactionCharringLinearNominal_0_cone_Mass.csv'
   time: 0
   Tinit: 25
   width1: 0.1016
@@ -41,7 +41,7 @@ cone2:
     htc: 15
     Tamb: 25
     heatFlux: 50
-  file: '../../data/multiReactionCharring/multiReacCharLinearNominal50KW_0_cone_Mass.csv'
+  file: '../../../../data/multiReactionCharring/multiReacCharLinearNominal50KW_0_cone_Mass.csv'
   time: 0
   Tinit: 25
   width1: 0.1016
