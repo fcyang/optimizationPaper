@@ -1,0 +1,388 @@
+C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\3Reactions\validation\../../../../results/multiReactionCharring/3Reactions/validation/charLinear3ReacBT100kW Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - known
+  - known
+  - known
+  assumeVolumeConservation: true
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    allowIgnition: false
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    ignitionHeatFlux: 20
+    ignitionThreshold: 0.0032
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../../../data/multiReactionCharring/multiReactionCharringFake.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 100
+          htc: 15
+      ignitionHeatFlux: 20.0
+      ignitionThreshold: 0.0032
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\3Reactions\validation\
+  dataSources:
+    names:
+    - cone1
+    types:
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  keepTemporaryFiles: true
+  name: charLinear3ReacBT100kW
+  optimizeParams:
+    absErr: 1e-9
+    absRelErr: 1e-6
+    elimThresh: 1e-2
+    maxIter: -1
+    maxTime: -1
+    minIter: -1
+    minP: 2
+    opAlpha: 1
+    opBeta: 1
+    opP: 1
+    opQ: 1
+    opS: 1
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: true
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - 873.29
+      - 1000
+      - 2800
+    - - 819.2
+      - 1189
+      - 1189
+    Cpb:
+    - - 0.0239
+      - 0.0
+      - 0.0
+    - - 0.5245
+      - 1189
+      - 1189
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id002
+      - 0
+      - 0
+      - 1
+    - *id002
+    K:
+    - - 7697.5
+      - 500
+      - 3000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - 0.8024
+      - 0.75
+      - 1.0
+    - - 0.94
+      - 1189
+      - 1189
+    ka:
+    - - 0.233
+      - 0.1
+      - 0.3
+    - - 0.144
+      - 1189
+      - 1189
+    kb:
+    - - 5.16e-05
+      - 0.0
+      - 0.0
+    - - 0.000252
+      - 0.0
+      - 0.0
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    nO2:
+    - - 0
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 8
+    multiprocess: true
+  reactionParams:
+    A:
+    - - 1.79e12
+      - 1e6
+      - 1e14
+    - - 9.55e13
+      - 1e6
+      - 1e14
+    - - 1.72e13
+      - 1e6
+      - 1e14
+    E:
+    - - 1.66e5
+      - 1.2e4
+      - 2.0e5
+    - - 4.25e5
+      - 1.2e4
+      - 2.0e5
+    - - 2.66e5
+      - 1.2e4
+      - 2.0e5
+    Hp:
+    - - 290700
+      - 1e5
+      - 1e7
+    - - 692109
+      - 1e5
+      - 1e7
+    - - 1400061
+      - 1e5
+      - 1e7
+    Xi:
+    - - 0.4356
+      - 0
+      - 1
+    - - 0.629
+      - 0
+      - 1
+    - - 0.475
+      - 0
+      - 1
+    n:
+    - - 1.65
+      - 5e-1
+      - 4e0
+    - - 4.5
+      - 5e-1
+      - 4e0
+    - - 3.445
+      - 5e-1
+      - 4e0
+    nO2:
+    - &id004
+      - 0
+      - 0
+      - 1
+    - *id004
+    - *id004
+    prodState:
+    - 1
+    - 1
+    - 1
+    reacState:
+    - 0
+    - 0
+    - 0
+    typeState:
+    - 3
+    - 3
+    - 3
+  reinitializeComplex: false
+  restart: false
+  resultsDir: ../../../../results/multiReactionCharring/3Reactions/validation/
+  systemDir: C:\Users\Fyang\Workspace\optimization\sourceCode\optimizationpython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  thermalPropertyUnits: K
+  virtualExperiment: true
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+A	 = 1.79e+12,9.55e+13,1.72e+13,
+C0	 = 1.0,0.0,
+Cpa	 = 873.29,819.2,
+Cpb	 = 0.0239,0.5245,
+E	 = 1.66e+05,4.25e+05,2.66e+05,
+Hp	 = 290700.0,692109.0,1400061.0,
+K	 = 7697.5,100000000.0,
+Value	 = 0.009246522926530514,
+Xi	 = 0.4356,0.629,0.475,
+eps	 = 0.8024,0.94,
+ka	 = 0.233,0.144,
+kb	 = 5.16e-05,0.000252,
+n	 = 1.65,4.5,3.445,
+nO2	 = 0.0,0.0,0.0,
+rho	 = 1683.0,1235.0,
+Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\3Reactions\validation\../../../../results/multiReactionCharring/3Reactions/validation/charLinear3ReacBT100kW_solution.txt

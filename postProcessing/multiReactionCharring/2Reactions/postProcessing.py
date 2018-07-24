@@ -28,7 +28,7 @@ fileSeq = ['Nominal', '1Mass', 'TGADSC', '3Mass', 'FTBT', 'TGA', '2MassTGA', 'BT
 heatFlux = ['10kW', '60kW', '100kW']
 # fileSeq = ['Nominal', 'TGADSC', '3Mass', 'TGA']
 # heatFlux = ['10kW', '100kW']
-legList = ['Virtual', 'M+TGA+DSC', '3 M', 'M+FT+BT']
+legList = ['Virtual', 'M+TGA+DSC', '3 M', 'M+FT+BT', '2M+TGA', 'BT', 'TGA+BT']
 # legList = ['Virtual', 'M+TGA+DSC', '3 M', 'M+TGA']
 tempSeq = ['FT', 'BT']
 
@@ -124,8 +124,21 @@ axisList = [6000, 400]
 
 # %%
 # cherry-picked figure plots for publication
-
-
+fig = plt.figure(figsize=(fwidth, fheight))
+plt.plot(dfMass[0][0][0], dfMass[0][0][1], '-k', marker=markerList[0], markerfacecolor='none', markevery=markStep[0], linewidth=1.5, label=legList[0])
+plt.plot(dfMass[0][6][0], dfMass[0][6][1], '-', marker=markerList[1], markerfacecolor='none', markevery=markStep[0], linewidth=1.5, label=legList[4])
+plt.plot(dfMass[0][7][0], dfMass[0][7][1], '-', marker=markerList[2], markerfacecolor='none', markevery=markStep[0], linewidth=1.5, label=legList[5])
+plt.plot(dfMass[0][8][0], dfMass[0][8][1], '-', marker=markerList[3], markerfacecolor='none', markevery=markStep[0], linewidth=1.5, label=legList[6])
+plt.xlabel('Time (s)', fontname='Times New Roman', fontsize=fsize)
+plt.ylabel(r'Normalized Mass', fontname='Times New Roman', fontsize=fsize)
+H = plt.legend(loc='upper right', prop={'size': 16}, numpoints=1,
+                            frameon=False)
+plt.rc('xtick', labelsize=16)
+plt.rc('ytick', labelsize=16)
+# save figures
+plt.tight_layout()
+plt.savefig(figureName + '10kW' + 'NormalizedMass' +'.png', dpi=300)
+plt.show()
 # # %%
 # # auto figures generation -- for large batch of figures
 # for idx1,i in enumerate(heatFlux):

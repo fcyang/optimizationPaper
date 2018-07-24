@@ -1,4 +1,4 @@
-name: CharLinear2Reac2MassTGA
+name: charLinear2Reac2MassTGA
 resultsDir: '../../../results/multiReactionCharring/2Reactions/'
 virtualExperiment: False
 restart: True
