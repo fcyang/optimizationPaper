@@ -20,7 +20,7 @@ cone1:
     htc: 15
     Tamb: 25
     heatFlux: 25
-  file: '../../../../data/multiReactionCharring/charLinear3ReacNominal25kW_0_cone_Mass.csv'
+  file: '../../../../data/multiReactionCharring/charLinear3ReacNominal25kWVirtual.csv'
   time: 0
   Tinit: 25
   width1: 0.1016
