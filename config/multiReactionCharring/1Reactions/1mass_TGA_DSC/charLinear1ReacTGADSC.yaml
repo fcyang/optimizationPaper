@@ -4,7 +4,7 @@ restart: False
 virtualExperiment: False
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
 reinitializeComplex: False
-assumeVolumeConservation: False
+assumeVolumeConservation: True
 thermalPropertyUnits: 'K'
 outputParams:
   saveAllSamples: False
@@ -20,7 +20,7 @@ cone1:
     htc: 15
     Tamb: 25
     heatFlux: 25
-  file: '../../../../data/multiReactionCharring/multiReactionCharringFake.csv'
+  file: '../../../../data/multiReactionCharring/charLinear1ReacNominal25kW_0_cone_Mass.csv'
   time: 0
   Tinit: 25
   width1: 0.1016

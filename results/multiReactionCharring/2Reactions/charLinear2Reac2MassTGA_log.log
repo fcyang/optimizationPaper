@@ -1,0 +1,453 @@
+C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\2Reactions\2mass_TGA\../../../../results/multiReactionCharring/2Reactions/charLinear2Reac2MassTGA Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - unknown
+  - unknown
+  assumeVolumeConservation: false
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    allowIgnition: false
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    ignitionHeatFlux: 20
+    ignitionThreshold: 0.0032
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../../../data/multiReactionCharring/multiReactionCharringLinearNominal_0_cone_Mass.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 25
+          htc: 15
+      ignitionHeatFlux: 20.0
+      ignitionThreshold: 0.0032
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  cone2: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../../../data/multiReactionCharring/multiReacCharLinearNominal50KW_0_cone_Mass.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 50
+          htc: 15
+      ignitionHeatFlux: 20.0
+      ignitionThreshold: 0.0032
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\2Reactions\2mass_TGA\
+  dataSources:
+    names:
+    - cone1
+    - cone2
+    types:
+    - cone
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  keepTemporaryFiles: false
+  name: charLinear2Reac2MassTGA
+  optimizeParams:
+    absErr: 1e-7
+    absRelErr: 1e-7
+    elimThresh: 1e-2
+    maxIter: 200
+    maxTime: 600000
+    minIter: 5
+    minP: 21
+    opAlpha: 41
+    opBeta: 1
+    opP: 21
+    opQ: 21
+    opS: 41
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: false
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - None
+      - 270
+      - 4320
+    - - None
+      - 260.25
+      - 4164
+    Cpb:
+    - - None
+      - 0.0113
+      - 0.1808
+    - - None
+      - 0.06475
+      - 1.036
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id002
+      - 0
+      - 0
+      - 1
+    - *id002
+    K:
+    - - None
+      - 2500
+      - 40000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - None
+      - 0.235
+      - 1.0
+    - - 0.94
+      - 0.235
+      - 1.0
+    ka:
+    - - None
+      - 0.078
+      - 1.248
+    - - None
+      - 0.023725
+      - 0.3796
+    kb:
+    - - None
+      - 1.1013e-05
+      - 0.0001762
+    - - None
+      - 7.075e-05
+      - 0.001132
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    nO2:
+    - - 0
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 4
+    multiprocess: true
+  reactionParams:
+    A:
+    - - None
+      - 2.106e12
+      - 2.574e12
+    - - None
+      - 6.75e13
+      - 8.25e13
+    E:
+    - - None
+      - 1.629e5
+      - 1.991e5
+    - - None
+      - 1.737e5
+      - 2.123e5
+    Hp:
+    - - None
+      - 2.5e4
+      - 4e5
+    - - None
+      - 5e4
+      - 8e5
+    Xi:
+    - - None
+      - 0.675
+      - 0.825
+    - - None
+      - 0.45
+      - 0.55
+    n:
+    - - None
+      - 0.9
+      - 1.1
+    - - None
+      - 1.35
+      - 1.65
+    nO2:
+    - &id004
+      - 0
+      - 0
+      - 1
+    - *id004
+    prodState:
+    - 1
+    - 1
+    reacState:
+    - 0
+    - 0
+    typeState:
+    - 3
+    - 3
+  reinitializeComplex: false
+  restart: false
+  resultsDir: ../../../../results/multiReactionCharring/2Reactions/
+  systemDir: C:\Users\Fyang\Workspace\optimization\sourceCode\optimizationpython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  thermalPropertyUnits: K
+  virtualExperiment: false
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+0		274.08	1.022e-03	1.937e-02	1.000e+00	21	861
+1		554.20	1.022e-03	1.804e-02	1.000e+00	21	861
+2		915.51	9.088e-04	1.180e-02	1.000e+00	21	861
+3		1330.31	5.916e-04	5.965e-03	1.000e+00	21	861
+4		1733.71	5.916e-04	3.864e-03	1.000e+00	21	861
+5		2134.03	4.903e-04	1.583e-02	1.000e+00	21	861
+6		2540.13	4.058e-04	2.305e-03	1.000e+00	21	861
+7		2944.88	2.925e-04	2.305e-03	1.000e+00	21	861
+8		3372.23	1.579e-04	2.305e-03	1.000e+00	21	861
+9		3770.29	1.155e-04	1.347e-03	1.000e+00	21	861
+10		4186.63	9.820e-05	1.061e-03	1.000e+00	21	861
+11		4650.35	7.596e-05	6.133e-04	1.000e+00	21	861
+12		5114.07	6.668e-05	4.585e-04	1.000e+00	21	861
+13		5584.13	5.687e-05	4.055e-04	1.000e+00	21	861
+14		6046.28	5.379e-05	1.851e-04	1.000e+00	21	861
+15		6493.58	5.258e-05	1.648e-04	1.000e+00	21	861
+16		6890.00	5.068e-05	9.429e-05	9.715e-04	21	861
+17		7268.80	4.750e-05	8.749e-05	8.613e-04	21	861
+18		7595.59	4.168e-05	6.619e-05	5.499e-04	21	861
+19		7906.43	3.642e-05	6.619e-05	5.551e-04	21	861
+20		8273.52	3.394e-05	5.525e-05	4.564e-04	21	861
+21		8642.51	3.144e-05	4.719e-05	3.743e-04	21	861
+22		9006.79	2.976e-05	4.444e-05	2.628e-04	21	861
+23		9352.85	2.779e-05	4.444e-05	1.301e-04	21	861
+24		9705.68	2.616e-05	4.444e-05	8.932e-05	21	861
+25		10062.75	2.550e-05	3.487e-05	7.270e-05	21	861
+26		10483.08	2.506e-05	3.465e-05	5.091e-05	21	861
+27		10884.08	2.439e-05	3.465e-05	4.229e-05	21	861
+28		11220.94	2.346e-05	2.782e-05	3.341e-05	21	861
+29		11513.39	1.999e-05	2.679e-05	3.379e-05	21	861
+30		11814.82	1.596e-05	2.547e-05	3.662e-05	21	861
+31		12148.30	1.205e-05	2.547e-05	3.863e-05	21	861
+32		12497.33	1.036e-05	2.547e-05	3.713e-05	21	861
+33		12871.09	8.994e-06	2.079e-05	3.269e-05	21	861
+34		13255.51	7.417e-06	2.079e-05	2.900e-05	21	861
+35		13616.33	6.818e-06	1.566e-05	2.712e-05	21	861
+36		13975.27	6.354e-06	1.310e-05	2.508e-05	21	861
+37		14360.15	5.956e-06	1.310e-05	2.380e-05	21	861
+38		14756.08	5.756e-06	1.256e-05	2.204e-05	21	861

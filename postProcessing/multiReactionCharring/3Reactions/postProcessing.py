@@ -24,11 +24,11 @@ tempCol = ['# Time [s]',' Temperature [C]']
 dfMass = []
 dfFT = []
 dfBT = []
-fileSeq = ['Nominal', 'TGADSC', '2Mass', '2MassTGA','3Mass', '4Mass', 'FTBT', 'TGA', 'BT', '5Mass', 'TGABT']
+fileSeq = ['Nominal', 'FTBT', 'TGA', 'BT', 'TGABT']
 heatFlux = ['10kW', '60kW', '100kW']
 # fileSeq = ['Nominal', 'TGADSC', '3Mass', 'TGA']
 # heatFlux = ['10kW', '100kW']
-legList = ['Virtual', 'M+TGA+DSC', '2M','2M+TGA', '3M','4M', 'M+FT+BT', 'M+TGA', 'M+BT', '5M', 'M+TGA+BT']
+legList = ['Virtual', 'FTBT', 'TGA', 'BT', 'TGABT']
 # legList = ['Virtual', 'M+TGA+DSC', '3 M', 'M+TGA']
 tempSeq = ['FT', 'BT']
 
@@ -129,12 +129,9 @@ markStepIdx = 0
 fig = plt.figure(figsize=(fwidth, fheight))
 plt.plot(dfMass[heatFluxIdx][0][0], dfMass[heatFluxIdx][0][1], '-k', marker=markerList[0], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[0])
 plt.plot(dfMass[heatFluxIdx][1][0], dfMass[heatFluxIdx][1][1], '-', marker=markerList[1], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[1])
-plt.plot(dfMass[heatFluxIdx][3][0], dfMass[heatFluxIdx][3][1], '-', marker=markerList[2], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[3])
-plt.plot(dfMass[heatFluxIdx][6][0], dfMass[heatFluxIdx][6][1], '-', marker=markerList[3], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[6])
-plt.plot(dfMass[heatFluxIdx][7][0], dfMass[heatFluxIdx][7][1], '-', marker=markerList[4], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[7])
-plt.plot(dfMass[heatFluxIdx][8][0], dfMass[heatFluxIdx][8][1], '-', marker=markerList[5], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[8])
-plt.plot(dfMass[heatFluxIdx][9][0], dfMass[heatFluxIdx][9][1], '-', marker=markerList[6], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[9])
-plt.plot(dfMass[heatFluxIdx][10][0], dfMass[heatFluxIdx][10][1], '-', marker=markerList[7], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[10])
+plt.plot(dfMass[heatFluxIdx][2][0], dfMass[heatFluxIdx][2][1], '-', marker=markerList[2], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[2])
+plt.plot(dfMass[heatFluxIdx][3][0], dfMass[heatFluxIdx][3][1], '-', marker=markerList[3], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[3])
+plt.plot(dfMass[heatFluxIdx][4][0], dfMass[heatFluxIdx][4][1], '-', marker=markerList[4], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[4])
 plt.xlabel('Time (s)', fontname='Times New Roman', fontsize=fsize)
 plt.ylabel(r'Normalized Mass', fontname='Times New Roman', fontsize=fsize)
 H = plt.legend(loc='lower left', prop={'size': 14}, numpoints=1,
@@ -153,17 +150,14 @@ markStepIdx = 1
 fig = plt.figure(figsize=(fwidth, fheight))
 plt.plot(dfMass[heatFluxIdx][0][0], dfMass[heatFluxIdx][0][1], '-k', marker=markerList[0], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[0])
 plt.plot(dfMass[heatFluxIdx][1][0], dfMass[heatFluxIdx][1][1], '-', marker=markerList[1], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[1])
-plt.plot(dfMass[heatFluxIdx][3][0], dfMass[heatFluxIdx][3][1], '-', marker=markerList[2], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[3])
-plt.plot(dfMass[heatFluxIdx][6][0], dfMass[heatFluxIdx][6][1], '-', marker=markerList[3], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[6])
-plt.plot(dfMass[heatFluxIdx][7][0], dfMass[heatFluxIdx][7][1], '-', marker=markerList[4], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[7])
-plt.plot(dfMass[heatFluxIdx][8][0], dfMass[heatFluxIdx][8][1], '-', marker=markerList[5], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[8])
-plt.plot(dfMass[heatFluxIdx][9][0], dfMass[heatFluxIdx][9][1], '-', marker=markerList[6], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[9])
-plt.plot(dfMass[heatFluxIdx][10][0], dfMass[heatFluxIdx][10][1], '-', marker=markerList[7], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[10])
+plt.plot(dfMass[heatFluxIdx][2][0], dfMass[heatFluxIdx][2][1], '-', marker=markerList[2], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[2])
+plt.plot(dfMass[heatFluxIdx][3][0], dfMass[heatFluxIdx][3][1], '-', marker=markerList[3], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[3])
+plt.plot(dfMass[heatFluxIdx][4][0], dfMass[heatFluxIdx][4][1], '-', marker=markerList[4], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[4])
 plt.xlabel('Time (s)', fontname='Times New Roman', fontsize=fsize)
 plt.ylabel(r'Normalized Mass', fontname='Times New Roman', fontsize=fsize)
-H = plt.legend(loc='lower left', prop={'size': 14}, numpoints=1,
+H = plt.legend(loc='upper right', prop={'size': 14}, numpoints=1,
                             frameon=False)
-plt.axis([150, 500, 0.4, 0.46])
+plt.axis([150, 500, 0.4, 0.6])
 plt.rc('xtick', labelsize=16)
 plt.rc('ytick', labelsize=16)
 # save figures
@@ -177,12 +171,9 @@ markStepIdx = 1
 fig = plt.figure(figsize=(fwidth, fheight))
 plt.plot(dfMass[heatFluxIdx][0][0], dfMass[heatFluxIdx][0][1], '-k', marker=markerList[0], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[0])
 plt.plot(dfMass[heatFluxIdx][1][0], dfMass[heatFluxIdx][1][1], '-', marker=markerList[1], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[1])
-plt.plot(dfMass[heatFluxIdx][3][0], dfMass[heatFluxIdx][3][1], '-', marker=markerList[2], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[3])
-plt.plot(dfMass[heatFluxIdx][6][0], dfMass[heatFluxIdx][6][1], '-', marker=markerList[3], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[6])
-plt.plot(dfMass[heatFluxIdx][7][0], dfMass[heatFluxIdx][7][1], '-', marker=markerList[4], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[7])
-plt.plot(dfMass[heatFluxIdx][8][0], dfMass[heatFluxIdx][8][1], '-', marker=markerList[5], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[8])
-plt.plot(dfMass[heatFluxIdx][9][0], dfMass[heatFluxIdx][9][1], '-', marker=markerList[6], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[9])
-plt.plot(dfMass[heatFluxIdx][10][0], dfMass[heatFluxIdx][10][1], '-', marker=markerList[7], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[10])
+plt.plot(dfMass[heatFluxIdx][2][0], dfMass[heatFluxIdx][2][1], '-', marker=markerList[2], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[2])
+plt.plot(dfMass[heatFluxIdx][3][0], dfMass[heatFluxIdx][3][1], '-', marker=markerList[3], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[3])
+plt.plot(dfMass[heatFluxIdx][4][0], dfMass[heatFluxIdx][4][1], '-', marker=markerList[4], markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[4])
 plt.xlabel('Time (s)', fontname='Times New Roman', fontsize=fsize)
 plt.ylabel(r'Normalized Mass', fontname='Times New Roman', fontsize=fsize)
 H = plt.legend(loc='upper right', prop={'size': 14}, numpoints=1,

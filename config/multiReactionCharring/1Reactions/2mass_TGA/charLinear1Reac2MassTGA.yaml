@@ -2,7 +2,7 @@ name: charLinear1Reac2MassTGA
 resultsDir: '../../../../results/multiReactionCharring/1Reactions/'
 virtualExperiment: False
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
-reinitializeComplex: True
+reinitializeComplex: False
 assumeVolumeConservation: True
 outputParams:
   saveAllSamples: False
@@ -18,7 +18,7 @@ cone1:
     htc: 15
     Tamb: 25
     heatFlux: 25
-  file: '../../../../data/E_Glass/E_GlassOldLinearNominal_0_cone_Mass.csv'
+  file: '../../../../data/multiReactionCharring/charLinear1ReacNominal25kW_0_cone_Mass.csv'
   time: 0
   Tinit: 25
   width1: 0.1016
@@ -41,7 +41,7 @@ cone2:
     htc: 15
     Tamb: 25
     heatFlux: 50
-  file: '../../../../data/E_Glass/E_GlassOldLinearNominal50KW_0_cone_Mass.csv'
+  file: '../../../../data/multiReactionCharring/charLinear1ReacNominal50kW_0_cone_Mass.csv'
   time: 0
   Tinit: 25
   width1: 0.1016

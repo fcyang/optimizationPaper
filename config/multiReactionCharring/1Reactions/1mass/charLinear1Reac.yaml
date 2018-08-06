@@ -4,7 +4,7 @@ restart: False
 virtualExperiment: False
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
 reinitializeComplex: False
-assumeVolumeConservation: False
+assumeVolumeConservation: True
 thermalPropertyUnits: 'K'
 outputParams:
   saveAllSamples: False
@@ -20,7 +20,7 @@ cone1:
     htc: 15
     Tamb: 25
     heatFlux: 25
-  file: '../../data/E_Glass/E_GlassOldLinearNominal_0_cone_Mass.csv'
+  file: '../../../../data/multiReactionCharring/charLinear1ReacNominal25kW_0_cone_Mass.csv'
   time: 0
   Tinit: 25
   width1: 0.1016
@@ -33,21 +33,21 @@ cone1:
   types: [1]
 processParams:
   multiprocess: True
-  maxProcesses: 8
+  maxProcesses: 4
 optimizeParams:
-  opP: 29
+  opP: 15
   opS: 29
   opQ: 15
-  opAlpha: 57
+  opAlpha: 29
   opBeta: 1
-  minP: 2
+  minP: 15
   minIter: 5
-  maxIter: 1000
+  maxIter: 200
   absErr: 1e-7
   relErr: 1e-12
-  absRelErr: 5e-7
+  absRelErr: 1e-7
   relIter: 15
-  maxTime: 60000
+  maxTime: 600000
   elimThresh: 1e-2
 phaseParams:
   phases: ['virgin', 'char']
