@@ -1,0 +1,403 @@
+D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\multiReactionCharring\1Reactions\1mass_TGA\../../../../results/multiReactionCharring/1Reactions/charLinear1ReacTGA Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - unknowable
+  assumeVolumeConservation: true
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    allowIgnition: false
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    ignitionHeatFlux: 20
+    ignitionThreshold: 0.0032
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../../../data/multiReactionCharring/charLinear1ReacNominal25kW_0_cone_Mass.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 25
+          htc: 15
+      ignitionHeatFlux: 20.0
+      ignitionThreshold: 0.0032
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\multiReactionCharring\1Reactions\1mass_TGA\
+  dataSources:
+    names:
+    - cone1
+    types:
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  keepTemporaryFiles: false
+  name: charLinear1ReacTGA
+  optimizeParams:
+    absErr: 1e-7
+    absRelErr: 1e-7
+    elimThresh: 1e-2
+    maxIter: 200
+    maxTime: 600000
+    minIter: 5
+    minP: 15
+    opAlpha: 29
+    opBeta: 1
+    opP: 15
+    opQ: 15
+    opS: 29
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: false
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - None
+      - 270
+      - 4320
+    - - None
+      - 260.25
+      - 4164
+    Cpb:
+    - - None
+      - 0.0113
+      - 0.1808
+    - - None
+      - 0.06475
+      - 1.036
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id002
+      - 0
+      - 0
+      - 1
+    - *id002
+    K:
+    - - None
+      - 2500
+      - 40000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - None
+      - 0.235
+      - 1.0
+    - - 0.94
+      - 0.235
+      - 1.0
+    ka:
+    - - None
+      - 0.078
+      - 1.248
+    - - None
+      - 0.023725
+      - 0.3796
+    kb:
+    - - None
+      - 1.1013e-05
+      - 0.0001762
+    - - None
+      - 7.075e-05
+      - 0.001132
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    nO2:
+    - - 0
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 4
+    multiprocess: true
+  reactionParams:
+    A:
+    - - None
+      - 2.106e12
+      - 2.574e12
+    E:
+    - - None
+      - 1.629e5
+      - 1.991e5
+    Hp:
+    - - None
+      - 2.5e4
+      - 4e5
+    Xi:
+    - - None
+      - 0
+      - 1
+    n:
+    - - None
+      - 0.9
+      - 1.1
+    nO2:
+    - - 0
+      - 0
+      - 1
+    prodState:
+    - 1
+    reacState:
+    - 0
+    typeState:
+    - 3
+  reinitializeComplex: false
+  restart: false
+  resultsDir: ../../../../results/multiReactionCharring/1Reactions/
+  systemDir: D:\workspace\JENSENHUGHES\optimization\sourceCode\optimizationpython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  thermalPropertyUnits: K
+  virtualExperiment: false
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+0		53.39	2.124e-04	5.382e-03	1.000e+00	15	435
+1		110.81	2.124e-04	5.382e-03	1.000e+00	15	435
+2		187.56	2.124e-04	5.344e-03	1.000e+00	15	435
+3		266.31	9.450e-05	3.544e-03	1.000e+00	15	435
+4		347.07	7.683e-05	3.544e-03	1.000e+00	15	435
+5		429.53	2.860e-05	2.552e-03	1.000e+00	15	435
+6		512.57	2.493e-05	1.853e-03	1.000e+00	15	435
+7		594.03	2.093e-05	9.154e-04	1.000e+00	15	435
+8		673.47	8.616e-06	9.154e-04	1.000e+00	15	435
+9		750.74	8.616e-06	9.154e-04	1.000e+00	15	435
+10		833.20	8.616e-06	4.829e-04	1.000e+00	15	435
+11		918.55	8.616e-06	2.983e-04	1.000e+00	15	435
+12		1000.21	7.813e-06	2.983e-04	1.000e+00	15	435
+13		1080.76	6.560e-06	5.317e-03	1.000e+00	15	435
+14		1150.89	3.645e-06	1.349e-03	1.000e+00	15	435
+15		1221.53	3.166e-06	1.349e-03	1.000e+00	15	435
+16		1304.08	3.050e-06	2.907e-04	2.093e-04	15	435
+17		1390.35	2.741e-06	7.702e-05	2.096e-04	15	435
+18		1482.21	2.564e-06	1.939e-05	9.193e-05	15	435
+19		1571.88	2.493e-06	9.925e-06	7.433e-05	15	435
+20		1655.33	2.476e-06	5.376e-06	2.613e-05	15	435
+21		1738.58	2.448e-06	3.419e-06	2.249e-05	15	435
+22		1809.72	2.398e-06	2.729e-06	1.853e-05	15	435
+23		1867.35	2.276e-06	2.720e-06	6.340e-06	15	435
+24		1929.38	2.098e-06	2.595e-06	6.518e-06	15	435
+25		2000.73	1.995e-06	2.488e-06	6.620e-06	15	435
+26		2069.97	1.862e-06	2.372e-06	6.754e-06	15	435
+27		2139.11	1.675e-06	2.320e-06	6.138e-06	15	435
+28		2210.05	1.500e-06	2.174e-06	5.060e-06	15	435
+29		2283.99	1.444e-06	2.095e-06	2.201e-06	15	435
+30		2361.44	1.381e-06	1.960e-06	1.785e-06	15	435
+31		2436.58	1.284e-06	1.806e-06	1.766e-06	15	435
+32		2508.82	1.222e-06	1.730e-06	1.519e-06	15	435
+33		2580.27	1.165e-06	1.572e-06	1.399e-06	15	435
+34		2653.12	1.121e-06	1.398e-06	1.371e-06	15	435
+35		2728.06	1.071e-06	1.363e-06	1.405e-06	15	435
+36		2797.40	1.002e-06	1.270e-06	1.447e-06	15	435
+37		2869.94	9.586e-07	1.251e-06	1.440e-06	15	435
+38		2945.09	9.199e-07	1.162e-06	1.356e-06	15	435
+39		3018.04	8.820e-07	1.160e-06	1.216e-06	15	435
+40		3089.27	8.603e-07	1.139e-06	1.135e-06	15	435
+41		3162.41	8.196e-07	1.080e-06	1.042e-06	15	435
+42		3232.45	7.922e-07	9.725e-07	8.831e-07	15	435
+43		3300.77	7.456e-07	9.327e-07	7.547e-07	15	435
+44		3363.60	6.763e-07	8.966e-07	7.676e-07	15	435
+45		3425.92	6.439e-07	8.270e-07	7.373e-07	15	435
+46		3485.05	5.662e-07	7.846e-07	7.178e-07	15	435
+47		3545.37	5.027e-07	7.846e-07	7.194e-07	15	435
+48		3604.89	4.410e-07	7.141e-07	7.238e-07	15	435
+49		3667.81	3.380e-07	7.141e-07	7.834e-07	15	435
+50		3733.95	2.962e-07	5.449e-07	7.747e-07	15	435
+51		3802.78	2.047e-07	5.046e-07	7.969e-07	15	435
+52		3870.70	1.873e-07	4.096e-07	7.713e-07	15	435
+53		3943.64	1.258e-07	3.851e-07	7.941e-07	15	435
+54		4014.78	1.079e-07	3.543e-07	7.741e-07	15	435
+55		4084.41	8.289e-08	2.850e-07	7.774e-07	15	435
+A	 = 2.57e+12,
+C0	 = 1.0,0.0,
+Cpa	 = 1070.8362727732842,1191.8013083400022,
+Cpb	 = 0.13443643541081896,0.09899755524386841,
+E	 = 1.81e+05,
+Hp	 = 101833.57828835564,
+K	 = 31897.22766674373,100000000.0,
+Value	 = 8.288544512695568e-08,
+Xi	 = 0.7338086749851456,
+eps	 = 0.9609942466183055,0.94,
+ka	 = 0.2981842661933535,0.03840699589130622,
+kb	 = 9.652124864032688e-05,0.0003793140738531022,
+n	 = 0.9977548735098627,
+nO2	 = 0.0,
+rho	 = 1683.0,1235.0,
+Results saved to D:\workspace\JENSENHUGHES\optimization\optimizationPaper\config\multiReactionCharring\1Reactions\1mass_TGA\../../../../results/multiReactionCharring/1Reactions/charLinear1ReacTGA_solution.txt
