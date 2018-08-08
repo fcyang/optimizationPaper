@@ -1,9 +1,10 @@
 name: charLinear2ReacTGA
-resultsDir: '../../../results/multiReactionCharring/hybrid/'
+resultsDir: '../../../../results/multiReactionCharring/2Reactions/'
 virtualExperiment: False
-keepTemporaryFiles: True
+keepTemporaryFiles: False
 fdsPath: 'C:\Program Files\FDS\FDS6\bin'
 reinitializeComplex: False
+assumeVolumeConservation: False
 outputParams:
   saveAllSamples: False
 cone1:
@@ -18,13 +19,12 @@ cone1:
     htc: 15
     Tamb: 25
     heatFlux: 25
-  file: '../../../data/multiReactionCharring/multiReactionCharringLinearNominal_0_cone_Mass.csv'
+  file: '../../../../data/multiReactionCharring/multiReactionCharringLinearNominalVirtual.csv'
   time: 0
   Tinit: 25
   width1: 0.1016
   width2: 0.1016
   initialThickness: 0.008
-  finalThickness: 0.0063498751
   names: ['Mass']
   columns: [1]
   weights: [1]
