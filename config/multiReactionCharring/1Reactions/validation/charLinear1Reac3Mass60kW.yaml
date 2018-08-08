@@ -1,61 +1,247 @@
-name: charLinear1Reac3Mass60kW
-resultsDir: '../../../../results/multiReactionCharring/1Reactions/validation/'
-virtualExperiment: True
-fdsPath: 'C:\Program Files\FDS\FDS6\bin'
-reinitializeComplex: False
-outputParams:
-  saveAllSamples: True
 cone1:
-  activePhaseVars: ['C0','rho','ka','kb','kc','kd','ke','Cpa','Cpb','Cpc','Cpd','Cpe','eps','K']
-  activeReactionVars: ['A','E','n','Hp','nO2','Xi']
-  weight: 1.0
-  backBoundaryConditions:
-    type: 'INSULATED'
-    htc: 'Auto'
-    Tamb: 25
-  frontBoundaryConditions:
-    htc: 15
-    Tamb: 25
-    heatFlux: 60
-  file: '../../../../data/multiReactionCharring/multiReactionCharringFake.csv'
-  time: 0
   Tinit: 25
+  activePhaseVars:
+  - C0
+  - rho
+  - ka
+  - kb
+  - kc
+  - kd
+  - ke
+  - Cpa
+  - Cpb
+  - Cpc
+  - Cpd
+  - Cpe
+  - eps
+  - K
+  activeReactionVars:
+  - A
+  - E
+  - n
+  - Hp
+  - nO2
+  - Xi
+  backBoundaryConditions:
+    Tamb: 25
+    htc: Auto
+    type: INSULATED
+  columns:
+  - 1
+  depths:
+  - 0
+  file: C:/Users/Fyang/Workspace/optimization/optimizationPaper/data/multiReactionCharring/multiReactionCharringFake.csv
+  frontBoundaryConditions:
+    Tamb: 25
+    heatFlux: 60.0
+    htc: 15
+  initialThickness: 0.008
+  names:
+  - Mass
+  time: 0
+  types:
+  - 1
+  weight: 1.0
+  weights:
+  - 1
   width1: 0.1016
   width2: 0.1016
-  initialThickness: 0.008
-  names: ['Mass']
-  columns: [1]
-  weights: [1]
-  depths: [0]
-  types: [1]
-processParams:
-  multiprocess: True
-  maxProcesses: 4
-phaseParams:
-  phases: ['virgin', 'char']
-  C0:   [[1,      0,      1], [0,  1189,   1189]      ]
-  ka:   [[0.2922,     0.10,   0.30], [0.0961,  1189,   1189]   ]
-  kb:   [[8.46e-5,      0.0,    0.0], [2.83e-4,  0.0,   0.0]     ]
-  kc:   [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
-  kd:   [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
-  rho:  [[1683,  1189,   1189], [1235,  1189,   1189]   ]
-  Cpa:  [[1047.5,     1000,   2800], [1053.37,  1189,   1189]   ]
-  Cpb:  [[0.1254,      0.0,    0.0], [0.2416,  1189,   1189]    ]
-  Cpc:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
-  Cpd:  [[0.0,      0.0,    0.0],  [0.0,      0.0,    0.0]  ]
-  eps:  [[0.9416,     0.75,   1.0], [0.94,  1189,   1189]    ]
-  K:    [[4956.6,     500,    3000], [1e8,  1189,   1189]   ]
-  nO2:  [[0,        0,      1], [0,  1189,   1189]      ]
 dataSources:
-  names: ['cone1']
-  types: ['cone']
+  names:
+  - cone1
+  types:
+  - cone
+fdsPath: C:\Program Files\FDS\FDS6\bin
+name: charLinear1Reac3Mass60kW
+outputParams:
+  saveAllSamples: true
+phaseParams:
+  C0:
+  - - 1
+    - 0
+    - 1
+  - - 0
+    - 1189
+    - 1189
+  Cpa:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - &id001 !!python/object/apply:numpy.dtype
+        args:
+        - f8
+        - 0
+        - 1
+        state: !!python/tuple
+        - 3
+        - <
+        - null
+        - null
+        - null
+        - -1
+        - -1
+        - 0
+      - !!binary |
+        mEHlh36kkEA=
+    - 1000
+    - 2800
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        CF5Cr7HEjUA=
+    - 1189
+    - 1189
+  Cpb:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        cs2RQB90tD8=
+    - 0.0
+    - 0.0
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        BWgXLRnx1z8=
+    - 1189
+    - 1189
+  Cpc:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  Cpd:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  K:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        eKIkWX0Kz0A=
+    - 500
+    - 3000
+  - - 1e8
+    - 1189
+    - 1189
+  eps:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        pKh5iYwb7j8=
+    - 0.75
+    - 1.0
+  - - 0.94
+    - 1189
+    - 1189
+  ka:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        8IJVOD3M0z8=
+    - 0.1
+    - 0.3
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        UDbiJF2utj8=
+    - 1189
+    - 1189
+  kb:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        aTYjRnMVCz8=
+    - 0.0
+    - 0.0
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        rcaFbvUdMz8=
+    - 0.0
+    - 0.0
+  kc:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  kd:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  nO2:
+  - - 0
+    - 0
+    - 1
+  - - 0
+    - 1189
+    - 1189
+  phases:
+  - virgin
+  - char
+  rho:
+  - - 1683
+    - 1189
+    - 1189
+  - - 1235
+    - 1189
+    - 1189
+processParams:
+  maxProcesses: 4
+  multiprocess: true
 reactionParams:
-  A:   [[3.32e12,1e6,1e14]]
-  E:   [[1.83e5,1.2e4,2.0e5]]
-  n:   [[1.008,5e-1,4e0]]
-  Hp:  [[100484,1e5,1e7]]
-  nO2: [[0,0,1]]
-  Xi:  [[None,0,1]]
-  typeState: [3]
-  reacState: [0]
-  prodState: [1]
+  A:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAgf/+ygkI=
+    - 1e6
+    - 1e14
+  E:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAEAYBkE=
+    - 1.2e4
+    - 2.0e5
+  Hp:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        xP9E0YB2+EA=
+    - 1e5
+    - 1e7
+  Xi:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        JqKSVFx75z8=
+    - 0
+    - 1
+  n:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        bnlQGg0X8D8=
+    - 5e-1
+    - 4e0
+  nO2:
+  - - 0
+    - 0
+    - 1
+  prodState:
+  - 1
+  reacState:
+  - 0
+  typeState:
+  - 3
+reinitializeComplex: false
+resultsDir: ../../../../results/multiReactionCharring/1Reactions/validation/
+virtualExperiment: true

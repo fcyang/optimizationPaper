@@ -25,19 +25,24 @@ from subprocess import call
 
 # %%
 # define functions
-def readSolution(dir, nameList):
+def readSolution(dir, nameList, reac):
     solutionName = []
     solution = []
+    colList = [x for x in range(reac+1)]
     for idx,x in enumerate(nameList):
+        print(dir + x + '_solution.txt')
         solutionName.append(glob.glob(dir + x + '_solution.txt')[0])
-        print(dir + x + '.txt')
-        solTmp = pd.read_csv(solutionName[idx], sep='=|,', engine='python', names=['virgin', 'char', 'none'])
-        solTmp = solTmp.iloc[:,0:2]
+        solTmp = pd.read_csv(solutionName[idx], sep='=|,', engine='python', index_col=0, header=None)
+        # solTmp.columns = colList
+        if reac>1:
+            solTmp = solTmp.iloc[:,0:reac]
+        else:
+            solTmp = solTmp.iloc[:,0:2]
         solTmp.index = [y[:-2] for y in solTmp.index]
         solution.append(solTmp)
     return solutionName, solution
 
-def generateVal(dir, solList, codeDir, sol, heatFluxList):
+def generateVal(dir, solList, codeDir, sol, heatFluxList, reac):
     for idx1,i in enumerate(sol):
         for idx2,j in enumerate(heatFluxList):
             with open(dir+'Template.yaml') as f:
@@ -46,21 +51,23 @@ def generateVal(dir, solList, codeDir, sol, heatFluxList):
             # change case name
             doc['name'] = doc['name']+solList[idx1]+j+'kW'
             # change kinetic parameters for 1 reaction
-            doc['reactionParams']['A'][0][0] = sol[idx1].loc['A','virgin']
-            doc['reactionParams']['E'][0][0] = sol[idx1].loc['E','virgin']
-            doc['reactionParams']['n'][0][0] = sol[idx1].loc['n','virgin']
-            doc['reactionParams']['Hp'][0][0] = sol[idx1].loc['Hp','virgin']
+            for k in range(reac):
+                doc['reactionParams']['A'][k][0] = sol[idx1].loc['A',k]
+                doc['reactionParams']['E'][k][0] = sol[idx1].loc['E',k]
+                doc['reactionParams']['n'][k][0] = sol[idx1].loc['n',k]
+                doc['reactionParams']['Hp'][k][0] = sol[idx1].loc['Hp',k]
+                doc['reactionParams']['Xi'][k][0] = sol[idx1].loc['Xi',k]
             # change material properties
-            doc['phaseParams']['ka'][0][0] = sol[idx1].loc['ka','virgin']
-            doc['phaseParams']['ka'][1][0] = sol[idx1].loc['ka','char']
-            doc['phaseParams']['kb'][0][0] = sol[idx1].loc['kb','virgin']
-            doc['phaseParams']['kb'][1][0] = sol[idx1].loc['kb','char']
-            doc['phaseParams']['Cpa'][0][0] = sol[idx1].loc['Cpa','virgin']
-            doc['phaseParams']['Cpa'][1][0] = sol[idx1].loc['Cpa','char']
-            doc['phaseParams']['Cpb'][0][0] = sol[idx1].loc['Cpb','virgin']
-            doc['phaseParams']['Cpb'][1][0] = sol[idx1].loc['Cpb','char']
-            doc['phaseParams']['K'][0][0] = sol[idx1].loc['K','virgin']
-            doc['phaseParams']['eps'][0][0] = sol[idx1].loc['eps','virgin']
+            doc['phaseParams']['ka'][0][0] = sol[idx1].loc['ka',0]
+            doc['phaseParams']['ka'][1][0] = sol[idx1].loc['ka',1]
+            doc['phaseParams']['kb'][0][0] = sol[idx1].loc['kb',0]
+            doc['phaseParams']['kb'][1][0] = sol[idx1].loc['kb',1]
+            doc['phaseParams']['Cpa'][0][0] = sol[idx1].loc['Cpa',0]
+            doc['phaseParams']['Cpa'][1][0] = sol[idx1].loc['Cpa',1]
+            doc['phaseParams']['Cpb'][0][0] = sol[idx1].loc['Cpb',0]
+            doc['phaseParams']['Cpb'][1][0] = sol[idx1].loc['Cpb',1]
+            doc['phaseParams']['K'][0][0] = sol[idx1].loc['K',0]
+            doc['phaseParams']['eps'][0][0] = sol[idx1].loc['eps',0]
             # change heat flux
             doc['cone1']['frontBoundaryConditions']['heatFlux'] = float(j)
             if j == '10':
@@ -83,6 +90,7 @@ def generateVal(dir, solList, codeDir, sol, heatFluxList):
                 # write to yaml file
                 with open(valFileName, "w") as f:
                     yaml.dump(doc, f, default_flow_style=False)
+                    print(doc)
 
             # run validation cases
             print('Running validation case '+valFileName)
@@ -94,12 +102,14 @@ def generateVal(dir, solList, codeDir, sol, heatFluxList):
 # %%
 # run script
 preFileName = 'charLinear1Reac'
-solDir = 'C:/Users/Fyang/Workspace/optimization/optimizationPaper/results/multiReactionCharring/1Reactions/solution/'
-solList = ['2MassTGA']
+solDir = 'C:/Users/Fyang/Workspace/optimization/optimizationPaper/results/multiReactionCharring/1Reactions/solutions/'
+solList = ['1Mass', 'FTBT', 'BT', 'TGADSC', 'TGA', '2Mass', '2MassTGA', '3Mass']
 heatFluxList = ['10', '60', '100']
-name, sol = readSolution(solDir+preFileName, solList)
+reac = 1
+name, sol = readSolution(solDir+preFileName, solList, reac)
+sol[0]
 
 confDir = 'C:/Users/Fyang/Workspace/optimization/optimizationPaper/config/multiReactionCharring/1Reactions/validation/'
 codeDir = 'C:/Users/Fyang/Workspace/optimization/sourceCode/optimizationPython/src/main.py'
 tempFileName = confDir + preFileName
-generateVal(tempFileName, solList, codeDir, sol, heatFluxList)
+generateVal(tempFileName, solList, codeDir, sol, heatFluxList, reac)

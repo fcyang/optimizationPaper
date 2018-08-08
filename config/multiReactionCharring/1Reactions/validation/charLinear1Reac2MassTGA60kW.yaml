@@ -80,26 +80,26 @@ phaseParams:
         - -1
         - 0
       - !!binary |
-        6AxgTiHMkEA=
+        IjyTGZfIkEA=
     - 1000
     - 2800
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        RKnxVzShkkA=
+        SDrS+UJ5kUA=
     - 1189
     - 1189
   Cpb:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        UdLX0nBYpT8=
+        jfpCeMacsT8=
     - 0.0
     - 0.0
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        0RuHQEodsT8=
+        av2YwDviyT8=
     - 1189
     - 1189
   Cpc:
@@ -120,7 +120,7 @@ phaseParams:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        5LZirdZ400A=
+        o3HfMkRvxUA=
     - 500
     - 3000
   - - 1e8
@@ -130,7 +130,7 @@ phaseParams:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        tF5YAYAb7j8=
+        /3odpDoV7j8=
     - 0.75
     - 1.0
   - - 0.94
@@ -140,26 +140,26 @@ phaseParams:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        GmnEm/b+0z8=
+        TByzIs1m0z8=
     - 0.1
     - 0.3
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        xMF8ZYQqvz8=
+        gDBjPgrAsT8=
     - 1189
     - 1189
   kb:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        TXXbv04kBT8=
+        ypcNKr6KED8=
     - 0.0
     - 0.0
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        6kUQa5pDMD8=
+        Tc84A1tTNT8=
     - 0.0
     - 0.0
   kc:
@@ -201,32 +201,35 @@ reactionParams:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        AAAgf/+ygkI=
+        AABgSzqugUI=
     - 1e6
     - 1e14
   E:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        AAAAAIA3BkE=
+        AAAAAEAYBkE=
     - 1.2e4
     - 2.0e5
   Hp:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        bIIIX8Ro+EA=
+        cSVkMoCX+EA=
     - 1e5
     - 1e7
   Xi:
-  - - None
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        JqKSVFx75z8=
     - 0
     - 1
   n:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        FwHmIt3S7z8=
+        wkova8vm7z8=
     - 5e-1
     - 4e0
   nO2:
