@@ -109,14 +109,14 @@ dictitems:
       - 1
       depths:
       - 0
-      file: ../../../../data/multiReactionCharring/multiReactionCharringFake.csv
+      file: C:/Users/Fyang/Workspace/optimization/optimizationPaper/data/multiReactionCharring/multiReactionCharringFake.csv
       finalThickness: false
       frontBoundaryConditions: !!python/object/apply:collections.defaultdict
         args:
         - *id001
         dictitems:
           Tamb: 25
-          heatFlux: 60
+          heatFlux: 60.0
           htc: 15
       ignitionHeatFlux: 20.0
       ignitionThreshold: 0.0032
@@ -181,17 +181,42 @@ dictitems:
       - 1189
       - 1189
     Cpa:
-    - - 1049.14
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - &id002 !!python/object/apply:numpy.dtype
+          args:
+          - f8
+          - 0
+          - 1
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - -1
+          - -1
+          - 0
+        - !!binary |
+          AmTu/6ejkEA=
       - 1000
       - 2800
-    - - 745.76
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          rv+XKeLDiUA=
       - 1189
       - 1189
     Cpb:
-    - - 0.1037
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          G7YNkaU8uD8=
       - 0.0
       - 0.0
-    - - 0.1267
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          yyhGlbc9zT8=
       - 1189
       - 1189
     Cpc:
@@ -209,37 +234,55 @@ dictitems:
       - 0.0
       - 0.0
     Cpe:
-    - &id002
+    - &id003
       - 0
       - 0
       - 1
-    - *id002
+    - *id003
     K:
-    - - 17881.9
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          lbulF5ck3EA=
       - 500
       - 3000
     - - 1e8
       - 1189
       - 1189
     eps:
-    - - 0.9323
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          KczWn/uz7T8=
       - 0.75
       - 1.0
     - - 0.94
       - 1189
       - 1189
     ka:
-    - - 0.307
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          /1D+kCAa0z8=
       - 0.1
       - 0.3
-    - - 0.2233
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          lG1GNjSYuT8=
       - 1189
       - 1189
     kb:
-    - - 4.97e-05
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          jsuhYKWqEz8=
       - 0.0
       - 0.0
-    - - 9.856e-05
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          fs5oJZ9YMj8=
       - 0.0
       - 0.0
     kc:
@@ -257,11 +300,11 @@ dictitems:
       - 0.0
       - 0.0
     ke:
-    - &id003
+    - &id004
       - 0
       - 0
       - 1
-    - *id003
+    - *id004
     nO2:
     - - 0
       - 0
@@ -284,62 +327,107 @@ dictitems:
     multiprocess: true
   reactionParams:
     A:
-    - - 2.11e12
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AABA85YGgUI=
       - 1e6
       - 1e14
-    - - 6.97e13
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AAAGWUO20EI=
       - 1e6
       - 1e14
-    - - 9.45e12
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AABw/ghtoUI=
       - 1e6
       - 1e14
     E:
-    - - 1.87e5
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AAAAAEAYBkE=
       - 1.2e4
       - 2.0e5
-    - - 1.89e5
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AAAAAIAxB0E=
       - 1.2e4
       - 2.0e5
-    - - 1.76e5
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AAAAAMBcBUE=
       - 1.2e4
       - 2.0e5
     Hp:
-    - - 399427.85
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          9gScecBGCEE=
       - 1e5
       - 1e7
-    - - 228391.8
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          Ob97aRq5CkE=
       - 1e5
       - 1e7
-    - - 390347.5
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          ascom25+GEE=
       - 1e5
       - 1e7
     Xi:
-    - - 0.671
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          yo3IS57L5j8=
       - 0
       - 1
-    - - 0.5262
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          DgKWF+R/4D8=
       - 0
       - 1
-    - - 0.29325
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          k0DebW/i0j8=
       - 0
       - 1
     n:
-    - - 1.0369
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          qTIgHtNE8D8=
       - 5e-1
       - 4e0
-    - - 1.476
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          8J/2Aq76+D8=
       - 5e-1
       - 4e0
-    - - 3.052
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          GKnn59VxCEA=
       - 5e-1
       - 4e0
     nO2:
-    - &id004
+    - &id005
       - 0
       - 0
       - 1
-    - *id004
-    - *id004
+    - *id005
+    - *id005
     prodState:
     - 1
     - 1
@@ -355,7 +443,7 @@ dictitems:
   reinitializeComplex: false
   restart: false
   resultsDir: ../../../../results/multiReactionCharring/3Reactions/validation/
-  systemDir: C:\Users\Fyang\Workspace\optimization\sourceCode\optimizationpython\src
+  systemDir: C:\Users\Fyang\Workspace\optimization\sourceCode\optimizationPython\src
   tga:
     activePhaseVars:
     - C0
@@ -370,19 +458,19 @@ dictitems:
   thermalPropertyUnits: K
   virtualExperiment: true
 Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
-A	 = 2.11e+12,6.97e+13,9.45e+12,
+A	 = 2.34e+12,7.35e+13,9.58e+12,
 C0	 = 1.0,0.0,
-Cpa	 = 1049.14,745.76,
-Cpb	 = 0.1037,0.1267,
-E	 = 1.87e+05,1.89e+05,1.76e+05,
-Hp	 = 399427.85,228391.8,390347.5,
-K	 = 17881.9,100000000.0,
-Value	 = 0.007899897934010676,
-Xi	 = 0.671,0.5262,0.29325,
-eps	 = 0.9323,0.94,
-ka	 = 0.307,0.2233,
-kb	 = 4.97e-05,9.856e-05,
-n	 = 1.0369,1.476,3.052,
+Cpa	 = 1064.9140622376003,824.4854308962729,
+Cpb	 = 0.09467539588305167,0.2284459570767637,
+E	 = 1.81e+05,1.90e+05,1.75e+05,
+Hp	 = 198872.0593796146,218915.30150555985,401307.6515227469,
+K	 = 28818.36081832236,100000000.0,
+Value	 = 0.007827240543431403,
+Xi	 = 0.7123557548661037,0.5156116924918608,0.29507051209748986,
+eps	 = 0.9282205697876452,0.94,
+ka	 = 0.29846967849267964,0.099978698015937,
+kb	 = 7.502207168545561e-05,0.0002799404659612272,
+n	 = 1.0168029000080117,1.5612011066204978,3.0555837743351155,
 nO2	 = 0.0,0.0,0.0,
 rho	 = 1683.0,1235.0,
 Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\3Reactions\validation\../../../../results/multiReactionCharring/3Reactions/validation/charLinear3Reac2MassTGA60kW_solution.txt

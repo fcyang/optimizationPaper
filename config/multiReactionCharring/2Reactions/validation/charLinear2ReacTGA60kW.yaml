@@ -1,0 +1,277 @@
+cone1:
+  Tinit: 25
+  activePhaseVars:
+  - C0
+  - rho
+  - ka
+  - kb
+  - kc
+  - kd
+  - ke
+  - Cpa
+  - Cpb
+  - Cpc
+  - Cpd
+  - Cpe
+  - eps
+  - K
+  activeReactionVars:
+  - A
+  - E
+  - n
+  - Hp
+  - nO2
+  - Xi
+  backBoundaryConditions:
+    Tamb: 25
+    htc: Auto
+    type: INSULATED
+  columns:
+  - 1
+  depths:
+  - 0
+  file: C:/Users/Fyang/Workspace/optimization/optimizationPaper/data/multiReactionCharring/multiReactionCharringFake.csv
+  frontBoundaryConditions:
+    Tamb: 25
+    heatFlux: 60.0
+    htc: 15
+  initialThickness: 0.008
+  names:
+  - Mass
+  time: 0
+  types:
+  - 1
+  weight: 1.0
+  weights:
+  - 1
+  width1: 0.1016
+  width2: 0.1016
+dataSources:
+  names:
+  - cone1
+  types:
+  - cone
+fdsPath: C:\Program Files\FDS\FDS6\bin
+keepTemporaryFiles: true
+name: charLinear2ReacTGA60kW
+outputParams:
+  saveAllSamples: true
+phaseParams:
+  C0:
+  - - 1
+    - 0
+    - 1
+  - - 0
+    - 1189
+    - 1189
+  Cpa:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - &id001 !!python/object/apply:numpy.dtype
+        args:
+        - f8
+        - 0
+        - 1
+        state: !!python/tuple
+        - 3
+        - <
+        - null
+        - null
+        - null
+        - -1
+        - -1
+        - 0
+      - !!binary |
+        DiEV9fLVkkA=
+    - 1000
+    - 2800
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        BpUqs6Hmk0A=
+    - 1189
+    - 1189
+  Cpb:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        Xnjb5dY1hz8=
+    - 0.0
+    - 0.0
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        slboXS8ItD8=
+    - 1189
+    - 1189
+  Cpc:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  Cpd:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  K:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        WbieCiwa3UA=
+    - 500
+    - 3000
+  - - 1e8
+    - 1189
+    - 1189
+  eps:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        CzLcGdj/7z8=
+    - 0.75
+    - 1.0
+  - - 0.94
+    - 1189
+    - 1189
+  ka:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        8L/+IQdC1T8=
+    - 0.1
+    - 0.3
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        P//rbIgloD8=
+    - 1189
+    - 1189
+  kb:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        MK/8ZzsUFz8=
+    - 0.0
+    - 0.0
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        TU8eOly9OT8=
+    - 0.0
+    - 0.0
+  kc:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  kd:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  phases:
+  - virgin
+  - char
+  rho:
+  - - 1683
+    - 1189
+    - 1189
+  - - 1235
+    - 1189
+    - 1189
+processParams:
+  maxProcesses: 8
+  multiprocess: true
+reactionParams:
+  A:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AABgUjcZgUI=
+    - 1e6
+    - 1e14
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AADcwgiyzkI=
+    - 1e6
+    - 1e14
+  E:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAEAYBkE=
+    - 1.2e4
+    - 2.0e5
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAMBQB0E=
+    - 1.2e4
+    - 2.0e5
+  Hp:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        qLpn09Vs2EA=
+    - 1e5
+    - 1e7
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        ki/VOTknC0E=
+    - 1e5
+    - 1e7
+  Xi:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        zyc+YVaq5T8=
+    - 0
+    - 1
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        CSoRLyFl4T8=
+    - 0
+    - 1
+  n:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        akDLLqHE8D8=
+    - 5e-1
+    - 4e0
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        GGXVs2Bm+j8=
+    - 5e-1
+    - 4e0
+  nO2:
+  - - 0
+    - 0
+    - 1
+  - - 0
+    - 0
+    - 1
+  prodState:
+  - 1
+  - 1
+  reacState:
+  - 0
+  - 0
+  typeState:
+  - 3
+  - 3
+reinitializeComplex: false
+resultsDir: ../../../../results/multiReactionCharring/2Reactions/validation/
+virtualExperiment: true

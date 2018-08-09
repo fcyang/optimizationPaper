@@ -99,11 +99,10 @@ def generateVal(dir, solList, codeDir, sol, heatFluxList, reac):
 # run script
 preFileName = 'charLinear3Reac'
 solDir = 'C:/Users/Fyang/Workspace/optimization/optimizationPaper/results/multiReactionCharring/3Reactions/solutions/'
-solList = ['TGADSC']
+solList = ['2MassTGA','2Mass']
 heatFluxList = ['10', '60', '100']
 reac = 3
 name, sol = readSolution(solDir+preFileName, solList, reac)
-sol[0]
 
 confDir = 'C:/Users/Fyang/Workspace/optimization/optimizationPaper/config/multiReactionCharring/3Reactions/validation/'
 codeDir = 'C:/Users/Fyang/Workspace/optimization/sourceCode/optimizationPython/src/main.py'

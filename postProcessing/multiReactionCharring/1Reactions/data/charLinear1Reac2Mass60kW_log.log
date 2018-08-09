@@ -1,0 +1,405 @@
+C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\1Reactions\validation\../../../../results/multiReactionCharring/1Reactions/validation/charLinear1Reac2Mass60kW Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - known
+  assumeVolumeConservation: true
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    allowIgnition: false
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    ignitionHeatFlux: 20
+    ignitionThreshold: 0.0032
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: C:/Users/Fyang/Workspace/optimization/optimizationPaper/data/multiReactionCharring/multiReactionCharringFake.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 60.0
+          htc: 15
+      ignitionHeatFlux: 20.0
+      ignitionThreshold: 0.0032
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\1Reactions\validation\
+  dataSources:
+    names:
+    - cone1
+    types:
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  keepTemporaryFiles: false
+  name: charLinear1Reac2Mass60kW
+  optimizeParams:
+    absErr: 1e-9
+    absRelErr: 1e-6
+    elimThresh: 1e-2
+    maxIter: -1
+    maxTime: -1
+    minIter: -1
+    minP: 2
+    opAlpha: 1
+    opBeta: 1
+    opP: 1
+    opQ: 1
+    opS: 1
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: true
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - &id002 !!python/object/apply:numpy.dtype
+          args:
+          - f8
+          - 0
+          - 1
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - -1
+          - -1
+          - 0
+        - !!binary |
+          HArv5W86kEA=
+      - 1000
+      - 2800
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          qLE2j//3jEA=
+      - 1189
+      - 1189
+    Cpb:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          EtfrJ1H9wj8=
+      - 0.0
+      - 0.0
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          RLLim0jc3D8=
+      - 1189
+      - 1189
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    K:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          /0g3tctA40A=
+      - 500
+      - 3000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          8bSN+vgo7j8=
+      - 0.75
+      - 1.0
+    - - 0.94
+      - 1189
+      - 1189
+    ka:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          HsyW6MEi0z8=
+      - 0.1
+      - 0.3
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          nRuTBPrxrj8=
+      - 1189
+      - 1189
+    kb:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          OsBqbyQMFD8=
+      - 0.0
+      - 0.0
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          3BqeWyoPNj8=
+      - 0.0
+      - 0.0
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id004
+      - 0
+      - 0
+      - 1
+    - *id004
+    nO2:
+    - - 0
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 4
+    multiprocess: true
+  reactionParams:
+    A:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AACAcvJohkI=
+      - 1e6
+      - 1e14
+    E:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AAAAAIA3BkE=
+      - 1.2e4
+      - 2.0e5
+    Hp:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          ONK6A96c+EA=
+      - 1e5
+      - 1e7
+    Xi:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          JqKSVFx75z8=
+      - 0
+      - 1
+    n:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          BoNT10Ae8D8=
+      - 5e-1
+      - 4e0
+    nO2:
+    - - 0
+      - 0
+      - 1
+    prodState:
+    - 1
+    reacState:
+    - 0
+    typeState:
+    - 3
+  reinitializeComplex: false
+  restart: false
+  resultsDir: ../../../../results/multiReactionCharring/1Reactions/validation/
+  systemDir: C:\Users\Fyang\Workspace\optimization\sourceCode\optimizationPython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  thermalPropertyUnits: K
+  virtualExperiment: true
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+A	 = 3.08e+12,
+C0	 = 1.0,0.0,
+Cpa	 = 1038.6092755651398,926.9997848771063,
+Cpb	 = 0.1483556218078595,0.4509450456924109,
+E	 = 1.82e+05,
+Hp	 = 100813.87591058842,
+K	 = 39430.36587108857,100000000.0,
+Value	 = 0.00696183518542085,
+Xi	 = 0.7338086749851456,
+eps	 = 0.9425015348075744,0.94,
+ka	 = 0.2989964267137014,0.06043988519518637,
+kb	 = 7.647488005591086e-05,0.0003365972912593837,
+n	 = 1.007386056058921,
+nO2	 = 0.0,
+rho	 = 1683.0,1235.0,
+Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\1Reactions\validation\../../../../results/multiReactionCharring/1Reactions/validation/charLinear1Reac2Mass60kW_solution.txt
