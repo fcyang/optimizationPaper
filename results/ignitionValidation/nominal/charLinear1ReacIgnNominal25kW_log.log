@@ -1,0 +1,368 @@
+C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\ignitionValidation\dataGeneration\../../../results/ignitionValidation/nominal/charLinear1ReacIgnNominal25kW Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - unknowable
+  assumeVolumeConservation: true
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    - qIgn
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    ignition:
+      allowIgnition: false
+      criticalMassFlux: 0.0032
+      ignitionCriteria: critical mass flux
+      ignitionHeatFlux: 20
+      ignitionTime: 30
+      optimizedHeatFlux: false
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: ../../../data/ignitionValidation/multiReactionCharringFake.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 25
+          htc: 15
+      ignition: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          allowIgnition: true
+          criticalMassFlux: 0.0032
+          ignitionCriteria: time
+          ignitionHeatFlux: 20
+          ignitionTime: 200
+          optimizedHeatFlux: false
+          timeToIgnition: false
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\ignitionValidation\dataGeneration\
+  dataSources:
+    names:
+    - cone1
+    types:
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - Xi
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  keepTemporaryFiles: false
+  name: charLinear1ReacIgnNominal25kW
+  optimizeParams:
+    absErr: 1e-9
+    absRelErr: 1e-6
+    elimThresh: 1e-2
+    maxIter: -1
+    maxTime: -1
+    minIter: -1
+    minP: 2
+    opAlpha: 1
+    opBeta: 1
+    opP: 1
+    opQ: 1
+    opS: 1
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: true
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - 1080
+      - 1000
+      - 2800
+    - - 1041
+      - 1189
+      - 1189
+    Cpb:
+    - - 0.0452
+      - 0.0
+      - 0.0
+    - - 0.259
+      - 1189
+      - 1189
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id002
+      - 0
+      - 0
+      - 1
+    - *id002
+    K:
+    - - 10000
+      - 500
+      - 3000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - 0.94
+      - 0.75
+      - 1.0
+    - - 0.94
+      - 1189
+      - 1189
+    ka:
+    - - 0.312
+      - 0.1
+      - 0.3
+    - - 0.0949
+      - 1189
+      - 1189
+    kb:
+    - - 4.405e-05
+      - 0.0
+      - 0.0
+    - - 0.000283
+      - 0.0
+      - 0.0
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    nO2:
+    - - 0
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 4
+    multiprocess: true
+  reactionParams:
+    A:
+    - - 2.344e12
+      - 1e6
+      - 1e14
+    E:
+    - - 1.81e5
+      - 1.2e4
+      - 2.0e5
+    Hp:
+    - - 100000
+      - 1e5
+      - 1e7
+    Xi:
+    - - None
+      - 0
+      - 1
+    n:
+    - - 1.0
+      - 5e-1
+      - 4e0
+    nO2:
+    - - 0
+      - 0
+      - 1
+    prodState:
+    - 1
+    qIgn:
+    - - None
+      - 15
+      - 25
+    reacState:
+    - 0
+    typeState:
+    - 3
+  reinitializeComplex: false
+  restart: false
+  resultsDir: ../../../results/ignitionValidation/nominal/
+  systemDir: C:\Users\Fyang\Workspace\optimization\sourceCode\optimizationpython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Xi
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  thermalPropertyUnits: K
+  virtualExperiment: true
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+A	 = 2.34e+12,
+C0	 = 1.0,0.0,
+Cpa	 = 1080.0,1041.0,
+Cpb	 = 0.0452,0.259,
+E	 = 1.81e+05,
+Hp	 = 100000.0,
+K	 = 10000.0,100000000.0,
+Value	 = 0.006626164412950537,
+Xi	 = 0.7338086749851456,
+eps	 = 0.94,0.94,
+ka	 = 0.312,0.0949,
+kb	 = 4.405e-05,0.000283,
+n	 = 1.0,
+nO2	 = 0.0,
+qIgn	 = 20.50707595453401,
+rho	 = 1683.0,1235.0,
+Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\ignitionValidation\dataGeneration\../../../results/ignitionValidation/nominal/charLinear1ReacIgnNominal25kW_solution.txt
