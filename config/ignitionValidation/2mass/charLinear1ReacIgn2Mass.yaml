@@ -8,7 +8,7 @@ outputParams:
   saveAllSamples: False
 cone1:
   activePhaseVars: ['C0','rho','ka','kb','kc','kd','ke','Cpa','Cpb','Cpc','Cpd','Cpe','eps','K']
-  activeReactionVars: ['A','E','n','Hp','nO2','Xi']
+  activeReactionVars: ['A','E','n','Hp','nO2','Xi','qIgn']
   weight: 1.0
   backBoundaryConditions:
     type: 'INSULATED'
@@ -38,7 +38,7 @@ cone1:
   types: [1]
 cone2:
   activePhaseVars: ['C0','rho','ka','kb','kc','kd','ke','Cpa','Cpb','Cpc','Cpd','Cpe','eps','K']
-  activeReactionVars: ['A','E','n','Hp','nO2','Xi']
+  activeReactionVars: ['A','E','n','Hp','nO2','Xi','qIgn']
   weight: 1.0
   backBoundaryConditions:
     type: 'INSULATED'
@@ -68,7 +68,7 @@ cone2:
   types: [1]
 processParams:
   multiprocess: True
-  maxProcesses: 4
+  maxProcesses: 8
 optimizeParams:
   opP: 16
   opS: 31
