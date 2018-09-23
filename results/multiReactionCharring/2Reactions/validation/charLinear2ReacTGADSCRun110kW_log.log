@@ -1,0 +1,457 @@
+C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\2Reactions\validation\../../../../results/multiReactionCharring/2Reactions/validation/charLinear2ReacTGADSCRun110kW Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - known
+  - known
+  assumeVolumeConservation: true
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    - qIgn
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    ignition:
+      allowIgnition: false
+      criticalMassFlux: 0.0032
+      ignitionCriteria: critical mass flux
+      ignitionHeatFlux: 20
+      ignitionTime: 30
+      optimizedHeatFlux: false
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: C:/Users/Fyang/Workspace/optimization/optimizationPaper/data/multiReactionCharring/multiReactionCharringFake1.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 10.0
+          htc: 15
+      ignition: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          allowIgnition: false
+          criticalMassFlux: 0.0032
+          ignitionCriteria: critical mass flux
+          ignitionHeatFlux: 20
+          ignitionTime: 30
+          optimizedHeatFlux: false
+          timeToIgnition: false
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\2Reactions\validation\
+  dataSources:
+    names:
+    - cone1
+    types:
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - Xi
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  keepTemporaryFiles: true
+  name: charLinear2ReacTGADSCRun110kW
+  optimizeParams:
+    absErr: 1e-9
+    absRelErr: 1e-6
+    elimThresh: 1e-2
+    maxIter: -1
+    maxTime: -1
+    minIter: -1
+    minP: 2
+    opAlpha: 1
+    opBeta: 1
+    opP: 1
+    opQ: 1
+    opS: 1
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: true
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - &id002 !!python/object/apply:numpy.dtype
+          args:
+          - f8
+          - 0
+          - 1
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - -1
+          - -1
+          - 0
+        - !!binary |
+          1qiLnD/6kEA=
+      - 1000
+      - 2800
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          VIuRm0u6jEA=
+      - 1189
+      - 1189
+    Cpb:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          gv97KjjOpT8=
+      - 0.0
+      - 0.0
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          zF7eD4N51j8=
+      - 1189
+      - 1189
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    K:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          EnCE0Zfq0kA=
+      - 500
+      - 3000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          fqNpoSFr7j8=
+      - 0.75
+      - 1.0
+    - - 0.94
+      - 1189
+      - 1189
+    ka:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          zcFVxrjr0z8=
+      - 0.1
+      - 0.3
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          Jwiu0acAxj8=
+      - 1189
+      - 1189
+    kb:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          bgBININWCz8=
+      - 0.0
+      - 0.0
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          g7JYUCE3Jz8=
+      - 0.0
+      - 0.0
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id004
+      - 0
+      - 0
+      - 1
+    - *id004
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 8
+    multiprocess: true
+  reactionParams:
+    A:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AABA+pNxgEI=
+      - 1e6
+      - 1e14
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AADiebdN0kI=
+      - 1e6
+      - 1e14
+    E:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AAAAAEAYBkE=
+      - 1.2e4
+      - 2.0e5
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AAAAAICuB0E=
+      - 1.2e4
+      - 2.0e5
+    Hp:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          DQxKIh7+AUE=
+      - 1e5
+      - 1e7
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          oYYn2KT9BUE=
+      - 1e5
+      - 1e7
+    Xi:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          EeYHnWlC5z8=
+      - 0
+      - 1
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          LURFrKSV4D8=
+      - 0
+      - 1
+    n:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          1HbYs1c78D8=
+      - 5e-1
+      - 4e0
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          8tmQR4wE9z8=
+      - 5e-1
+      - 4e0
+    nO2:
+    - &id005
+      - 0
+      - 0
+      - 1
+    - *id005
+    prodState:
+    - 1
+    - 1
+    qIgn:
+    - &id006
+      - None
+      - 15
+      - 25
+    - *id006
+    reacState:
+    - 0
+    - 0
+    typeState:
+    - 3
+    - 3
+  reinitializeComplex: false
+  restart: false
+  resultsDir: ../../../../results/multiReactionCharring/2Reactions/validation/
+  systemDir: C:\Users\Fyang\Workspace\optimization\sourceCode\optimizationPython\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Xi
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  thermalPropertyUnits: K
+  virtualExperiment: true
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+A	 = 2.26e+12,8.05e+13,
+C0	 = 1.0,0.0,
+Cpa	 = 1086.5621206113624,919.2869178171773,
+Cpb	 = 0.042588954149322525,0.35116650151892936,
+E	 = 1.81e+05,1.94e+05,
+Hp	 = 147395.76674279608,180148.60554413966,
+K	 = 19370.372162923282,100000000.0,
+Value	 = 0.048957047913510396,
+Xi	 = 0.7268570010193703,0.5182669987353897,
+eps	 = 0.950577559718212,0.94,
+ka	 = 0.31126231545115673,0.1718950055911261,
+kb	 = 5.214298156275351e-05,0.00017711908019303968,
+n	 = 1.014487936517459,1.4386103435077726,
+nO2	 = 0.0,0.0,
+qIgn	 = 17.94378716975325,16.77153155724425,
+rho	 = 1683.0,1235.0,
+Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\2Reactions\validation\../../../../results/multiReactionCharring/2Reactions/validation/charLinear2ReacTGADSCRun110kW_solution.txt

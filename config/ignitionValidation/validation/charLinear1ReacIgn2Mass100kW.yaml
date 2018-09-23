@@ -1,0 +1,262 @@
+cone1:
+  Tinit: 25
+  activePhaseVars:
+  - C0
+  - rho
+  - ka
+  - kb
+  - kc
+  - kd
+  - ke
+  - Cpa
+  - Cpb
+  - Cpc
+  - Cpd
+  - Cpe
+  - eps
+  - K
+  activeReactionVars:
+  - A
+  - E
+  - n
+  - Hp
+  - nO2
+  - Xi
+  - qIgn
+  backBoundaryConditions:
+    Tamb: 25
+    htc: Auto
+    type: INSULATED
+  columns:
+  - 1
+  depths:
+  - 0
+  file: C:/Users/Fyang/Workspace/optimization/optimizationPaper/data/multiReactionCharring/multiReactionCharringFake.csv
+  frontBoundaryConditions:
+    Tamb: 25
+    heatFlux: 100.0
+    htc: 15
+  ignition:
+    allowIgnition: true
+    criticalMassFlux: 0.0032
+    ignitionCriteria: time
+    ignitionHeatFlux: 20
+    ignitionTime: 10.0
+    optimizedHeatFlux: true
+  initialThickness: 0.008
+  names:
+  - Mass
+  time: 0
+  types:
+  - 1
+  weight: 1.0
+  weights:
+  - 1
+  width1: 0.1016
+  width2: 0.1016
+dataSources:
+  names:
+  - cone1
+  types:
+  - cone
+fdsPath: C:\Program Files\FDS\FDS6\bin
+name: charLinear1ReacIgn2Mass100kW
+outputParams:
+  saveAllSamples: true
+phaseParams:
+  C0:
+  - - 1
+    - 0
+    - 1
+  - - 0
+    - 1189
+    - 1189
+  Cpa:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - &id001 !!python/object/apply:numpy.dtype
+        args:
+        - f8
+        - 0
+        - 1
+        state: !!python/tuple
+        - 3
+        - <
+        - null
+        - null
+        - null
+        - -1
+        - -1
+        - 0
+      - !!binary |
+        zH2/cPb0kEA=
+    - 1000
+    - 2800
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        iC8zgd7+kEA=
+    - 1189
+    - 1189
+  Cpb:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        HluretQ/hz8=
+    - 0.0
+    - 0.0
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        Yv75JqMUyD8=
+    - 1189
+    - 1189
+  Cpc:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  Cpd:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  K:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        pRi1vMIn4EA=
+    - 500
+    - 3000
+  - - 1e8
+    - 1189
+    - 1189
+  eps:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        dzhCzTkh7j8=
+    - 0.75
+    - 1.0
+  - - 0.94
+    - 1189
+    - 1189
+  ka:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        TvamH/o91D8=
+    - 0.1
+    - 0.3
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        0mPAX1oTtj8=
+    - 1189
+    - 1189
+  kb:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        ZFBVNU7//T4=
+    - 0.0
+    - 0.0
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        Zh+0fjtEMz8=
+    - 0.0
+    - 0.0
+  kc:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  kd:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  nO2:
+  - - 0
+    - 0
+    - 1
+  - - 0
+    - 1189
+    - 1189
+  phases:
+  - virgin
+  - char
+  rho:
+  - - 1683
+    - 1189
+    - 1189
+  - - 1235
+    - 1189
+    - 1189
+processParams:
+  maxProcesses: 4
+  multiprocess: true
+reactionParams:
+  A:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAANVbhcEI=
+    - 1e6
+    - 1e14
+  E:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAIC6BUE=
+    - 1.2e4
+    - 2.0e5
+  Hp:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        +i9BDP1p+EA=
+    - 1e5
+    - 1e7
+  Xi:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        JqKSVFx75z8=
+    - 0
+    - 1
+  n:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        BtPkQ4mF7z8=
+    - 5e-1
+    - 4e0
+  nO2:
+  - - 0
+    - 0
+    - 1
+  prodState:
+  - 1
+  qIgn:
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        PvQ6oxdjNEA=
+    - 15
+    - 25
+  reacState:
+  - 0
+  typeState:
+  - 3
+reinitializeComplex: false
+resultsDir: ../../../results/ignitionValidation/nominal/
+virtualExperiment: true

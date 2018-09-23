@@ -58,7 +58,7 @@ dictitems:
     - Hp
     - nO2
     - Xi
-    allowIgnition: false
+    - qIgn
     backBoundaryConditions:
       Tamb: 25
       htc: Auto
@@ -66,8 +66,13 @@ dictitems:
     frontBoundaryConditions:
       Tamb: 25
       htc: Auto
-    ignitionHeatFlux: 20
-    ignitionThreshold: 0.0032
+    ignition:
+      allowIgnition: false
+      criticalMassFlux: 0.0032
+      ignitionCriteria: critical mass flux
+      ignitionHeatFlux: 20
+      ignitionTime: 30
+      optimizedHeatFlux: false
     weight: 1.0
   cone1: !!python/object/apply:collections.defaultdict
     args:
@@ -116,8 +121,17 @@ dictitems:
           Tamb: 25
           heatFlux: 60.0
           htc: 15
-      ignitionHeatFlux: 20.0
-      ignitionThreshold: 0.0032
+      ignition: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          allowIgnition: false
+          criticalMassFlux: 0.0032
+          ignitionCriteria: critical mass flux
+          ignitionHeatFlux: 20
+          ignitionTime: 30
+          optimizedHeatFlux: false
+          timeToIgnition: false
       initialThickness: 0.008
       names:
       - Mass
@@ -148,6 +162,7 @@ dictitems:
     - E
     - n
     - Hp
+    - Xi
     dscO2: None
     weight: 1.0
   fdsPath: C:\Program Files\FDS\FDS6\bin
@@ -365,6 +380,10 @@ dictitems:
       - 1
     prodState:
     - 1
+    qIgn:
+    - - None
+      - 15
+      - 25
     reacState:
     - 0
     typeState:
@@ -381,6 +400,7 @@ dictitems:
     - A
     - E
     - n
+    - Xi
     tgaO2: None
     tgaOpt: 1
     weight: 1.0
@@ -401,5 +421,6 @@ ka	 = 0.2989964267137014,0.06043988519518637,
 kb	 = 7.647488005591086e-05,0.0003365972912593837,
 n	 = 1.007386056058921,
 nO2	 = 0.0,
+qIgn	 = 17.41587077293721,
 rho	 = 1683.0,1235.0,
 Results saved to C:\Users\Fyang\Workspace\optimization\optimizationPaper\config\multiReactionCharring\1Reactions\validation\../../../../results/multiReactionCharring/1Reactions/validation/charLinear1Reac2Mass60kW_solution.txt

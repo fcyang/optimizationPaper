@@ -24,11 +24,11 @@ tempCol = ['# Time [s]',' Temperature [C]']
 dfMass = []
 dfFT = []
 dfBT = []
-fileSeq = ['Nominal', 'FTBT', 'TGA', 'BT', 'TGABT', 'TGADSC', '2Mass', '2MassTGA']
+fileSeq = ['Nominal', 'FTBT', 'TGA', 'BT', 'TGABT', 'TGADSC', '2Mass', '3Mass', '4Mass', '5Mass', '2MassTGA']
 heatFlux = ['10kW', '60kW', '100kW']
 # fileSeq = ['Nominal', 'TGADSC', '3Mass', 'TGA']
 # heatFlux = ['10kW', '100kW']
-legList = ['Virtual', 'FTBT', 'TGA', 'BT', 'TGABT', 'TGADSC', '2Mass', '2MassTGA']
+legList = ['Virtual', 'FTBT', 'TGA', 'BT', 'TGABT', 'TGADSC', '2Mass', '3Mass', '4Mass', '5Mass', '2MassTGA']
 # legList = ['Virtual', 'M+TGA+DSC', '3 M', 'M+TGA']
 tempSeq = ['FT', 'BT']
 
@@ -120,7 +120,7 @@ fwidthlong = 6.5 * 2
 fheight = 5
 fwidthlong = 6.5 * 2
 markStep = [200, 20]
-markerList = ['o', '^', 'v', 's', '<', '>', '*', 'p']
+markerList = ['o', '^', 'v', 's', '<', '>', '*', 'p', 'h', 'x', '+']
 axisList = [6000, 400]
 
 # %%
