@@ -1,0 +1,500 @@
+C:\Users\fcyan\workspace\JH\optimizationPaper\config\multiReactionCharring\3Reactions\validation\../../../../results/multiReactionCharring/3Reactions/validation/charLinear3Reac1Mass60kW Log file
+!!python/object/apply:collections.defaultdict
+args:
+- &id001 !!python/name:builtins.bool ''
+dictitems:
+  Duraboard:
+    CprampF:
+    - 1.0
+    - 1.0
+    CprampT:
+    - 0
+    - 5000
+    eps: 0.8
+    krampF:
+    - 0.075932
+    - 0.090229
+    - 0.104522
+    - 0.122143
+    - 0.14158
+    - 0.163436
+    - 0.190738
+    - 0.221975
+    krampT:
+    - 203.035
+    - 317.4028
+    - 426.9164
+    - 536.4182
+    - 647.3003
+    - 757.4803
+    - 867.6409
+    - 981.2546
+    rho: 258
+    thickness: 0.0254
+  XiState:
+  - known
+  - known
+  - known
+  assumeVolumeConservation: true
+  cone:
+    Tinit: 25
+    activePhaseVars:
+    - C0
+    - rho
+    - ka
+    - kb
+    - kc
+    - kd
+    - ke
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    - eps
+    - K
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - nO2
+    - Xi
+    - qIgn
+    backBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+      type: INSULATED
+    frontBoundaryConditions:
+      Tamb: 25
+      htc: Auto
+    ignition:
+      allowIgnition: false
+      criticalMassFlux: 0.0032
+      ignitionCriteria: critical mass flux
+      ignitionHeatFlux: 20
+      ignitionTime: 30
+      optimizedHeatFlux: false
+    weight: 1.0
+  cone1: !!python/object/apply:collections.defaultdict
+    args:
+    - *id001
+    dictitems:
+      Tinit: 25
+      activePhaseVars:
+      - C0
+      - rho
+      - ka
+      - kb
+      - kc
+      - kd
+      - ke
+      - Cpa
+      - Cpb
+      - Cpc
+      - Cpd
+      - Cpe
+      - eps
+      - K
+      activeReactionVars:
+      - A
+      - E
+      - n
+      - Hp
+      - nO2
+      - Xi
+      backBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          htc: Auto
+          type: INSULATED
+      columns:
+      - 1
+      depths:
+      - 0
+      file: C:/Users/fcyan/workspace/JH/optimizationPaper/data/multiReactionCharring/multiReactionCharringFake.csv
+      finalThickness: false
+      frontBoundaryConditions: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          Tamb: 25
+          heatFlux: 60.0
+          htc: 15
+      ignition: !!python/object/apply:collections.defaultdict
+        args:
+        - *id001
+        dictitems:
+          allowIgnition: false
+          criticalMassFlux: 0.0032
+          ignitionCriteria: critical mass flux
+          ignitionHeatFlux: 20
+          ignitionTime: 30
+          optimizedHeatFlux: false
+          timeToIgnition: false
+      initialThickness: 0.008
+      names:
+      - Mass
+      time: 0
+      types:
+      - 1
+      weight: 1.0
+      weights:
+      - 1
+      width1: 0.1016
+      width2: 0.1016
+  configDir: C:\Users\fcyan\workspace\JH\optimizationPaper\config\multiReactionCharring\3Reactions\validation\
+  dataSources:
+    names:
+    - cone1
+    types:
+    - cone
+  dsc:
+    activePhaseVars:
+    - C0
+    - Cpa
+    - Cpb
+    - Cpc
+    - Cpd
+    - Cpe
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Hp
+    - Xi
+    dscO2: None
+    weight: 1.0
+  fdsPath: C:\Program Files\FDS\FDS6\bin
+  keepTemporaryFiles: true
+  name: charLinear3Reac1Mass60kW
+  optimizeParams:
+    absErr: 1e-9
+    absRelErr: 1e-6
+    elimThresh: 1e-2
+    maxIter: -1
+    maxTime: -1
+    minIter: -1
+    minP: 2
+    opAlpha: 1
+    opBeta: 1
+    opP: 1
+    opQ: 1
+    opS: 1
+    relErr: 1e-12
+    relIter: 15
+  outputParams:
+    saveAllSamples: true
+  phaseParams:
+    C0:
+    - - 1
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    Cpa:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - &id002 !!python/object/apply:numpy.dtype
+          args:
+          - f8
+          - 0
+          - 1
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - -1
+          - -1
+          - 0
+        - !!binary |
+          x+4saRWYokA=
+      - 1000
+      - 2800
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          V+n5r0CxqUA=
+      - 1189
+      - 1189
+    Cpb:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          LQoWTqPJuj8=
+      - 0.0
+      - 0.0
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          FOq+YjBO3j8=
+      - 1189
+      - 1189
+    Cpc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    Cpe:
+    - &id003
+      - 0
+      - 0
+      - 1
+    - *id003
+    K:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          J2JIndhw0kA=
+      - 500
+      - 3000
+    - - 1e8
+      - 1189
+      - 1189
+    eps:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          0qzgxewb6T8=
+      - 0.75
+      - 1.0
+    - - 0.94
+      - 1189
+      - 1189
+    ka:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          oATJ8bQE4z8=
+      - 0.1
+      - 0.3
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          +FVjEaUSuz8=
+      - 1189
+      - 1189
+    kb:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          xvvtD9H0Cj8=
+      - 0.0
+      - 0.0
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          Ngs2BZ1oLz8=
+      - 0.0
+      - 0.0
+    kc:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    kd:
+    - - 0.0
+      - 0.0
+      - 0.0
+    - - 0.0
+      - 0.0
+      - 0.0
+    ke:
+    - &id004
+      - 0
+      - 0
+      - 1
+    - *id004
+    nO2:
+    - - 0
+      - 0
+      - 1
+    - - 0
+      - 1189
+      - 1189
+    phases:
+    - virgin
+    - char
+    rho:
+    - - 1683
+      - 1189
+      - 1189
+    - - 1235
+      - 1189
+      - 1189
+  processParams:
+    maxProcesses: 8
+    multiprocess: true
+  reactionParams:
+    A:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AABAisPBiUI=
+      - 1e6
+      - 1e14
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AABMO3GwwEI=
+      - 1e6
+      - 1e14
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AACYJZjTskI=
+      - 1e6
+      - 1e14
+    E:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AAAAAEC5AEE=
+      - 1.2e4
+      - 2.0e5
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AAAAAMD3AEE=
+      - 1.2e4
+      - 2.0e5
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          AAAAAIBVAUE=
+      - 1.2e4
+      - 2.0e5
+    Hp:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          ZZb6HqssBkE=
+      - 1e5
+      - 1e7
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          OS6PlFtgGkE=
+      - 1e5
+      - 1e7
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          eR6xi2VUKEE=
+      - 1e5
+      - 1e7
+    Xi:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          et77PgrG3T8=
+      - 0
+      - 1
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          CaMnfQrd2z8=
+      - 0
+      - 1
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          DZfIbeaX2T8=
+      - 0
+      - 1
+    n:
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          3BGMRjgFAkA=
+      - 5e-1
+      - 4e0
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          ie2nR1DD+D8=
+      - 5e-1
+      - 4e0
+    - - !!python/object/apply:numpy.core.multiarray.scalar
+        - *id002
+        - !!binary |
+          qXBvzv9VGEA=
+      - 5e-1
+      - 4e0
+    nO2:
+    - &id005
+      - 0
+      - 0
+      - 1
+    - *id005
+    - *id005
+    prodState:
+    - 1
+    - 1
+    - 1
+    qIgn:
+    - &id006
+      - None
+      - 15
+      - 25
+    - *id006
+    - *id006
+    reacState:
+    - 0
+    - 0
+    - 0
+    typeState:
+    - 3
+    - 3
+    - 3
+  reinitializeComplex: false
+  restart: false
+  resultsDir: ../../../../results/multiReactionCharring/3Reactions/validation/
+  systemDir: C:\Users\fcyan\workspace\JH\code\src
+  tga:
+    activePhaseVars:
+    - C0
+    - rho
+    activeReactionVars:
+    - A
+    - E
+    - n
+    - Xi
+    tgaO2: None
+    tgaOpt: 1
+    weight: 1.0
+  thermalPropertyUnits: K
+  virtualExperiment: true
+Loop	t (s)	Error Min	Error Max	ErrorRel	Comp	Samples
+A	 = 3.54e+12,3.67e+13,2.07e+13,
+C0	 = 1.0,0.0,
+Cpa	 = 2380.0418180505253,3288.6263425919856,
+Cpb	 = 0.10463925033949613,0.4735222782434516,
+E	 = 1.37e+05,1.39e+05,1.42e+05,
+Hp	 = 181653.39012639518,432150.8950774405,797234.772835686,
+K	 = 18883.38459977708,100000000.0,
+Value	 = 0.007455407394690584,
+Xi	 = 0.4652124037815849,0.4353662702765609,0.3998962471108463,
+eps	 = 0.7846588005826567,0.94,
+ka	 = 0.5943245622985565,0.10575324701797928,
+kb	 = 5.141509063032834e-05,0.00023962895157233496,
+n	 = 2.252548743390646,1.5476839827595958,6.083983636428607,
+nO2	 = 0.0,0.0,0.0,
+qIgn	 = 19.370623721299964,
+rho	 = 1683.0,1235.0,
+Results saved to C:\Users\fcyan\workspace\JH\optimizationPaper\config\multiReactionCharring\3Reactions\validation\../../../../results/multiReactionCharring/3Reactions/validation/charLinear3Reac1Mass60kW_solution.txt

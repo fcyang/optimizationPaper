@@ -33,7 +33,7 @@ cone1:
   file: C:/Users/fcyan/workspace/JH/optimizationPaper/data/multiReactionCharring/multiReactionCharringFake.csv
   frontBoundaryConditions:
     Tamb: 25
-    heatFlux: 60.0
+    heatFlux: 100.0
     htc: 15
   initialThickness: 0.008
   names:
@@ -53,7 +53,7 @@ dataSources:
   - cone
 fdsPath: C:\Program Files\FDS\FDS6\bin
 keepTemporaryFiles: true
-name: charLinear3Reac
+name: charLinear3Reac1Mass100kW
 outputParams:
   saveAllSamples: true
 phaseParams:
@@ -81,26 +81,26 @@ phaseParams:
         - -1
         - 0
       - !!binary |
-        ZeAg5YM1iEA=
+        x+4saRWYokA=
     - 1000
     - 2800
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        mEFq8NCLgEA=
+        V+n5r0CxqUA=
     - 1189
     - 1189
   Cpb:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        xGd/uAiOhz8=
+        LQoWTqPJuj8=
     - 0.0
     - 0.0
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        We536uCt7T8=
+        FOq+YjBO3j8=
     - 1189
     - 1189
   Cpc:
@@ -121,7 +121,7 @@ phaseParams:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        nM2pySO63EA=
+        J2JIndhw0kA=
     - 500
     - 3000
   - - 1e8
@@ -131,7 +131,7 @@ phaseParams:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        FK5H4XoU7j8=
+        0qzgxewb6T8=
     - 0.75
     - 1.0
   - - 0.94
@@ -141,26 +141,26 @@ phaseParams:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        MMBOa9ERyz8=
+        oATJ8bQE4z8=
     - 0.1
     - 0.3
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        9LRT+2BMmD8=
+        +FVjEaUSuz8=
     - 1189
     - 1189
   kb:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        k94bastm+z4=
+        xvvtD9H0Cj8=
     - 0.0
     - 0.0
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        aYGqMrz7OT8=
+        Ngs2BZ1oLz8=
     - 0.0
     - 0.0
   kc:
@@ -202,86 +202,95 @@ reactionParams:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        AAAA4Xndd0I=
+        AABAisPBiUI=
     - 1e6
     - 1e14
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        AAB6cfaq40I=
+        AABMO3GwwEI=
     - 1e6
     - 1e14
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        AACIgMPqsUI=
+        AACYJZjTskI=
     - 1e6
     - 1e14
   E:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        AAAAAIBDBEE=
+        AAAAAEC5AEE=
     - 1.2e4
     - 2.0e5
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        AAAAAECPJ0E=
+        AAAAAMD3AEE=
     - 1.2e4
     - 2.0e5
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        AAAAAPDvIEE=
+        AAAAAIBVAUE=
     - 1.2e4
     - 2.0e5
   Hp:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        FTZXnFzh2z8=
+        ZZb6HqssBkE=
     - 1e5
     - 1e7
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        OtisHykAwD8=
+        OS6PlFtgGkE=
     - 1e5
     - 1e7
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        2HCdErLG2z8=
+        eR6xi2VUKEE=
     - 1e5
     - 1e7
   Xi:
-  - - 0.498
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        et77PgrG3T8=
     - 0
     - 1
-  - - 0.437
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        CaMnfQrd2z8=
     - 0
     - 1
-  - - 0.489
+  - - !!python/object/apply:numpy.core.multiarray.scalar
+      - *id001
+      - !!binary |
+        DZfIbeaX2T8=
     - 0
     - 1
   n:
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        fKMDWVLb+T8=
+        3BGMRjgFAkA=
     - 5e-1
     - 4e0
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        hG/RIQzqE0A=
+        ie2nR1DD+D8=
     - 5e-1
     - 4e0
   - - !!python/object/apply:numpy.core.multiarray.scalar
       - *id001
       - !!binary |
-        9Vt2WG4uG0A=
+        qXBvzv9VGEA=
     - 5e-1
     - 4e0
   nO2:

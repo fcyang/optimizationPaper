@@ -67,9 +67,9 @@ def generateVal(dir, solList, codeDir, sol, heatFluxList, reac):
             # change heat flux
             doc['cone1']['frontBoundaryConditions']['heatFlux'] = float(j)
             if j == '10':
-                doc['cone1']['file'] = 'C:/Users/Fyang/Workspace/optimization/optimizationPaper/data/multiReactionCharring/multiReactionCharringFake1.csv'
+                doc['cone1']['file'] = 'C:/Users/fcyan/workspace/JH/optimizationPaper/data/multiReactionCharring/multiReactionCharringFake1.csv'
             else:
-                doc['cone1']['file'] = 'C:/Users/Fyang/Workspace/optimization/optimizationPaper/data/multiReactionCharring/multiReactionCharringFake.csv'
+                doc['cone1']['file'] = 'C:/Users/fcyan/workspace/JH/optimizationPaper/data/multiReactionCharring/multiReactionCharringFake.csv'
 
             valFileName = doc['name']+'.yaml'
 
@@ -98,13 +98,13 @@ def generateVal(dir, solList, codeDir, sol, heatFluxList, reac):
 # %%
 # run script
 preFileName = 'charLinear3Reac'
-solDir = 'C:/Users/Fyang/Workspace/optimization/optimizationPaper/results/multiReactionCharring/3Reactions/solutions/'
-solList = ['3Mass','4Mass','5Mass']
+solDir = 'C:/Users/fcyan/workspace/JH/optimizationPaper/results/multiReactionCharring/3Reactions/solutions/'
+solList = ['1Mass']
 heatFluxList = ['10', '60', '100']
 reac = 3
 name, sol = readSolution(solDir+preFileName, solList, reac)
 
-confDir = 'C:/Users/Fyang/Workspace/optimization/optimizationPaper/config/multiReactionCharring/3Reactions/validation/'
-codeDir = 'C:/Users/Fyang/Workspace/optimization/sourceCode/optimizationPython/src/main.py'
+confDir = 'C:/Users/fcyan/workspace/JH/optimizationPaper/config/multiReactionCharring/3Reactions/validation/'
+codeDir = 'C:/Users/fcyan/workspace/JH/code/src/main.py'
 tempFileName = confDir + preFileName
 generateVal(tempFileName, solList, codeDir, sol, heatFluxList, reac)

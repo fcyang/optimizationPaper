@@ -24,11 +24,11 @@ tempCol = ['# Time [s]',' Temperature [C]']
 dfMass = []
 dfFT = []
 dfBT = []
-fileSeq = ['Nominal', 'FTBT', 'BT', 'TGADSCRun1', 'TGABT', '2Mass', '3Mass', '2MassTGA', 'TGA']
+fileSeq = ['Nominal', '1Mass', '2Mass', '2MassTGA', '3Mass', 'FTBT', 'TGA', 'TGABT', 'BT']
 heatFlux = ['10kW', '60kW', '100kW']
 # fileSeq = ['Nominal', 'TGADSC', '3Mass', 'TGA']
 # heatFlux = ['10kW', '100kW']
-legList = ['Virtual', 'FTBT', 'BT', 'TGADSC', 'TGABT', '2Mass', '3Mass', '2MassTGA', 'TGA']
+legList = ['Virtual', '1Mass', '2Mass', '2Mass+TGA', '3Mass', '1Mass+FT+BT', '1Mass+TGA', '1Mass+TGA+BT', '1Mass+BT']
 # legList = ['Virtual', 'M+TGA+DSC', '3 M', 'M+TGA']
 tempSeq = ['FT', 'BT']
 
@@ -102,8 +102,10 @@ errData.to_csv('errorMassData.csv')
 ################################################################################
 # %%
 # Custom greek font in label
-plt.rc('font', family='serif')
-plt.rc('font', serif='Times New Roman')
+# plt.rc('font', family='serif')
+font = {'family' : 'Times New Roman',
+        'weight' : 'normal'}
+plt.rc('font', **font)
 mpl.rcParams['mathtext.fontset'] = 'custom'
 mpl.rcParams['mathtext.rm'] = 'Times New Roman'
 
@@ -114,13 +116,12 @@ colors = [(0, 0.447, 0.7410), (0.8500, 0.3250, 0.0980),
 # Figure parameters
 fsize = 20
 hsize = 16
-mSize = 8
 fwidth = 6.5
-fwidthlong = 6.5 * 2
+fwidthlong = 6.5+2.1
 fheight = 5
-fwidthlong = 6.5 * 2
 markStep = [200, 20]
-markerList = ['o', '^', 'v', 's', '<', '>', '*', 'p']
+markerList = ['o', '^', 'v', 's', '<', '>', '*', 'p', 'h', 'x', '+']
+markerSize = 8
 axisList = [6000, 400]
 
 # %%
@@ -129,12 +130,12 @@ heatFluxIdx = 0
 markStepIdx = 0
 fig = plt.figure(figsize=(fwidth, fheight))
 for i in range(len(legList[1:])):
-    plt.plot(dfMass[heatFluxIdx][i+1][0], dfMass[heatFluxIdx][i+1][1], '-', marker=markerList[i], markersize=mSize, markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[i+1])
+    plt.plot(dfMass[heatFluxIdx][i+1][0], dfMass[heatFluxIdx][i+1][1], '-', marker=markerList[i], markerfacecolor='none', markevery=markStep[markStepIdx],markersize=markerSize, linewidth=1, label=legList[i+1])
 plt.plot(dfMass[heatFluxIdx][0][0], dfMass[heatFluxIdx][0][1], '-k', markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=3, label=legList[0])
 plt.xlabel('Time (s)', fontname='Times New Roman', fontsize=fsize)
 plt.ylabel(r'Normalized Mass', fontname='Times New Roman', fontsize=fsize)
-H = plt.legend(loc='lower left', prop={'size': 14}, numpoints=1,
-                            frameon=False)
+# H = plt.legend(loc='lower left', prop={'size': 16}, numpoints=1,
+#                             frameon=False, bbox_to_anchor=(1,0.12))
 plt.axis([0, 6000, 0.6, 1.05])
 plt.rc('xtick', labelsize=16)
 plt.rc('ytick', labelsize=16)
@@ -146,15 +147,14 @@ plt.show()
 # %%
 heatFluxIdx = 2
 markStepIdx = 1
+markStep = [100, 10]
 fig = plt.figure(figsize=(fwidth, fheight))
 for i in range(len(legList[1:])):
-    plt.plot(dfMass[heatFluxIdx][i+1][0], dfMass[heatFluxIdx][i+1][1], '-', marker=markerList[i], markersize=mSize, markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[i+1])
+    plt.plot(dfMass[heatFluxIdx][i+1][0], dfMass[heatFluxIdx][i+1][1], '-', marker=markerList[i], markerfacecolor='none', markevery=markStep[markStepIdx],markersize=16, linewidth=1, label=legList[i+1])
 plt.plot(dfMass[heatFluxIdx][0][0], dfMass[heatFluxIdx][0][1], '-k', markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=3, label=legList[0])
-plt.xlabel('Time (s)', fontname='Times New Roman', fontsize=fsize)
-plt.ylabel(r'Normalized Mass', fontname='Times New Roman', fontsize=fsize)
-H = plt.legend(loc='upper right', prop={'size': 14}, numpoints=1,
-                            frameon=False)
-plt.axis([150, 500, 0.57, 0.61])
+plt.axis([125, 275, 0.56, 0.7])
+plt.tick_params(axis='x',which='both',bottom=False,left=False,top=False,labelbottom=False,labelleft=False)
+plt.tick_params(axis='y',which='both',bottom=False,left=False,top=False,labelbottom=False,labelleft=False)
 plt.rc('xtick', labelsize=16)
 plt.rc('ytick', labelsize=16)
 # save figures
@@ -165,14 +165,15 @@ plt.show()
 # %%
 heatFluxIdx = 2
 markStepIdx = 1
-fig = plt.figure(figsize=(fwidth, fheight))
+markStep = [200, 20]
+fig = plt.figure(figsize=(fwidthlong, fheight))
 for i in range(len(legList[1:])):
-    plt.plot(dfMass[heatFluxIdx][i+1][0], dfMass[heatFluxIdx][i+1][1], '-', marker=markerList[i], markersize=mSize, markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=1.5, label=legList[i+1])
+    plt.plot(dfMass[heatFluxIdx][i+1][0], dfMass[heatFluxIdx][i+1][1], '-', marker=markerList[i], markerfacecolor='none', markevery=markStep[markStepIdx],markersize=markerSize, linewidth=1, label=legList[i+1])
 plt.plot(dfMass[heatFluxIdx][0][0], dfMass[heatFluxIdx][0][1], '-k', markerfacecolor='none', markevery=markStep[markStepIdx], linewidth=3, label=legList[0])
 plt.xlabel('Time (s)', fontname='Times New Roman', fontsize=fsize)
 plt.ylabel(r'Normalized Mass', fontname='Times New Roman', fontsize=fsize)
-H = plt.legend(loc='upper right', prop={'size': 14}, numpoints=1,
-                            frameon=False)
+H = plt.legend(loc='lower left', prop={'size': 16}, numpoints=1,
+                            frameon=False, bbox_to_anchor=(1,0.12))
 plt.axis([0, 500, 0.5, 1.05])
 plt.rc('xtick', labelsize=16)
 plt.rc('ytick', labelsize=16)
@@ -180,6 +181,7 @@ plt.rc('ytick', labelsize=16)
 plt.tight_layout()
 plt.savefig(figureName + '100kW' + 'NormalizedMass' +'2.png', dpi=300)
 plt.show()
+
 
 # # %%
 # # auto figures generation -- for large batch of figures
